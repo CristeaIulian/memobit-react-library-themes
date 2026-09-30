@@ -8,7 +8,7 @@ import { THEME_ASSET_DIR } from './index';
 // package's dependencies.
 interface ThemePlugin {
     name: string;
-    config(userConfig: { base?: string }): { define: Record<string, string> };
+    config(): { define: Record<string, string> };
     configureServer(server: {
         middlewares: {
             use(handler: (req: { url?: string }, res: ServerResponse, next: () => void) => void): void;
@@ -70,12 +70,14 @@ export const memobitThemes = (options: MemobitThemesOptions = {}): ThemePlugin =
     return {
         name: 'memobit-themes',
 
-        // URLs have to be built from the app's own base, not assumed to sit at the site
-        // root. Several of these apps are served from a subpath, where a root-absolute
-        // /memobit-themes/... 404s and the app renders unthemed.
-        config(userConfig: { base?: string }) {
-            const base = (userConfig.base ?? '/').replace(/\/+$/, '');
-            const urls = Object.fromEntries([...themes.keys()].map(name => [name, `${base}/${THEME_ASSET_DIR}/${name}.css`]));
+        // Paths are relative to the JS bundle, not the site root, and ThemeContext resolves
+        // them against import.meta.url. Nothing at build time can know the public prefix:
+        // these apps are served by a PHP backend that emits its own index.html pointing at
+        // ./public/assets/, so Vite's base is / while the real URL is /public/. Deriving the
+        // prefix from the loaded bundle is correct wherever the app ends up mounted, and it
+        // works in dev too, since the middleware below matches the segment anywhere.
+        config() {
+            const urls = Object.fromEntries([...themes.keys()].map(name => [name, `../${THEME_ASSET_DIR}/${name}.css`]));
 
             return { define: { __MEMOBIT_THEME_URLS__: JSON.stringify(urls) } };
         },
