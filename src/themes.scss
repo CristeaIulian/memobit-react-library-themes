@@ -1,0 +1,73 @@
+// Every theme in one stylesheet — the pre-1.0 way of consuming this package, kept so an
+// app that has not migrated keeps working. It is ~625 KB of which one theme is ever
+// active; prefer the Vite plugin, which loads the selected theme on its own.
+//
+// base.scss and scrollbars.scss used to be pulled in from here. They are not themes and
+// stay in @memobit/libs, so an app importing this must now import them directly:
+//   import '@memobit/libs/dist/styles/base.scss';
+//   import '@memobit/libs/dist/styles/scrollbars.scss';
+
+@use './theming/amber-meridian';
+@use './theming/archive-indigo';
+@use './theming/arctic-blue';
+@use './theming/asphalt-code';
+@use './theming/atelier-media';
+@use './theming/audit-ember';
+@use './theming/azure-night';
+@use './theming/blossom-meadow';
+@use './theming/blueprint-clay';
+@use './theming/blush-market';
+@use './theming/brass-chronicle';
+@use './theming/carbon-velocity';
+@use './theming/chalk-circuit';
+@use './theming/chrono-atlas';
+@use './theming/citrus-vital';
+@use './theming/clinical-aqua';
+@use './theming/cobalt-pulse';
+@use './theming/command-slate';
+@use './theming/crawler-dusk';
+@use './theming/crimson-dusk';
+@use './theming/cyber-forest';
+@use './theming/dashdarkx';
+@use './theming/ember-night';
+@use './theming/emerald-ledger';
+@use './theming/frost-petal';
+@use './theming/garden-harvest';
+@use './theming/gilded-bear';
+@use './theming/graphite-shell';
+@use './theming/horizon-amber';
+@use './theming/horizon-drift';
+@use './theming/ivory-serif';
+@use './theming/lavender-mist';
+@use './theming/light-blue';
+@use './theming/lumen';
+@use './theming/luna';
+@use './theming/mesh-circuit';
+@use './theming/midnight-amber';
+@use './theming/midnight-atlas';
+@use './theming/midnight-folio';
+@use './theming/mint-meadow';
+@use './theming/mintone';
+@use './theming/neon-tokyo';
+@use './theming/noir-marquee';
+@use './theming/ocean-breeze';
+@use './theming/ocean-depths';
+@use './theming/orbital-night';
+@use './theming/sandstone';
+@use './theming/sandy-parchment';
+@use './theming/screening-room';
+@use './theming/signal-burst';
+@use './theming/signal-clarity';
+@use './theming/slate-bazaar';
+@use './theming/slate-focus';
+@use './theming/spectrum-vault';
+@use './theming/tailwind-vue-dark';
+@use './theming/terminal-phosphor';
+@use './theming/terracotta-kitchen';
+@use './theming/twilight-pulse';
+@use './theming/vault-guard';
+@use './theming/velvet-reel';
+@use './theming/velvet-tome';
+@use './theming/verdant-pulse';
+@use './theming/vital-aurora';
+@use './theming/vital-signal';

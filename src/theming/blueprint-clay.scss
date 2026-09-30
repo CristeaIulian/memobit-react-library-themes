@@ -1,0 +1,271 @@
+// Blueprint Clay theme - Dedicated to Real Estate Crawler app
+// Architectural light: off-white clay, slate blue-gray accent, blueprint drafting aesthetic
+[data-theme='blueprint-clay'] {
+    --font-family: 'Josefin Sans', 'Helvetica Neue', sans-serif;
+    --font-family-display: 'Libre Baskerville', Georgia, serif;
+
+    --body-background: var(--body-background-wash, var(--body-background-base));
+    --body-background-base: #f2ede8;
+    --body-background-wash:
+        radial-gradient(55% 50% at 100% 0%, rgba(93, 122, 138, 0.12) 0%, transparent 65%),
+        radial-gradient(50% 45% at 0% 100%, rgba(184, 134, 11, 0.06) 0%, transparent 65%),
+        radial-gradient(130% 110% at 15% 0%, #eee8e0 0%, #f4efe9 55%, #f0ebe4 100%);
+    --body-color: #3a4a56;
+    --body-color-accent: #1a2a34;
+    --body-color-muted: #8a9aa6;
+    --body-title-color: #1a2a34;
+    --body-sub-title-color: #5d7a8a;
+    --body-accent-color: #5d7a8a;
+    --body-danger-color: #c0392b;
+
+    --backdrop-color: rgba(30, 42, 50, 0.6);
+    --text-shadow: rgba(0, 0, 0, 0.12);
+    --box-shadow: rgba(30, 42, 50, 0.12);
+
+    --header-background-color: rgba(242, 237, 232, 0.88);
+    --header-border-bottom-color: rgba(93, 122, 138, 0.18);
+    --header-color: #3a4a56;
+    --header-font-weight: 600;
+
+    --card-background-color: rgba(255, 252, 248, 0.7);
+    --card-background-accent-color: rgba(244, 240, 234, 0.6);
+    --card-border-color: rgba(93, 122, 138, 0.18);
+    --card-backdrop-filter: blur(12px) saturate(1.3);
+    --card-border-accent-color: #5d7a8a;
+    --card-hover-border-color: rgba(93, 122, 138, 0.36);
+    --card-color: #5d7a8a;
+    --card-accent-color: #5d7a8a;
+    --card-box-shadow: 0 4px 18px rgba(30, 42, 50, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    --card-surface-box-shadow: var(--card-box-shadow);
+    --card-footer-background-color: rgba(232, 226, 218, 0.5);
+    --card-footer-color: #8a9aa6;
+    --card-title-color: var(--body-title-color);
+    --card-title-font-family: var(--font-family-display, serif);
+    --card-title-font-size: var(--font-size-md);
+    --card-title-font-style: italic;
+    --card-title-font-weight: var(--font-weight-normal);
+    --card-title-letter-spacing: 0.01em;
+    --card-title-text-transform: none;
+
+    --links-color: #5d7a8a;
+    --links-hover-color: #3a5a6e;
+
+    --delimiter-color: rgba(93, 122, 138, 0.18);
+    --border-color: rgba(93, 122, 138, 0.24);
+
+    --button-default-border-color: rgba(93, 122, 138, 0.28);
+    --button-default-background-color: rgba(255, 252, 248, 0.7);
+    --button-default-color: #3a4a56;
+    --button-default-hover-border-color: #5d7a8a;
+    --button-default-hover-background-color: rgba(93, 122, 138, 0.1);
+    --button-default-hover-color: #1a2a34;
+
+    --button-info-border-color: #5d7a8a;
+    --button-info-background-color: #4a6478;
+    --button-info-color: #ffffff;
+    --button-info-hover-border-color: #7a9aaa;
+    --button-info-hover-background-color: #5d7a8a;
+    --button-info-hover-color: #ffffff;
+
+    --button-warning-border-color: #c8874a;
+    --button-warning-background-color: #b06030;
+    --button-warning-color: #ffffff;
+    --button-warning-hover-border-color: #e0a870;
+    --button-warning-hover-background-color: #c8874a;
+    --button-warning-hover-color: #ffffff;
+
+    --button-success-border-color: #4a8a6a;
+    --button-success-background-color: #386850;
+    --button-success-color: #ffffff;
+    --button-success-hover-border-color: #5aa880;
+    --button-success-hover-background-color: #4a8a6a;
+    --button-success-hover-color: #ffffff;
+
+    --button-danger-border-color: #c0392b;
+    --button-danger-background-color: #a82820;
+    --button-danger-color: #ffffff;
+    --button-danger-hover-border-color: #e05040;
+    --button-danger-hover-background-color: #c0392b;
+    --button-danger-hover-color: #ffffff;
+
+    --button-plain-color: #8a9aa6;
+    --button-plain-hover-color: #1a2a34;
+    --button-ghost-border-color: transparent;
+    --button-ghost-background-color: transparent;
+    --button-ghost-color: var(--button-plain-color);
+    --button-ghost-hover-border-color: transparent;
+    --button-ghost-hover-background-color: rgba(93, 122, 138, 0.1);
+    --button-ghost-hover-color: var(--button-plain-hover-color);
+
+    --dropdown-border-color: rgba(93, 122, 138, 0.24);
+    --dropdown-header-background-color: rgba(255, 252, 248, 0.85);
+    --dropdown-header-border-focus-color: #5d7a8a;
+    --dropdown-header-color: #3a4a56;
+    --dropdown-options-background-color: rgba(255, 252, 248, 0.95);
+    --dropdown-options-color: #3a4a56;
+    --dropdown-options-hover-background-color: rgba(93, 122, 138, 0.1);
+    --dropdown-options-hover-color: #1a2a34;
+    --dropdown-options-selected-background-color: rgba(93, 122, 138, 0.18);
+    --dropdown-options-selected-color: #1a2a34;
+    --dropdown-chips-background-color: rgba(93, 122, 138, 0.14);
+    --dropdown-chips-color: #4a6478;
+    --dropdown-chips-border-color: rgba(93, 122, 138, 0.3);
+    --dropdown-chips-hover-background-color: rgba(93, 122, 138, 0.24);
+    --dropdown-action-color: #5d7a8a;
+    --dropdown-action-background-color: rgba(255, 252, 248, 0.95);
+    --dropdown-action-hover-color: #1a2a34;
+    --dropdown-action-hover-background-color: rgba(93, 122, 138, 0.1);
+
+    --tabs-active-background-color: rgba(93, 122, 138, 0.16);
+    --tabs-active-color: #4a6478;
+    --tabs-inactive-background-color: transparent;
+    --tabs-inactive-color: #8a9aa6;
+
+    --modal-background-color: rgba(255, 252, 248, 0.92);
+    --modal-border-color: rgba(93, 122, 138, 0.22);
+    --modal-backdrop-filter: blur(16px) saturate(1.4);
+    --modal-header-background-color: rgba(232, 226, 218, 0.7);
+    --modal-header-color: #1a2a34;
+    --modal-title-color: var(--modal-header-color);
+    --modal-title-font-family: var(--font-family-display, serif);
+    --modal-title-font-size: var(--font-size-lg);
+    --modal-title-font-style: italic;
+    --modal-title-font-weight: var(--font-weight-normal);
+    --modal-title-letter-spacing: 0.01em;
+    --modal-title-text-transform: none;
+    --modal-body-color: #5d7a8a;
+    --modal-footer-background-color: rgba(232, 226, 218, 0.5);
+    --modal-color: #3a4a56;
+    --modal-box-shadow: 0 10px 40px rgba(30, 42, 50, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    --modal-surface-box-shadow: var(--modal-box-shadow);
+    --modal-box-shadow-hover: 0 14px 52px rgba(93, 122, 138, 0.22);
+
+    --list-alternate-background-color: rgba(232, 226, 218, 0.4);
+    --list-hover-background-color: rgba(93, 122, 138, 0.08);
+
+    --progress-bar-background-color: rgba(93, 122, 138, 0.14);
+    --progress-bar-color: #5d7a8a;
+
+    --progress-default-bar-border-color: rgba(93, 122, 138, 0.24);
+    --progress-default-bar-fill-color: #8a9aa6;
+
+    --progress-success-bar-border-color: #4a8a6a;
+    --progress-success-bar-fill-color: #4a8a6a;
+
+    --progress-info-bar-border-color: #5d7a8a;
+    --progress-info-bar-fill-color: #5d7a8a;
+
+    --progress-warning-bar-border-color: #c8874a;
+    --progress-warning-bar-fill-color: #c8874a;
+
+    --progress-danger-bar-border-color: #c0392b;
+    --progress-danger-bar-fill-color: #c0392b;
+
+    --form-control-background-color: rgba(255, 252, 248, 0.8);
+    --form-control-color: #3a4a56;
+    --form-control-label-color: #8a9aa6;
+    --form-control-label-font-size: var(--font-size-xs);
+    --form-control-label-font-weight: var(--font-weight-semibold);
+    --form-control-label-letter-spacing: 0.1em;
+    --form-control-label-text-transform: uppercase;
+    --form-control-border-color: rgba(93, 122, 138, 0.26);
+    --form-control-error-background-color: rgba(192, 57, 43, 0.08);
+    --form-control-error-color: #c0392b;
+    --form-control-error-border-color: #c0392b;
+    --form-control-focus-background-color: rgba(255, 252, 248, 0.95);
+    --form-control-focus-border-color: #5d7a8a;
+    --form-control-focus-color: #1a2a34;
+    --form-control-placeholder-color: #b8c8d2;
+    --form-control-success-background-color: rgba(74, 138, 106, 0.08);
+    --form-control-success-color: #4a8a6a;
+    --form-control-success-border-color: #4a8a6a;
+
+    --form-control-selection-background-color: rgba(93, 122, 138, 0.14);
+    --form-control-selection-border-color: #5d7a8a;
+    --form-control-selection-color: #1a2a34;
+    --form-control-selection-label-color: #4a6478;
+    --form-control-focus-ring: rgba(93, 122, 138, 0.28);
+
+    --calendar-background-color: rgba(255, 252, 248, 0.9);
+    --calendar-border-color: rgba(93, 122, 138, 0.2);
+    --calendar-header-background-color: rgba(232, 226, 218, 0.6);
+    --calendar-header-color: #1a2a34;
+    --calendar-day-color: #5d7a8a;
+    --calendar-day-hover-background-color: rgba(93, 122, 138, 0.1);
+    --calendar-day-selected-background-color: #5d7a8a;
+    --calendar-day-selected-color: #ffffff;
+    --calendar-day-disabled-color: #c8d4da;
+    --calendar-day-today-border-color: #5d7a8a;
+    --calendar-day-weekend-color: #4a6478;
+
+    --datepicker-input-background-color: rgba(255, 252, 248, 0.8);
+
+    --tooltip-background-color: #4a6478;
+    --tooltip-border-color: #4a6478;
+    --tooltip-color: #ffffff;
+
+    --popover-background-color: rgba(255, 252, 248, 0.96);
+    --popover-border-color: #5d7a8a;
+    --popover-color: #3a4a56;
+    --popover-arrow-color: #5d7a8a;
+
+    --toast-info-background-color: #4a6478;
+    --toast-info-color: #ffffff;
+    --toast-info-border-color: #5d7a8a;
+
+    --toast-success-background-color: #386850;
+    --toast-success-color: #ffffff;
+    --toast-success-border-color: #4a8a6a;
+
+    --toast-warning-background-color: #b06030;
+    --toast-warning-color: #ffffff;
+    --toast-warning-border-color: #c8874a;
+
+    --toast-danger-background-color: #a82820;
+    --toast-danger-color: #ffffff;
+    --toast-danger-border-color: #c0392b;
+
+    --loader-border-color: rgba(93, 122, 138, 0.22);
+    --loader-border-top-color: #5d7a8a;
+
+    --rating-color-success: #4a8a6a;
+    --rating-color-warning: #c8874a;
+    --rating-color-danger: #c0392b;
+    --rating-color-info: #5d7a8a;
+    --rating-empty-color: rgba(93, 122, 138, 0.2);
+    --rating-empty-label-color: #8a9aa6;
+    --rating-half-rate-empty-color: rgba(93, 122, 138, 0.2);
+
+    --slider-track-background-color: rgba(93, 122, 138, 0.14);
+    --slider-track-border-color: rgba(93, 122, 138, 0.24);
+    --slider-track-hover-background-color: rgba(93, 122, 138, 0.22);
+    --slider-track-hover-border-color: #5d7a8a;
+    --slider-thumb-background-color: #5d7a8a;
+    --slider-thumb-border-color: #5d7a8a;
+    --slider-thumb-hover-background-color: #4a6478;
+    --slider-thumb-hover-border-color: #4a6478;
+
+    --chip-selected-background-color: rgba(93, 122, 138, 0.16);
+    --chip-selected-border-color: #5d7a8a;
+    --chip-hover-border-color: #5d7a8a;
+    --chip-hover-background-color: transparent;
+    --chip-hover-color: #5d7a8a;
+    --chip-selected-color: #4a6478;
+    --chip-selected-count-color: rgba(74, 100, 120, 0.7);
+
+    --note-container-effect-background-color: rgba(93, 122, 138, 0.08);
+    --note-container-effect-color: #3a4a56;
+    --note-container-effect-border-left-color: #5d7a8a;
+
+    --infuse-effect-hover-border-color: #5d7a8a;
+    --infuse-effect-hover-box-shadow-color: rgba(93, 122, 138, 0.28);
+    --infuse-effect-before-background: linear-gradient(90deg, #4a6478, #90b0c0);
+
+    --up-lift-effect-hover-border-color: #5d7a8a;
+    --up-lift-effect-box-shadow-color: rgba(30, 42, 50, 0.12);
+    --up-lift-effect-hover-box-shadow-color: rgba(93, 122, 138, 0.26);
+    --up-lift-effect-before-background: linear-gradient(135deg, #4a6478 0%, #b8d0da 100%);
+
+    --glow-box-shadow-color: 0 0 16px rgba(93, 122, 138, 0.38), 0 0 6px rgba(122, 154, 170, 0.22);
+    --glow-hover-border-color: rgba(93, 122, 138, 0.36);
+}

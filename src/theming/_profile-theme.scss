@@ -1,0 +1,317 @@
+@use 'sass:map';
+
+@function token($theme, $key, $fallback: null) {
+    @if map.has-key($theme, $key) {
+        @return map.get($theme, $key);
+    }
+
+    @return $fallback;
+}
+
+@mixin app-profile($theme) {
+    $font-family: token($theme, font-family, "'Inter', sans-serif");
+    $display-family: token($theme, display-family, $font-family);
+    $base: token($theme, base);
+    $surface: token($theme, surface);
+    $surface-alt: token($theme, surface-alt);
+    $surface-strong: token($theme, surface-strong);
+    $border: token($theme, border);
+    $border-strong: token($theme, border-strong);
+    $text: token($theme, text);
+    $title: token($theme, title);
+    $muted: token($theme, muted);
+    $sub-title: token($theme, sub-title);
+    $accent: token($theme, accent);
+    $accent-strong: token($theme, accent-strong);
+    $accent-soft: token($theme, accent-soft);
+    $accent-contrast: token($theme, accent-contrast);
+    $success: token($theme, success);
+    $success-contrast: token($theme, success-contrast, $base);
+    $warning: token($theme, warning);
+    $warning-contrast: token($theme, warning-contrast, $base);
+    $danger: token($theme, danger);
+    $info: token($theme, info, $accent);
+    $info-contrast: token($theme, info-contrast, $accent-contrast);
+    $wash-a: token($theme, wash-a, $accent);
+    $wash-b: token($theme, wash-b, $accent-strong);
+    $header-background: token($theme, header-background, $surface-strong);
+    $header-color: token($theme, header-color, $text);
+    $dropdown-header-background: token($theme, dropdown-header-background, $surface-strong);
+    $dropdown-header-color: token($theme, dropdown-header-color, $text);
+    $form-background: token($theme, form-background, $surface-strong);
+    $form-focus-background: token($theme, form-focus-background, $surface-alt);
+    $modal-footer-background: token($theme, modal-footer-background, $surface-strong);
+    $title-transform: token($theme, title-transform, none);
+    $title-letter-spacing: token($theme, title-letter-spacing, 0);
+    $label-transform: token($theme, label-transform, uppercase);
+    $label-letter-spacing: token($theme, label-letter-spacing, 0.08em);
+
+    --font-family: #{$font-family};
+    --font-family-display: #{$display-family};
+    --form-control-font-family: var(--font-family, sans-serif);
+
+    --body-background: var(--body-background-wash, var(--body-background-base));
+    --body-background-base: #{$base};
+    --body-background-wash:
+        radial-gradient(62% 54% at 100% 0%, #{rgba($wash-a, 0.16)} 0%, transparent 65%),
+        radial-gradient(56% 48% at 0% 100%, #{rgba($wash-b, 0.12)} 0%, transparent 68%),
+        linear-gradient(155deg, #{$surface-strong} 0%, #{$base} 52%, #{$surface} 100%);
+    --body-color: #{$text};
+    --body-color-accent: #{$title};
+    --body-color-muted: #{$muted};
+    --body-title-color: #{$title};
+    --body-sub-title-color: #{$sub-title};
+    --body-accent-color: #{$accent};
+    --body-danger-color: #{$danger};
+
+    --backdrop-color: rgba(0, 0, 0, 0.76);
+    --text-shadow: rgba(0, 0, 0, 0.48);
+    --box-shadow: rgba(0, 0, 0, 0.44);
+
+    --header-background-color: #{$header-background};
+    --header-border-bottom-color: #{$border};
+    --header-color: #{$header-color};
+    --header-font-weight: 600;
+
+    --card-background-color: #{$surface};
+    --card-background-accent-color: #{$surface-alt};
+    --card-border-color: #{$border};
+    --card-backdrop-filter: none;
+    --card-border-accent-color: #{$accent};
+    --card-hover-border-color: #{$border-strong};
+    --card-color: #{$sub-title};
+    --card-accent-color: #{$accent};
+    --card-box-shadow: 0 14px 38px rgba(0, 0, 0, 0.34);
+    --card-surface-box-shadow: 0 1px 0 #{rgba($title, 0.04)} inset, 0 14px 38px rgba(0, 0, 0, 0.32);
+    --card-footer-background-color: #{$surface-alt};
+    --card-footer-color: #{$muted};
+    --card-title-color: var(--body-title-color);
+    --card-title-font-family: var(--font-family-display, sans-serif);
+    --card-title-font-size: var(--font-size-lg);
+    --card-title-font-style: normal;
+    --card-title-font-weight: var(--font-weight-bold);
+    --card-title-letter-spacing: #{$title-letter-spacing};
+    --card-title-text-transform: #{$title-transform};
+
+    --links-color: #{$accent};
+    --links-hover-color: #{$accent-strong};
+
+    --delimiter-color: #{$border};
+    --border-color: #{$border-strong};
+
+    --button-default-border-color: #{$border-strong};
+    --button-default-background-color: #{$surface-alt};
+    --button-default-color: #{$text};
+    --button-default-hover-border-color: #{$accent};
+    --button-default-hover-background-color: #{rgba($accent, 0.12)};
+    --button-default-hover-color: #{$title};
+
+    --button-info-border-color: #{$accent};
+    --button-info-background-color: #{$accent-strong};
+    --button-info-color: #{$accent-contrast};
+    --button-info-hover-border-color: #{$accent};
+    --button-info-hover-background-color: #{$accent};
+    --button-info-hover-color: #{$accent-contrast};
+
+    --button-warning-border-color: #{$warning};
+    --button-warning-background-color: #{$warning};
+    --button-warning-color: #{$warning-contrast};
+    --button-warning-hover-border-color: #{$warning};
+    --button-warning-hover-background-color: #{rgba($warning, 0.88)};
+    --button-warning-hover-color: #{$warning-contrast};
+
+    --button-success-border-color: #{$success};
+    --button-success-background-color: #{$success};
+    --button-success-color: #{$success-contrast};
+    --button-success-hover-border-color: #{$success};
+    --button-success-hover-background-color: #{rgba($success, 0.86)};
+    --button-success-hover-color: #{$success-contrast};
+
+    --button-danger-border-color: #{$danger};
+    --button-danger-background-color: #{$danger};
+    --button-danger-color: #ffffff;
+    --button-danger-hover-border-color: #{$danger};
+    --button-danger-hover-background-color: #{rgba($danger, 0.86)};
+    --button-danger-hover-color: #ffffff;
+
+    --button-plain-color: #{$muted};
+    --button-plain-hover-color: #{$title};
+    --button-ghost-border-color: transparent;
+    --button-ghost-background-color: transparent;
+    --button-ghost-color: var(--button-plain-color);
+    --button-ghost-hover-border-color: transparent;
+    --button-ghost-hover-background-color: #{$surface-alt};
+    --button-ghost-hover-color: var(--button-plain-hover-color);
+
+    --dropdown-border-color: #{$border-strong};
+    --dropdown-header-background-color: #{$dropdown-header-background};
+    --dropdown-header-border-focus-color: #{$accent};
+    --dropdown-header-color: #{$dropdown-header-color};
+    --dropdown-options-background-color: #{$surface};
+    --dropdown-options-color: #{$text};
+    --dropdown-options-hover-background-color: #{rgba($accent, 0.11)};
+    --dropdown-options-hover-color: #{$title};
+    --dropdown-options-selected-background-color: #{rgba($accent, 0.2)};
+    --dropdown-options-selected-color: #{$title};
+    --dropdown-chips-background-color: #{rgba($accent, 0.14)};
+    --dropdown-chips-color: #{$accent};
+    --dropdown-chips-border-color: #{rgba($accent, 0.32)};
+    --dropdown-chips-hover-background-color: #{rgba($accent, 0.22)};
+    --dropdown-action-color: #{$sub-title};
+    --dropdown-action-background-color: #{$surface};
+    --dropdown-action-hover-color: #{$title};
+    --dropdown-action-hover-background-color: #{$surface-alt};
+
+    --tabs-active-background-color: #{rgba($accent, 0.15)};
+    --tabs-active-color: #{$accent};
+    --tabs-inactive-background-color: transparent;
+    --tabs-inactive-color: #{$muted};
+
+    --modal-background-color: #{$surface};
+    --modal-border-color: #{$border-strong};
+    --modal-backdrop-filter: none;
+    --modal-header-background-color: #{$surface-alt};
+    --modal-header-color: #{$title};
+    --modal-title-color: var(--modal-header-color);
+    --modal-title-font-family: var(--font-family-display, sans-serif);
+    --modal-title-font-size: var(--font-size-lg);
+    --modal-title-font-style: normal;
+    --modal-title-font-weight: var(--font-weight-bold);
+    --modal-title-letter-spacing: #{$title-letter-spacing};
+    --modal-title-text-transform: #{$title-transform};
+    --modal-body-color: #{$sub-title};
+    --modal-footer-background-color: #{$modal-footer-background};
+    --modal-color: #{$text};
+    --modal-box-shadow: 0 18px 52px rgba(0, 0, 0, 0.48);
+    --modal-surface-box-shadow: var(--modal-box-shadow);
+    --modal-box-shadow-hover: 0 22px 60px #{rgba($accent, 0.18)};
+
+    --list-alternate-background-color: #{$surface-alt};
+    --list-hover-background-color: #{rgba($accent, 0.08)};
+
+    --progress-bar-background-color: #{$surface-alt};
+    --progress-bar-color: #{$muted};
+
+    --progress-default-bar-border-color: #{$border-strong};
+    --progress-default-bar-fill-color: #{$muted};
+
+    --progress-success-bar-border-color: #{$success};
+    --progress-success-bar-fill-color: #{$success};
+
+    --progress-info-bar-border-color: #{$info};
+    --progress-info-bar-fill-color: #{$info};
+
+    --progress-warning-bar-border-color: #{$warning};
+    --progress-warning-bar-fill-color: #{$warning};
+
+    --progress-danger-bar-border-color: #{$danger};
+    --progress-danger-bar-fill-color: #{$danger};
+
+    --form-control-background-color: #{$form-background};
+    --form-control-color: #{$text};
+    --form-control-label-color: #{$muted};
+    --form-control-label-font-size: var(--font-size-xs);
+    --form-control-label-font-weight: var(--font-weight-semibold);
+    --form-control-label-letter-spacing: #{$label-letter-spacing};
+    --form-control-label-text-transform: #{$label-transform};
+    --form-control-border-color: #{$border-strong};
+    --form-control-error-background-color: #{rgba($danger, 0.1)};
+    --form-control-error-color: #{$danger};
+    --form-control-error-border-color: #{$danger};
+    --form-control-focus-background-color: #{$form-focus-background};
+    --form-control-focus-border-color: #{$accent};
+    --form-control-focus-color: #{$title};
+    --form-control-placeholder-color: #{rgba($muted, 0.72)};
+    --form-control-success-background-color: #{rgba($success, 0.1)};
+    --form-control-success-color: #{$success};
+    --form-control-success-border-color: #{$success};
+
+    --form-control-selection-background-color: #{rgba($accent, 0.16)};
+    --form-control-selection-border-color: #{$accent};
+    --form-control-selection-color: #{$title};
+    --form-control-selection-label-color: #{$accent};
+    --form-control-focus-ring: #{rgba($accent, 0.28)};
+
+    --calendar-background-color: #{$surface};
+    --calendar-border-color: #{$border-strong};
+    --calendar-header-background-color: #{$surface-alt};
+    --calendar-header-color: #{$title};
+    --calendar-day-color: #{$sub-title};
+    --calendar-day-hover-background-color: #{$surface-alt};
+    --calendar-day-selected-background-color: #{$accent};
+    --calendar-day-selected-color: #{$accent-contrast};
+    --calendar-day-disabled-color: #{rgba($muted, 0.42)};
+    --calendar-day-today-border-color: #{$accent};
+    --calendar-day-weekend-color: #{$warning};
+
+    --datepicker-input-background-color: #{$form-background};
+
+    --tooltip-background-color: #{$accent};
+    --tooltip-border-color: #{$accent};
+    --tooltip-color: #{$accent-contrast};
+
+    --popover-background-color: #{$surface};
+    --popover-border-color: #{$accent};
+    --popover-color: #{$text};
+    --popover-arrow-color: #{$accent};
+
+    --toast-info-background-color: #{$info};
+    --toast-info-color: #{$info-contrast};
+    --toast-info-border-color: #{$accent};
+
+    --toast-success-background-color: #{$success};
+    --toast-success-color: #{$success-contrast};
+    --toast-success-border-color: #{$success};
+
+    --toast-warning-background-color: #{$warning};
+    --toast-warning-color: #{$warning-contrast};
+    --toast-warning-border-color: #{$warning};
+
+    --toast-danger-background-color: #{$danger};
+    --toast-danger-color: #ffffff;
+    --toast-danger-border-color: #{$danger};
+
+    --loader-border-color: #{rgba($accent, 0.2)};
+    --loader-border-top-color: #{$accent};
+
+    --rating-color-success: #{$success};
+    --rating-color-warning: #{$warning};
+    --rating-color-danger: #{$danger};
+    --rating-color-info: #{$info};
+    --rating-empty-color: #{$surface-alt};
+    --rating-empty-label-color: #{$muted};
+    --rating-half-rate-empty-color: #{$surface-alt};
+
+    --slider-track-background-color: #{$surface-alt};
+    --slider-track-border-color: #{$border-strong};
+    --slider-track-hover-background-color: #{$accent-soft};
+    --slider-track-hover-border-color: #{$accent};
+    --slider-thumb-background-color: #{$accent};
+    --slider-thumb-border-color: #{$accent};
+    --slider-thumb-hover-background-color: #{$accent-strong};
+    --slider-thumb-hover-border-color: #{$accent-strong};
+
+    --chip-selected-background-color: #{rgba($accent, 0.16)};
+    --chip-selected-border-color: #{$accent};
+    --chip-hover-border-color: #{$accent};
+    --chip-hover-background-color: transparent;
+    --chip-hover-color: #{$sub-title};
+    --chip-selected-color: #{$accent};
+    --chip-selected-count-color: #{rgba($accent, 0.72)};
+
+    --note-container-effect-background-color: #{rgba($accent, 0.08)};
+    --note-container-effect-color: #{$text};
+    --note-container-effect-border-left-color: #{$accent};
+
+    --infuse-effect-hover-border-color: #{$accent};
+    --infuse-effect-hover-box-shadow-color: #{rgba($accent, 0.32)};
+    --infuse-effect-before-background: linear-gradient(90deg, #{$accent-strong}, #{$warning});
+
+    --up-lift-effect-hover-border-color: #{$accent};
+    --up-lift-effect-box-shadow-color: rgba(0, 0, 0, 0.42);
+    --up-lift-effect-hover-box-shadow-color: #{rgba($accent, 0.28)};
+    --up-lift-effect-before-background: linear-gradient(135deg, #{$accent} 0%, #{$wash-b} 100%);
+
+    --glow-box-shadow-color: 0 0 18px #{rgba($accent, 0.36)}, 0 0 8px #{rgba($wash-b, 0.18)};
+    --glow-hover-border-color: #{rgba($accent, 0.42)};
+}

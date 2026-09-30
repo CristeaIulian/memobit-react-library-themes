@@ -1,0 +1,34 @@
+// Signal Clarity theme - Dedicated to Network Audit app
+// Professional audit dark: navy glass, clear cyan, violet trace accents
+@use './profile-theme' as profile;
+
+[data-theme='signal-clarity'] {
+    @include profile.app-profile(
+        (
+            font-family: "'Inter', 'IBM Plex Sans', sans-serif",
+            display-family: "'Space Grotesk', 'Inter', sans-serif",
+            base: #08111d,
+            surface: #101b2b,
+            surface-alt: #152238,
+            surface-strong: #0b1726,
+            border: #243650,
+            border-strong: #314762,
+            text: #dbe7f3,
+            title: #f8fbff,
+            muted: #7f92aa,
+            sub-title: #b4c5d8,
+            accent: #38bdf8,
+            accent-strong: #0ea5e9,
+            accent-soft: #12324a,
+            accent-contrast: #06131d,
+            success: #2dd4bf,
+            warning: #fbbf24,
+            danger: #f43f5e,
+            info: #818cf8,
+            wash-a: #38bdf8,
+            wash-b: #818cf8,
+            title-transform: none,
+            title-letter-spacing: 0,
+        )
+    );
+}

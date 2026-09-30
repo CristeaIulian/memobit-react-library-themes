@@ -1,0 +1,269 @@
+// https://webapplayers.com/luna/modals.html
+// Luna theme - Dark theme with orange/amber accent
+[data-theme='luna'] {
+    --font-family: 'Roboto', sans-serif;
+
+    --body-background: var(--body-background-wash, var(--body-background-base));
+    --body-background-base: #252831;
+    --body-background-wash:
+        radial-gradient(58% 48% at 100% 0%, rgba(148, 155, 162, 0.12) 0%, transparent 65%),
+        radial-gradient(50% 45% at 0% 100%, rgba(91, 95, 99, 0.12) 0%, transparent 65%),
+        linear-gradient(155deg, #2e323d 0%, #20232b 55%, #272a33 100%);
+    --body-color: #ccced0;
+    --body-color-accent: #eeeeee;
+    --body-color-muted: #5b5f63;
+    --body-title-color: #ccced0;
+    --body-sub-title-color: #949ba2; // to update
+    --body-accent-color: #f6a821;
+    --body-danger-color: #db524b;
+
+    --backdrop-color: #0000007f;
+    --text-shadow: #333;
+    --box-shadow: #00000019;
+
+    --header-background-color: #3b3d46;
+    --header-border-bottom-color: #3b3d46;
+    --header-color: #6a727a;
+    --header-font-weight: 500;
+
+    --card-background-color: #3b3d46;
+    --card-background-accent-color: #444751;
+    --card-border-color: #3b3d46;
+    --card-backdrop-filter: none;
+    --card-border-accent-color: #f6a821; // active items - generally border-left 2-4px
+    --card-hover-border-color: #3b3d46; // to update
+    --card-color: #949ba2;
+    --card-accent-color: #949ba2;
+    --card-box-shadow: none;
+    --card-surface-box-shadow: var(--card-box-shadow);
+    --card-footer-background-color: #3b3d46;
+    --card-footer-color: #3b3d46;
+    --card-title-color: var(--body-title-color);
+    --card-title-font-family: var(--font-family, sans-serif);
+    --card-title-font-size: var(--font-size-md);
+    --card-title-font-style: normal;
+    --card-title-font-weight: var(--font-weight-bold);
+    --card-title-letter-spacing: normal;
+    --card-title-text-transform: none;
+
+    --links-color: #f6a821;
+    --links-hover-color: #f8bb52;
+
+    --delimiter-color: #3d404c;
+    --border-color: #3d404c;
+
+    --button-default-border-color: #616779;
+    --button-default-background-color: #515665;
+    --button-default-color: #ffffff;
+    --button-default-hover-border-color: #616779;
+    --button-default-hover-background-color: #61677919;
+    --button-default-hover-color: #ffffff;
+
+    --button-info-border-color: #56c0e0;
+    --button-info-background-color: #3f859a;
+    --button-info-color: #ffffff;
+    --button-info-hover-border-color: #56c0e0;
+    --button-info-hover-background-color: #56c0e019;
+    --button-info-hover-color: #ffffff;
+
+    --button-warning-border-color: #f7af3e;
+    --button-warning-background-color: #d69735;
+    --button-warning-color: #ffffff;
+    --button-warning-hover-border-color: #f7af3e;
+    --button-warning-hover-background-color: #f7af3e19;
+    --button-warning-hover-color: #ffffff;
+
+    --button-success-border-color: #1bbf89;
+    --button-success-background-color: #168963;
+    --button-success-color: #ffffff;
+    --button-success-hover-border-color: #1bbf89;
+    --button-success-hover-background-color: #1bbf8919;
+    --button-success-hover-color: #ffffff;
+
+    --button-danger-border-color: #db524b;
+    --button-danger-background-color: #b6443e;
+    --button-danger-color: #ffffff;
+    --button-danger-hover-border-color: #db524b;
+    --button-danger-hover-background-color: #db524b19;
+    --button-danger-hover-color: #ffffff;
+
+    --button-plain-color: #949ba2;
+    --button-plain-hover-color: #ffffff;
+    --button-ghost-border-color: transparent;
+    --button-ghost-background-color: transparent;
+    --button-ghost-color: var(--button-plain-color);
+    --button-ghost-hover-border-color: transparent;
+    --button-ghost-hover-background-color: var(--card-background-accent-color);
+    --button-ghost-hover-color: var(--button-plain-hover-color);
+    --dropdown-border-color: #3d404c;
+    --dropdown-header-background-color: #494b54;
+    --dropdown-header-border-focus-color: #494b54;
+    --dropdown-header-color: #bbc2c8;
+    --dropdown-options-background-color: #494b54;
+    --dropdown-options-color: #bbc2c8;
+    --dropdown-options-hover-background-color: #f6a821;
+    --dropdown-options-hover-color: #ffffff;
+    --dropdown-options-selected-background-color: #606370;
+    --dropdown-options-selected-color: #949ba2;
+    --dropdown-chips-background-color: #494b54;
+    --dropdown-chips-color: #ffffff;
+    --dropdown-chips-border-color: #616779;
+    --dropdown-chips-hover-background-color: #52555f;
+    --dropdown-action-color: #949ba2;
+    --dropdown-action-background-color: #494b54;
+    --dropdown-action-hover-color: #ffffff;
+    --dropdown-action-hover-background-color: #3d3e45;
+
+    --tabs-active-background-color: #44464f7f;
+    --tabs-active-color: #ffffff;
+    --tabs-inactive-background-color: transparent;
+    --tabs-inactive-color: #949ba2;
+
+    --modal-background-color: #30333b;
+    --modal-border-color: #44464f7f;
+    --modal-backdrop-filter: none;
+    --modal-header-background-color: #44464f7f;
+    --modal-header-color: #ffffff;
+    --modal-title-color: var(--modal-header-color);
+    --modal-title-font-family: var(--font-family, sans-serif);
+    --modal-title-font-size: var(--font-size-xl);
+    --modal-title-font-style: normal;
+    --modal-title-font-weight: var(--font-weight-semibold);
+    --modal-title-letter-spacing: normal;
+    --modal-title-text-transform: none;
+    --modal-body-color: #949ba2;
+    --modal-footer-background-color: #2b2e36;
+    --modal-color: #ffffff;
+    --modal-box-shadow: 0 0 3px 1px #111;
+    --modal-surface-box-shadow: var(--modal-box-shadow);
+    --modal-box-shadow-hover: 0 0 1px 1px #222;
+
+    --list-alternate-background-color: #44464f;
+    --list-hover-background-color: #494b54;
+
+    --progress-bar-background-color: #949ba2;
+    --progress-bar-color: #949ba2;
+
+    --progress-default-bar-border-color: #616779;
+    --progress-default-bar-fill-color: #3d404c;
+
+    --progress-success-bar-border-color: #1bbf89;
+    --progress-success-bar-fill-color: #1bbf89;
+
+    --progress-info-bar-border-color: #56c0e0;
+    --progress-info-bar-fill-color: #56c0e0;
+
+    --progress-warning-bar-border-color: #f7af3e;
+    --progress-warning-bar-fill-color: #f7af3e;
+
+    --progress-danger-bar-border-color: #db524b;
+    --progress-danger-bar-fill-color: #db524b;
+
+    --form-control-background-color: #494b54;
+    --form-control-color: #bbc2c8;
+    --form-control-label-color: var(--body-color-muted);
+    --form-control-label-font-size: var(--font-size-sm);
+    --form-control-label-font-weight: var(--font-weight-medium);
+    --form-control-label-letter-spacing: normal;
+    --form-control-label-text-transform: none;
+    --form-control-border-color: #494b54;
+    --form-control-error-background-color: #db524b11;
+    --form-control-error-color: #db524b;
+    --form-control-error-border-color: #db524b;
+    --form-control-focus-background-color: #52555f;
+    --form-control-focus-border-color: #52555f;
+    --form-control-focus-color: #949ba2;
+    --form-control-placeholder-color: #91969a;
+    --form-control-success-background-color: #1bbf8911;
+    --form-control-success-color: #1bbf89;
+    --form-control-success-border-color: #1bbf89;
+
+    --form-control-selection-background-color: #f7af3e;
+    --form-control-selection-border-color: #f7af3e;
+    --form-control-selection-color: #fff;
+    --form-control-selection-label-color: #fff;
+    --form-control-focus-ring: rgba(246, 168, 33, 0.4);
+
+    --calendar-background-color: #30333b;
+    --calendar-border-color: #3d404c;
+    --calendar-header-background-color: #3b3d46;
+    --calendar-header-color: #ffffff;
+    --calendar-day-color: #bbc2c8;
+    --calendar-day-hover-background-color: #494b54;
+    --calendar-day-selected-background-color: #f6a821;
+    --calendar-day-selected-color: #ffffff;
+    --calendar-day-disabled-color: #5b5f63;
+    --calendar-day-today-border-color: #f6a821;
+    --calendar-day-weekend-color: #f7af3e;
+
+    --datepicker-input-background-color: #494b54;
+
+    --tooltip-background-color: #f6a526;
+    --tooltip-border-color: #f6a526;
+    --tooltip-color: #ffffff;
+
+    --popover-background-color: #30333b;
+    --popover-border-color: #f6a526;
+    --popover-color: #f6a821;
+    --popover-arrow-color: #f6a821;
+
+    --toast-info-background-color: #56c0e0;
+    --toast-info-color: #ffffff;
+    --toast-info-border-color: #56c0e0;
+
+    --toast-success-background-color: #1bbf89;
+    --toast-success-color: #ffffff;
+    --toast-success-border-color: #1bbf89;
+
+    --toast-warning-background-color: #f7af3e;
+    --toast-warning-color: #ffffff;
+    --toast-warning-border-color: #f7af3e;
+
+    --toast-danger-background-color: #db524b;
+    --toast-danger-color: #ffffff;
+    --toast-danger-border-color: #db524b;
+
+    --loader-border-color: #f6a82133;
+    --loader-border-top-color: #f6a821;
+
+    --rating-color-success: #1bbf89;
+    --rating-color-warning: #f7af3e;
+    --rating-color-danger: #db524b;
+    --rating-color-info: #56c0e0;
+    --rating-empty-color: #949ba2;
+    --rating-empty-label-color: #eeeeee;
+    --rating-half-rate-empty-color: #949ba2;
+
+    --slider-track-background-color: #3b3d46;
+    --slider-track-border-color: #616779;
+    --slider-track-hover-background-color: #44464f;
+    --slider-track-hover-border-color: #6a727a;
+    --slider-thumb-background-color: #f6a821;
+    --slider-thumb-border-color: #f6a821;
+    --slider-thumb-hover-background-color: #f8bb52;
+    --slider-thumb-hover-border-color: #f8bb52;
+
+    --chip-selected-background-color: var(--card-background-accent-color);
+    --chip-selected-border-color: var(--body-accent-color);
+    --chip-hover-border-color: var(--body-accent-color);
+    --chip-hover-background-color: var(--card-background-accent-color);
+    --chip-hover-color: var(--body-color-accent);
+    --chip-selected-color: var(--body-accent-color);
+    --chip-selected-count-color: var(--body-color-muted);
+
+    --note-container-effect-background-color: #f6a82119;
+    --note-container-effect-color: #949ba2;
+    --note-container-effect-border-left-color: #f6a821;
+
+    --infuse-effect-hover-border-color: #f6a821;
+    --infuse-effect-hover-box-shadow-color: #f6a82133;
+    --infuse-effect-before-background: linear-gradient(90deg, #f6a821, #f8bb52);
+
+    --up-lift-effect-hover-border-color: #f6a821;
+    --up-lift-effect-box-shadow-color: #0000004c;
+    --up-lift-effect-hover-box-shadow-color: #f6a82133;
+    --up-lift-effect-before-background: linear-gradient(135deg, #f6a821 0%, #f8bb52 100%);
+
+    --glow-box-shadow-color: 0 0 16px rgba(246, 168, 33, 0.3), 0 0 6px rgba(246, 168, 33, 0.15);
+    --glow-hover-border-color: rgba(246, 168, 33, 0.35);
+}

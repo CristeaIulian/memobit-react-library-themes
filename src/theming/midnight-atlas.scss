@@ -1,0 +1,35 @@
+// Midnight Atlas theme - Dedicated to Voyage app
+// Travel journal dark: black canvas, olive surfaces, bright destination green, warm itinerary amber
+@use './profile-theme' as profile;
+
+[data-theme='midnight-atlas'] {
+    @include profile.app-profile(
+        (
+            font-family: "'Inter', 'DM Sans', sans-serif",
+            display-family: "'Newsreader', Georgia, serif",
+            base: #090b09,
+            surface: #1b1d19,
+            surface-alt: #21231f,
+            surface-strong: #0f110f,
+            border: #2a2d27,
+            border-strong: #34382f,
+            text: #ddd8ca,
+            title: #fff7e8,
+            muted: #747061,
+            sub-title: #aaa28e,
+            accent: #16c76a,
+            accent-strong: #10b45f,
+            accent-soft: #193324,
+            accent-contrast: #04110a,
+            success: #16c76a,
+            warning: #f5a400,
+            danger: #ef5b45,
+            info: #2f80d8,
+            wash-a: #16c76a,
+            wash-b: #f05a28,
+            title-transform: none,
+            title-letter-spacing: 0,
+            label-letter-spacing: 0.06em,
+        )
+    );
+}

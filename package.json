@@ -1,0 +1,77 @@
+{
+  "name": "@memobit/themes",
+  "version": "1.0.0",
+  "description": "64 themes for the Memobit apps — each published as its own stylesheet so an app loads only the one it is showing, with preview palettes for the theme picker.",
+  "keywords": [
+    "css",
+    "themes",
+    "theming",
+    "design-tokens",
+    "dark-mode",
+    "scss",
+    "memobit"
+  ],
+  "author": "Iulian Cristea <iulianx@gmail.com>",
+  "license": "Apache-2.0",
+  "homepage": "https://react.memobit.ro/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CristeaIulian/memobit-react-library-themes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CristeaIulian/memobit-react-library-themes/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./vite": {
+      "types": "./dist/vite.d.ts",
+      "import": "./dist/vite.js"
+    },
+    "./themes.css": "./dist/themes.css",
+    "./themes/*.css": "./dist/themes/*.css",
+    "./src/theming/*.scss": "./src/theming/*.scss",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src/theming"
+  ],
+  "scripts": {
+    "build:themes": "node scripts/build-themes.mjs",
+    "build": "npm run build:themes && vite build && npm pack",
+    "release": "npm run build && npm publish",
+    "prepublishOnly": "npm run build:themes && vite build",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.4",
+    "@types/node": "25.8.0",
+    "eslint": "9.39.4",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-import-x": "4.17.1",
+    "eslint-plugin-prettier": "5.5.5",
+    "eslint-plugin-simple-import-sort": "13.0.0",
+    "globals": "17.6.0",
+    "prettier": "3.8.3",
+    "sass": "1.99.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.59.3",
+    "vite": "8.1.5",
+    "vite-plugin-dts": "5.0.0"
+  }
+}

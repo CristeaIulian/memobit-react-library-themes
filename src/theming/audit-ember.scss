@@ -1,0 +1,286 @@
+// Audit Ember theme - Dashboard-style dark theme for the Network Audit tool
+// Near-black zinc surfaces, Geist typography, single ember-orange accent, semantic chip palette
+[data-theme='audit-ember'] {
+    --font-family: 'Geist', 'Inter', system-ui, sans-serif;
+    --font-family-display: 'Geist', 'Inter', system-ui, sans-serif;
+    --font-family-mono: 'Geist Mono', 'JetBrains Mono', 'Fira Code', monospace;
+
+    --body-background: var(--body-background-wash, var(--body-background-base));
+    --body-background-base: #09090b;
+    --body-background-wash:
+        radial-gradient(60% 50% at 100% 0%, rgba(251, 146, 60, 0.10) 0%, transparent 65%),
+        radial-gradient(45% 40% at 0% 100%, rgba(249, 115, 22, 0.06) 0%, transparent 70%),
+        linear-gradient(155deg, #0c0c10 0%, #09090b 55%, #08080a 100%);
+    --body-color: #d4d4d8;
+    --body-color-accent: #fafafa;
+    --body-color-muted: #71717a;
+    --body-title-color: #fafafa;
+    --body-sub-title-color: #a1a1aa;
+    --body-accent-color: #fb923c;
+    --body-danger-color: #f43f5e;
+
+    --backdrop-color: rgba(4, 4, 6, 0.74);
+    --text-shadow: rgba(0, 0, 0, 0.5);
+    --box-shadow: rgba(0, 0, 0, 0.6);
+
+    --header-background-color: #0c0c10;
+    --header-border-bottom-color: #1f1f27;
+    --header-color: #fafafa;
+    --header-font-weight: 600;
+
+    --card-background-color: #131318;
+    --card-background-accent-color: #181820;
+    --card-border-color: #23232b;
+    --card-backdrop-filter: none;
+    --card-border-accent-color: #fb923c;
+    --card-hover-border-color: #34343f;
+    --card-color: #d4d4d8;
+    --card-accent-color: #fb923c;
+    --card-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.36), 0 1px 2px rgba(0, 0, 0, 0.4);
+    --card-surface-box-shadow: 0 0 0 1px rgba(35, 35, 43, 0.6), 0 18px 40px -20px rgba(0, 0, 0, 0.65);
+    --card-footer-background-color: #0f0f14;
+    --card-footer-color: #a1a1aa;
+    --card-title-color: var(--body-title-color);
+    --card-title-font-family: var(--font-family, sans-serif);
+    --card-title-font-size: var(--font-size-lg);
+    --card-title-font-style: normal;
+    --card-title-font-weight: 600;
+    --card-title-letter-spacing: -0.01em;
+    --card-title-text-transform: none;
+
+    --links-color: #fb923c;
+    --links-hover-color: #fdba74;
+
+    --delimiter-color: #1f1f27;
+    --border-color: #23232b;
+
+    --button-default-border-color: #2a2a32;
+    --button-default-background-color: #18181c;
+    --button-default-color: #e4e4e7;
+    --button-default-hover-border-color: #3a3a44;
+    --button-default-hover-background-color: #1f1f25;
+    --button-default-hover-color: #fafafa;
+
+    --button-info-border-color: #fb923c;
+    --button-info-background-color: #fb923c;
+    --button-info-color: #1a0d04;
+    --button-info-hover-border-color: #fdba74;
+    --button-info-hover-background-color: #fdba74;
+    --button-info-hover-color: #1a0d04;
+
+    --button-warning-border-color: #f59e0b;
+    --button-warning-background-color: #f59e0b;
+    --button-warning-color: #1a1004;
+    --button-warning-hover-border-color: #fbbf24;
+    --button-warning-hover-background-color: #fbbf24;
+    --button-warning-hover-color: #1a1004;
+
+    --button-success-border-color: #34d399;
+    --button-success-background-color: #34d399;
+    --button-success-color: #04231f;
+    --button-success-hover-border-color: #6ee7b7;
+    --button-success-hover-background-color: #6ee7b7;
+    --button-success-hover-color: #04231f;
+
+    --button-danger-border-color: #f43f5e;
+    --button-danger-background-color: #f43f5e;
+    --button-danger-color: #1a0408;
+    --button-danger-hover-border-color: #fb7185;
+    --button-danger-hover-background-color: #fb7185;
+    --button-danger-hover-color: #1a0408;
+
+    --button-plain-color: #a1a1aa;
+    --button-plain-hover-color: #fafafa;
+    --button-ghost-border-color: transparent;
+    --button-ghost-background-color: transparent;
+    --button-ghost-color: var(--button-plain-color);
+    --button-ghost-hover-border-color: transparent;
+    --button-ghost-hover-background-color: #1b1b22;
+    --button-ghost-hover-color: var(--button-plain-hover-color);
+
+    --dropdown-border-color: #2a2a32;
+    --dropdown-header-background-color: #131318;
+    --dropdown-header-border-focus-color: #fb923c;
+    --dropdown-header-color: #e4e4e7;
+    --dropdown-options-background-color: #131318;
+    --dropdown-options-color: #d4d4d8;
+    --dropdown-options-hover-background-color: rgba(251, 146, 60, 0.10);
+    --dropdown-options-hover-color: #fafafa;
+    --dropdown-options-selected-background-color: rgba(251, 146, 60, 0.18);
+    --dropdown-options-selected-color: #fafafa;
+    --dropdown-chips-background-color: #fb923c;
+    --dropdown-chips-color: #1a0d04;
+    --dropdown-chips-border-color: #fb923c;
+    --dropdown-chips-hover-background-color: #fdba74;
+    --dropdown-action-color: #a1a1aa;
+    --dropdown-action-background-color: #131318;
+    --dropdown-action-hover-color: #fafafa;
+    --dropdown-action-hover-background-color: #1b1b22;
+
+    --tabs-active-background-color: #fb923c;
+    --tabs-active-color: #1a0d04;
+    --tabs-inactive-background-color: transparent;
+    --tabs-inactive-color: #71717a;
+
+    --modal-background-color: #131318;
+    --modal-border-color: #23232b;
+    --modal-backdrop-filter: none;
+    --modal-header-background-color: #0f0f14;
+    --modal-header-color: #fafafa;
+    --modal-title-color: var(--modal-header-color);
+    --modal-title-font-family: var(--font-family, sans-serif);
+    --modal-title-font-size: var(--font-size-sm);
+    --modal-title-font-style: normal;
+    --modal-title-font-weight: var(--font-weight-semibold);
+    --modal-title-letter-spacing: 0.08em;
+    --modal-title-text-transform: uppercase;
+    --modal-body-color: #d4d4d8;
+    --modal-footer-background-color: #0f0f14;
+    --modal-color: #d4d4d8;
+    --modal-box-shadow: 0 32px 90px rgba(0, 0, 0, 0.6), 0 8px 24px rgba(0, 0, 0, 0.4);
+    --modal-surface-box-shadow: 0 0 0 1px rgba(35, 35, 43, 0.8), 0 24px 60px -20px rgba(0, 0, 0, 0.7);
+    --modal-box-shadow-hover: 0 36px 100px rgba(0, 0, 0, 0.66), 0 10px 28px rgba(0, 0, 0, 0.46);
+
+    --list-alternate-background-color: #101015;
+    --list-hover-background-color: rgba(251, 146, 60, 0.06);
+
+    --progress-bar-background-color: #1f1f27;
+    --progress-bar-color: #2a2a32;
+
+    --progress-default-bar-border-color: #34343f;
+    --progress-default-bar-fill-color: #52525b;
+
+    --progress-success-bar-border-color: #34d399;
+    --progress-success-bar-fill-color: #34d399;
+
+    --progress-info-bar-border-color: #fb923c;
+    --progress-info-bar-fill-color: #fb923c;
+
+    --progress-warning-bar-border-color: #f59e0b;
+    --progress-warning-bar-fill-color: #f59e0b;
+
+    --progress-danger-bar-border-color: #f43f5e;
+    --progress-danger-bar-fill-color: #f43f5e;
+
+    --form-control-background-color: #131318;
+    --form-control-color: #fafafa;
+    --form-control-label-color: #a1a1aa;
+    --form-control-label-font-size: var(--font-size-xs);
+    --form-control-label-font-weight: var(--font-weight-medium);
+    --form-control-label-letter-spacing: 0.06em;
+    --form-control-label-text-transform: uppercase;
+    --form-control-border-color: #2a2a32;
+    --form-control-error-background-color: rgba(244, 63, 94, 0.08);
+    --form-control-error-color: #fb7185;
+    --form-control-error-border-color: #f43f5e;
+    --form-control-focus-background-color: #161620;
+    --form-control-focus-border-color: #fb923c;
+    --form-control-focus-color: #fafafa;
+    --form-control-placeholder-color: #52525b;
+    --form-control-success-background-color: rgba(52, 211, 153, 0.08);
+    --form-control-success-color: #6ee7b7;
+    --form-control-success-border-color: #34d399;
+
+    --form-control-selection-background-color: #fb923c;
+    --form-control-selection-border-color: #fb923c;
+    --form-control-selection-color: #1a0d04;
+    --form-control-selection-label-color: #fafafa;
+    --form-control-focus-ring: rgba(251, 146, 60, 0.22);
+
+    --calendar-background-color: #131318;
+    --calendar-border-color: #2a2a32;
+    --calendar-header-background-color: #18181c;
+    --calendar-header-color: #fafafa;
+    --calendar-day-color: #d4d4d8;
+    --calendar-day-hover-background-color: #1f1f27;
+    --calendar-day-selected-background-color: #fb923c;
+    --calendar-day-selected-color: #1a0d04;
+    --calendar-day-disabled-color: #3f3f46;
+    --calendar-day-today-border-color: #fb923c;
+    --calendar-day-weekend-color: #a1a1aa;
+
+    --datepicker-input-background-color: #131318;
+
+    --tooltip-background-color: #fb923c;
+    --tooltip-border-color: #fb923c;
+    --tooltip-color: #1a0d04;
+
+    --popover-background-color: #131318;
+    --popover-border-color: #fb923c;
+    --popover-color: #d4d4d8;
+    --popover-arrow-color: #fb923c;
+
+    --toast-info-background-color: #fb923c;
+    --toast-info-color: #1a0d04;
+    --toast-info-border-color: #fdba74;
+
+    --toast-success-background-color: #34d399;
+    --toast-success-color: #04231f;
+    --toast-success-border-color: #6ee7b7;
+
+    --toast-warning-background-color: #f59e0b;
+    --toast-warning-color: #1a1004;
+    --toast-warning-border-color: #fbbf24;
+
+    --toast-danger-background-color: #f43f5e;
+    --toast-danger-color: #1a0408;
+    --toast-danger-border-color: #fb7185;
+
+    --loader-border-color: rgba(251, 146, 60, 0.16);
+    --loader-border-top-color: #fb923c;
+
+    --rating-color-success: #34d399;
+    --rating-color-warning: #f59e0b;
+    --rating-color-danger: #f43f5e;
+    --rating-color-info: #fb923c;
+    --rating-empty-color: #2a2a32;
+    --rating-empty-label-color: #71717a;
+    --rating-half-rate-empty-color: #2a2a32;
+
+    --slider-track-background-color: #1f1f27;
+    --slider-track-border-color: #2a2a32;
+    --slider-track-hover-background-color: #2a2a32;
+    --slider-track-hover-border-color: #34343f;
+    --slider-thumb-background-color: #fb923c;
+    --slider-thumb-border-color: #fb923c;
+    --slider-thumb-hover-background-color: #fdba74;
+    --slider-thumb-hover-border-color: #fdba74;
+
+    --chip-selected-background-color: #fb923c;
+    --chip-selected-border-color: #fb923c;
+    --chip-hover-border-color: #fb923c;
+    --chip-hover-background-color: transparent;
+    --chip-hover-color: var(--body-color);
+    --chip-selected-color: #1a0d04;
+    --chip-selected-count-color: rgba(26, 13, 4, 0.7);
+
+    --note-container-effect-background-color: rgba(251, 146, 60, 0.08);
+    --note-container-effect-color: #d4d4d8;
+    --note-container-effect-border-left-color: #fb923c;
+
+    --infuse-effect-hover-border-color: #fb923c;
+    --infuse-effect-hover-box-shadow-color: rgba(251, 146, 60, 0.28);
+    --infuse-effect-before-background: linear-gradient(90deg, #fb923c, #f97316);
+
+    --up-lift-effect-hover-border-color: #fb923c;
+    --up-lift-effect-box-shadow-color: rgba(0, 0, 0, 0.5);
+    --up-lift-effect-hover-box-shadow-color: rgba(251, 146, 60, 0.3);
+    --up-lift-effect-before-background: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
+
+    --glow-box-shadow-color: 0 0 18px rgba(251, 146, 60, 0.32), 0 0 8px rgba(249, 115, 22, 0.2);
+    --glow-hover-border-color: rgba(251, 146, 60, 0.34);
+
+    // Intent-tinted card backgrounds — radial wash centered on the card,
+    // tuned for the near-black audit-ember surface so the glow reads without overpowering text.
+    // Consumed by both MiniStatsCard (filled variants) and Card (variant prop).
+    --card-tint-default-background:
+        radial-gradient(110% 80% at 50% 35%, rgba(251, 146, 60, 0.18) 0%, transparent 65%);
+    --card-tint-danger-background:
+        radial-gradient(110% 80% at 50% 35%, rgba(244, 63, 94, 0.22) 0%, transparent 65%);
+    --card-tint-warning-background:
+        radial-gradient(110% 80% at 50% 35%, rgba(245, 158, 11, 0.20) 0%, transparent 65%);
+    --card-tint-info-background:
+        radial-gradient(110% 80% at 50% 35%, rgba(96, 165, 250, 0.20) 0%, transparent 65%);
+    --card-tint-success-background:
+        radial-gradient(110% 80% at 50% 35%, rgba(52, 211, 153, 0.20) 0%, transparent 65%);
+}
