@@ -1,6 +1,6 @@
 {
   "name": "@memobit/themes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "64 themes for the Memobit apps — each published as its own stylesheet so an app loads only the one it is showing, with preview palettes for the theme picker.",
   "keywords": [
     "css",

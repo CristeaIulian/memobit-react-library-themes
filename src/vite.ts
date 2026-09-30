@@ -8,7 +8,7 @@ import { THEME_ASSET_DIR } from './index';
 // package's dependencies.
 interface ThemePlugin {
     name: string;
-    config(): { define: Record<string, string> };
+    config(userConfig: { base?: string }): { define: Record<string, string> };
     configureServer(server: {
         middlewares: {
             use(handler: (req: { url?: string }, res: ServerResponse, next: () => void) => void): void;
@@ -67,12 +67,16 @@ export const memobitThemes = (options: MemobitThemesOptions = {}): ThemePlugin =
     const { root = process.cwd() } = options;
     const themes = readThemeFiles(root);
 
-    const urls = Object.fromEntries([...themes.keys()].map(name => [name, `/${THEME_ASSET_DIR}/${name}.css`]));
-
     return {
         name: 'memobit-themes',
 
-        config() {
+        // URLs have to be built from the app's own base, not assumed to sit at the site
+        // root. Several of these apps are served from a subpath, where a root-absolute
+        // /memobit-themes/... 404s and the app renders unthemed.
+        config(userConfig: { base?: string }) {
+            const base = (userConfig.base ?? '/').replace(/\/+$/, '');
+            const urls = Object.fromEntries([...themes.keys()].map(name => [name, `${base}/${THEME_ASSET_DIR}/${name}.css`]));
+
             return { define: { __MEMOBIT_THEME_URLS__: JSON.stringify(urls) } };
         },
 
@@ -80,14 +84,18 @@ export const memobitThemes = (options: MemobitThemesOptions = {}): ThemePlugin =
         configureServer(server) {
             server.middlewares.use((req, res, next) => {
                 const path = (req.url ?? '').split('?')[0];
+                const marker = `/${THEME_ASSET_DIR}/`;
+                const at = path.indexOf(marker);
 
-                if (!path.startsWith(`/${THEME_ASSET_DIR}/`) || !path.endsWith('.css')) {
+                // Matched anywhere rather than at the start, so a base-prefixed URL still
+                // resolves in dev the same way it does in a built app.
+                if (at === -1 || !path.endsWith('.css')) {
                     next();
 
                     return;
                 }
 
-                const css = themes.get(path.slice(`/${THEME_ASSET_DIR}/`.length, -4));
+                const css = themes.get(path.slice(at + marker.length, -4));
 
                 if (css === undefined) {
                     next();
