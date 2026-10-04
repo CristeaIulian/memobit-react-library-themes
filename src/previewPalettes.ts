@@ -261,6 +261,14 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-background-color': '#f4f1e8',
         '--header-border-bottom-color': 'rgba(30, 36, 51, 0.12)',
     },
+    'kindred-ink': {
+        '--body-background': 'radial-gradient(55% 50% at 100% 0%, rgba(224, 137, 106, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(217, 168, 92, 0.09) 0%, transparent 65%), linear-gradient(160deg, #211a28 0%, #17131c 55%, #120f16 100%)',
+        '--body-accent-color': '#e0896a',
+        '--body-color-muted': '#a3978f',
+        '--card-background-color': '#221c29',
+        '--header-background-color': '#1d1823',
+        '--header-border-bottom-color': 'rgba(224, 137, 106, 0.16)',
+    },
     'lavender-mist': {
         '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(168, 85, 247, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(216, 180, 254, 0.16) 0%, transparent 65%), linear-gradient(155deg, #fffaff 0%, #f7edff 55%, #fdfbff 100%)',
         '--body-accent-color': '#a855f7',

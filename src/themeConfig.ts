@@ -420,6 +420,13 @@ export const THEME_CONFIGS: ThemeConfig[] = [
         fontUrl: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap',
         fontUrlMono: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap',
     },
+    {
+        value: 'kindred-ink',
+        label: 'Kindred Ink',
+        recommendedApps: ['Recall'],
+        fontUrl: 'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap',
+        fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap',
+    },
 ];
 
 export const FAVORITE_THEMES = new Set([
