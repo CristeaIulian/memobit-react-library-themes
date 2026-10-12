@@ -8,8 +8,8 @@ export default defineConfig({
     build: {
         lib: {
             entry: {
-                index: resolve(__dirname, 'src/index.ts'),
-                vite: resolve(__dirname, 'src/vite.ts'),
+                index: resolve(import.meta.dirname, 'src/index.ts'),
+                vite: resolve(import.meta.dirname, 'src/vite.ts'),
             },
             formats: ['es'],
         },
