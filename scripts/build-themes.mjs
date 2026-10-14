@@ -9,10 +9,9 @@
 
 import { mkdirSync, readdirSync, writeFileSync } from 'fs';
 import { dirname, join, resolve } from 'path';
-import { fileURLToPath } from 'url';
-
 import { format, resolveConfig } from 'prettier';
 import * as sass from 'sass';
+import { fileURLToPath } from 'url';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
@@ -49,7 +48,7 @@ const resolveLiteral = (css, value, seen = new Set()) => {
     if (!seen.has(token)) {
         seen.add(token);
 
-        const declared = [...css.matchAll(new RegExp(`${token}\s*:\s*([^;}]+)`, 'g'))].map(match => match[1].trim());
+        const declared = [...css.matchAll(new RegExp(`${token}s*:s*([^;}]+)`, 'g'))].map(match => match[1].trim());
         const direct = declared.filter(candidate => !candidate.includes('var(')).pop();
 
         if (direct !== undefined) {
@@ -88,7 +87,7 @@ for (const name of themeNames) {
     const palette = {};
 
     for (const token of PREVIEW_TOKENS) {
-        const values = [...css.matchAll(new RegExp(`${token}\s*:\s*([^;}]+)`, 'g'))].map(match => match[1].trim());
+        const values = [...css.matchAll(new RegExp(`${token}s*:s*([^;}]+)`, 'g'))].map(match => match[1].trim());
 
         // Take the last LITERAL value, not simply the last one. Nearly every theme declares
         // --body-background as a colour and then re-declares it as
@@ -121,7 +120,7 @@ writeFileSync(join(distDir, 'themes.css'), `${aggregate.css}\n`);
 const entries = Object.entries(palettes)
     .map(([name, palette]) => {
         const tokens = Object.entries(palette)
-            .map(([token, value]) => `        '${token}': '${value.replace(/'/g, "\'")}',`)
+            .map(([token, value]) => `        '${token}': ${JSON.stringify(value)},`)
             .join('\n');
 
         return `    '${name}': {\n${tokens}\n    },`;
