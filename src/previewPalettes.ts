@@ -59,7 +59,7 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
     },
     'audit-ember': {
         '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(251, 146, 60, 0.10) 0%, transparent 65%), radial-gradient(45% 40% at 0% 100%, rgba(249, 115, 22, 0.06) 0%, transparent 70%), linear-gradient(155deg, #0c0c10 0%, #09090b 55%, #08080a 100%)',
+            'radial-gradient(60% 50% at 100% 0%, rgba(251, 146, 60, 0.1) 0%, transparent 65%), radial-gradient(45% 40% at 0% 100%, rgba(249, 115, 22, 0.06) 0%, transparent 70%), linear-gradient(155deg, #0c0c10 0%, #09090b 55%, #08080a 100%)',
         '--body-accent-color': '#fb923c',
         '--body-color-muted': '#71717a',
         '--card-background-color': '#131318',
@@ -426,7 +426,7 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
     },
     'orbital-night': {
         '--body-background':
-            'repeating-linear-gradient(0deg, transparent 0 39px, rgba(95, 176, 255, 0.035) 39px 40px), repeating-linear-gradient(90deg, transparent 0 39px, rgba(95, 176, 255, 0.035) 39px 40px), radial-gradient(60% 50% at 100% 0%, rgba(95, 176, 255, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(56, 189, 248, 0.10) 0%, transparent 65%), linear-gradient(160deg, #14202e 0%, #0b1424 55%, #0e1828 100%)',
+            'repeating-linear-gradient(0deg, transparent 0 39px, rgba(95, 176, 255, 0.035) 39px 40px), repeating-linear-gradient(90deg, transparent 0 39px, rgba(95, 176, 255, 0.035) 39px 40px), radial-gradient(60% 50% at 100% 0%, rgba(95, 176, 255, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(56, 189, 248, 0.1) 0%, transparent 65%), linear-gradient(160deg, #14202e 0%, #0b1424 55%, #0e1828 100%)',
         '--body-accent-color': '#5fb0ff',
         '--body-color-muted': '#6f7f95',
         '--card-background-color': '#14213a',
