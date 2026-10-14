@@ -8,9 +8,8 @@
     --body-background: var(--body-background-wash, var(--body-background-base));
     --body-background-base: #09090b;
     --body-background-wash:
-        radial-gradient(60% 50% at 100% 0%, rgba(251, 146, 60, 0.10) 0%, transparent 65%),
-        radial-gradient(45% 40% at 0% 100%, rgba(249, 115, 22, 0.06) 0%, transparent 70%),
-        linear-gradient(155deg, #0c0c10 0%, #09090b 55%, #08080a 100%);
+        radial-gradient(60% 50% at 100% 0%, rgba(251, 146, 60, 0.1) 0%, transparent 65%),
+        radial-gradient(45% 40% at 0% 100%, rgba(249, 115, 22, 0.06) 0%, transparent 70%), linear-gradient(155deg, #0c0c10 0%, #09090b 55%, #08080a 100%);
     --body-color: #d4d4d8;
     --body-color-accent: #fafafa;
     --body-color-muted: #71717a;
@@ -104,7 +103,7 @@
     --dropdown-header-color: #e4e4e7;
     --dropdown-options-background-color: #131318;
     --dropdown-options-color: #d4d4d8;
-    --dropdown-options-hover-background-color: rgba(251, 146, 60, 0.10);
+    --dropdown-options-hover-background-color: rgba(251, 146, 60, 0.1);
     --dropdown-options-hover-color: #fafafa;
     --dropdown-options-selected-background-color: rgba(251, 146, 60, 0.18);
     --dropdown-options-selected-color: #fafafa;
@@ -273,14 +272,9 @@
     // Intent-tinted card backgrounds — radial wash centered on the card,
     // tuned for the near-black audit-ember surface so the glow reads without overpowering text.
     // Consumed by both MiniStatsCard (filled variants) and Card (variant prop).
-    --card-tint-default-background:
-        radial-gradient(110% 80% at 50% 35%, rgba(251, 146, 60, 0.18) 0%, transparent 65%);
-    --card-tint-danger-background:
-        radial-gradient(110% 80% at 50% 35%, rgba(244, 63, 94, 0.22) 0%, transparent 65%);
-    --card-tint-warning-background:
-        radial-gradient(110% 80% at 50% 35%, rgba(245, 158, 11, 0.20) 0%, transparent 65%);
-    --card-tint-info-background:
-        radial-gradient(110% 80% at 50% 35%, rgba(96, 165, 250, 0.20) 0%, transparent 65%);
-    --card-tint-success-background:
-        radial-gradient(110% 80% at 50% 35%, rgba(52, 211, 153, 0.20) 0%, transparent 65%);
+    --card-tint-default-background: radial-gradient(110% 80% at 50% 35%, rgba(251, 146, 60, 0.18) 0%, transparent 65%);
+    --card-tint-danger-background: radial-gradient(110% 80% at 50% 35%, rgba(244, 63, 94, 0.22) 0%, transparent 65%);
+    --card-tint-warning-background: radial-gradient(110% 80% at 50% 35%, rgba(245, 158, 11, 0.2) 0%, transparent 65%);
+    --card-tint-info-background: radial-gradient(110% 80% at 50% 35%, rgba(96, 165, 250, 0.2) 0%, transparent 65%);
+    --card-tint-success-background: radial-gradient(110% 80% at 50% 35%, rgba(52, 211, 153, 0.2) 0%, transparent 65%);
 }

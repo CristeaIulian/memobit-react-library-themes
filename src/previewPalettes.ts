@@ -14,7 +14,8 @@ export type PreviewToken =
 
 export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewToken, string>>>> = {
     'amber-meridian': {
-        '--body-background': 'radial-gradient(80% 50% at 50% 100%, rgba(217, 119, 6, 0.18) 0%, transparent 65%), radial-gradient(45% 40% at 100% 0%, rgba(251, 191, 36, 0.1) 0%, transparent 65%), radial-gradient(130% 110% at 10% 0%, #1a1208 0%, #100c06 55%, #160e08 100%)',
+        '--body-background':
+            'radial-gradient(80% 50% at 50% 100%, rgba(217, 119, 6, 0.18) 0%, transparent 65%), radial-gradient(45% 40% at 100% 0%, rgba(251, 191, 36, 0.1) 0%, transparent 65%), radial-gradient(130% 110% at 10% 0%, #1a1208 0%, #100c06 55%, #160e08 100%)',
         '--body-accent-color': '#d97706',
         '--body-color-muted': '#7a6848',
         '--card-background-color': '#201808',
@@ -22,7 +23,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'rgba(217, 119, 6, 0.16)',
     },
     'archive-indigo': {
-        '--body-background': 'radial-gradient(55% 50% at 100% 0%, rgba(99, 102, 241, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(99, 102, 241, 0.1) 0%, transparent 65%), linear-gradient(155deg, #0d1020 0%, #070a16 55%, #0b0e1c 100%)',
+        '--body-background':
+            'radial-gradient(55% 50% at 100% 0%, rgba(99, 102, 241, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(99, 102, 241, 0.1) 0%, transparent 65%), linear-gradient(155deg, #0d1020 0%, #070a16 55%, #0b0e1c 100%)',
         '--body-accent-color': '#6366f1',
         '--body-color-muted': '#5060a0',
         '--card-background-color': '#131828',
@@ -38,7 +40,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#334155',
     },
     'asphalt-code': {
-        '--body-background': 'radial-gradient(55% 50% at 100% 0%, rgba(6, 182, 212, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(6, 182, 212, 0.1) 0%, transparent 65%), linear-gradient(160deg, #0e1012 0%, #080a0c 55%, #0c0e10 100%)',
+        '--body-background':
+            'radial-gradient(55% 50% at 100% 0%, rgba(6, 182, 212, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(6, 182, 212, 0.1) 0%, transparent 65%), linear-gradient(160deg, #0e1012 0%, #080a0c 55%, #0c0e10 100%)',
         '--body-accent-color': '#06b6d4',
         '--body-color-muted': '#5a7888',
         '--card-background-color': '#141820',
@@ -46,7 +49,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#181c20',
     },
     'atelier-media': {
-        '--body-background': 'radial-gradient(50% 45% at 100% 0%, rgba(31, 92, 68, 0.08) 0%, transparent 65%), radial-gradient(55% 50% at 0% 100%, rgba(192, 116, 42, 0.07) 0%, transparent 65%), radial-gradient(120% 100% at 0% 0%, #f8f5ec 0%, #f1ede1 50%, #e8e3d2 100%)',
+        '--body-background':
+            'radial-gradient(50% 45% at 100% 0%, rgba(31, 92, 68, 0.08) 0%, transparent 65%), radial-gradient(55% 50% at 0% 100%, rgba(192, 116, 42, 0.07) 0%, transparent 65%), radial-gradient(120% 100% at 0% 0%, #f8f5ec 0%, #f1ede1 50%, #e8e3d2 100%)',
         '--body-accent-color': '#1f5c44',
         '--body-color-muted': '#8b8377',
         '--card-background-color': 'rgba(255, 254, 250, 0.96)',
@@ -54,7 +58,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'rgba(31, 92, 68, 0.14)',
     },
     'audit-ember': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(251, 146, 60, 0.10) 0%, transparent 65%), radial-gradient(45% 40% at 0% 100%, rgba(249, 115, 22, 0.06) 0%, transparent 70%), linear-gradient(155deg, #0c0c10 0%, #09090b 55%, #08080a 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(251, 146, 60, 0.10) 0%, transparent 65%), radial-gradient(45% 40% at 0% 100%, rgba(249, 115, 22, 0.06) 0%, transparent 70%), linear-gradient(155deg, #0c0c10 0%, #09090b 55%, #08080a 100%)',
         '--body-accent-color': '#fb923c',
         '--body-color-muted': '#71717a',
         '--card-background-color': '#131318',
@@ -62,7 +67,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#1f1f27',
     },
     'azure-night': {
-        '--body-background': 'radial-gradient(55% 45% at 100% 0%, rgba(74, 158, 255, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(33, 150, 243, 0.08) 0%, transparent 65%), linear-gradient(155deg, #202020 0%, #151515 55%, #1c1c1c 100%)',
+        '--body-background':
+            'radial-gradient(55% 45% at 100% 0%, rgba(74, 158, 255, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(33, 150, 243, 0.08) 0%, transparent 65%), linear-gradient(155deg, #202020 0%, #151515 55%, #1c1c1c 100%)',
         '--body-accent-color': '#4a9eff',
         '--body-color-muted': '#888888',
         '--card-background-color': '#2d2d2d',
@@ -70,7 +76,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#3a3a3a',
     },
     'blossom-meadow': {
-        '--body-background': 'radial-gradient(55% 50% at 100% 0%, rgba(232, 130, 107, 0.16) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(123, 168, 136, 0.13) 0%, transparent 65%), radial-gradient(40% 40% at 100% 100%, rgba(243, 191, 153, 0.12) 0%, transparent 60%), linear-gradient(155deg, #fef6ec 0%, #fbeadb 55%, #f5d8c2 100%)',
+        '--body-background':
+            'radial-gradient(55% 50% at 100% 0%, rgba(232, 130, 107, 0.16) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(123, 168, 136, 0.13) 0%, transparent 65%), radial-gradient(40% 40% at 100% 100%, rgba(243, 191, 153, 0.12) 0%, transparent 60%), linear-gradient(155deg, #fef6ec 0%, #fbeadb 55%, #f5d8c2 100%)',
         '--body-accent-color': '#e8826b',
         '--body-color-muted': '#8b7268',
         '--card-background-color': 'rgba(255, 250, 244, 0.92)',
@@ -78,7 +85,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'rgba(120, 70, 55, 0.16)',
     },
     'blueprint-clay': {
-        '--body-background': 'radial-gradient(55% 50% at 100% 0%, rgba(93, 122, 138, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(184, 134, 11, 0.06) 0%, transparent 65%), radial-gradient(130% 110% at 15% 0%, #eee8e0 0%, #f4efe9 55%, #f0ebe4 100%)',
+        '--body-background':
+            'radial-gradient(55% 50% at 100% 0%, rgba(93, 122, 138, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(184, 134, 11, 0.06) 0%, transparent 65%), radial-gradient(130% 110% at 15% 0%, #eee8e0 0%, #f4efe9 55%, #f0ebe4 100%)',
         '--body-accent-color': '#5d7a8a',
         '--body-color-muted': '#8a9aa6',
         '--card-background-color': 'rgba(255, 252, 248, 0.7)',
@@ -86,7 +94,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'rgba(93, 122, 138, 0.18)',
     },
     'blush-market': {
-        '--body-background': 'radial-gradient(60% 50% at 0% 100%, rgba(224, 120, 145, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 100% 0%, rgba(224, 120, 145, 0.14) 0%, transparent 65%), radial-gradient(120% 100% at 100% 0%, #fff0f3 0%, #f8eef0 45%, #f0e8eb 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 0% 100%, rgba(224, 120, 145, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 100% 0%, rgba(224, 120, 145, 0.14) 0%, transparent 65%), radial-gradient(120% 100% at 100% 0%, #fff0f3 0%, #f8eef0 45%, #f0e8eb 100%)',
         '--body-accent-color': '#e07891',
         '--body-color-muted': '#7a6870',
         '--card-background-color': 'rgba(255, 255, 255, 0.96)',
@@ -94,7 +103,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'rgba(224, 120, 145, 0.12)',
     },
     'brass-chronicle': {
-        '--body-background': 'radial-gradient(55% 50% at 100% 0%, rgba(184, 134, 11, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(120, 60, 20, 0.16) 0%, transparent 65%), radial-gradient(130% 110% at 15% 0%, #141008 0%, #0c0a06 55%, #120e08 100%)',
+        '--body-background':
+            'radial-gradient(55% 50% at 100% 0%, rgba(184, 134, 11, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(120, 60, 20, 0.16) 0%, transparent 65%), radial-gradient(130% 110% at 15% 0%, #141008 0%, #0c0a06 55%, #120e08 100%)',
         '--body-accent-color': '#b8860b',
         '--body-color-muted': '#7a6840',
         '--card-background-color': '#1c1608',
@@ -102,7 +112,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'rgba(184, 134, 11, 0.18)',
     },
     'carbon-velocity': {
-        '--body-background': 'radial-gradient(55% 45% at 100% 0%, rgba(220, 38, 38, 0.14) 0%, transparent 60%), radial-gradient(45% 55% at 0% 100%, rgba(120, 12, 12, 0.18) 0%, transparent 65%), linear-gradient(160deg, #111316 0%, #0a0b0d 60%, #0e0f12 100%)',
+        '--body-background':
+            'radial-gradient(55% 45% at 100% 0%, rgba(220, 38, 38, 0.14) 0%, transparent 60%), radial-gradient(45% 55% at 0% 100%, rgba(120, 12, 12, 0.18) 0%, transparent 65%), linear-gradient(160deg, #111316 0%, #0a0b0d 60%, #0e0f12 100%)',
         '--body-accent-color': '#dc2626',
         '--body-color-muted': '#6e7480',
         '--card-background-color': '#141618',
@@ -110,7 +121,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#1c1e24',
     },
     'chalk-circuit': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(132, 204, 22, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(132, 204, 22, 0.08) 0%, transparent 65%), linear-gradient(155deg, #1a2028 0%, #141820 55%, #182028 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(132, 204, 22, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(132, 204, 22, 0.08) 0%, transparent 65%), linear-gradient(155deg, #1a2028 0%, #141820 55%, #182028 100%)',
         '--body-accent-color': '#84cc16',
         '--body-color-muted': '#6a8868',
         '--card-background-color': '#1e2830',
@@ -126,7 +138,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#c9b48d',
     },
     'citrus-vital': {
-        '--body-background': 'radial-gradient(62% 54% at 100% 0%, rgba(45, 212, 191, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(250, 204, 21, 0.12) 0%, transparent 68%), linear-gradient(155deg, #0d1a17 0%, #0a1412 52%, #111f1b 100%)',
+        '--body-background':
+            'radial-gradient(62% 54% at 100% 0%, rgba(45, 212, 191, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(250, 204, 21, 0.12) 0%, transparent 68%), linear-gradient(155deg, #0d1a17 0%, #0a1412 52%, #111f1b 100%)',
         '--body-accent-color': '#2dd4bf',
         '--body-color-muted': '#7f9a91',
         '--card-background-color': '#111f1b',
@@ -134,7 +147,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#254139',
     },
     'clinical-aqua': {
-        '--body-background': 'radial-gradient(55% 50% at 100% 0%, rgba(8, 145, 178, 0.1) 0%, transparent 65%), radial-gradient(40% 45% at 0% 100%, rgba(8, 145, 178, 0.06) 0%, transparent 65%), linear-gradient(140deg, #f4f9fb 0%, #eaf2f5 55%, #e0ecf0 100%)',
+        '--body-background':
+            'radial-gradient(55% 50% at 100% 0%, rgba(8, 145, 178, 0.1) 0%, transparent 65%), radial-gradient(40% 45% at 0% 100%, rgba(8, 145, 178, 0.06) 0%, transparent 65%), linear-gradient(140deg, #f4f9fb 0%, #eaf2f5 55%, #e0ecf0 100%)',
         '--body-accent-color': '#0891b2',
         '--body-color-muted': '#5a7a84',
         '--card-background-color': 'rgba(255, 255, 255, 0.96)',
@@ -142,7 +156,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'rgba(8, 145, 178, 0.12)',
     },
     'cobalt-pulse': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(79, 142, 247, 0.16) 0%, transparent 65%), radial-gradient(48% 42% at 0% 100%, rgba(150, 80, 255, 0.12) 0%, transparent 65%), linear-gradient(155deg, #11131d 0%, #08090c 55%, #0d0e14 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(79, 142, 247, 0.16) 0%, transparent 65%), radial-gradient(48% 42% at 0% 100%, rgba(150, 80, 255, 0.12) 0%, transparent 65%), linear-gradient(155deg, #11131d 0%, #08090c 55%, #0d0e14 100%)',
         '--body-accent-color': '#4f8ef7',
         '--body-color-muted': '#6b7394',
         '--card-background-color': '#191c28',
@@ -150,7 +165,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#1e2236',
     },
     'command-slate': {
-        '--body-background': 'radial-gradient(62% 54% at 100% 0%, rgba(139, 92, 246, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(56, 189, 248, 0.12) 0%, transparent 68%), linear-gradient(155deg, #111620 0%, #0d1018 52%, #171b26 100%)',
+        '--body-background':
+            'radial-gradient(62% 54% at 100% 0%, rgba(139, 92, 246, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(56, 189, 248, 0.12) 0%, transparent 68%), linear-gradient(155deg, #111620 0%, #0d1018 52%, #171b26 100%)',
         '--body-accent-color': '#8b5cf6',
         '--body-color-muted': '#838d9f',
         '--card-background-color': '#171b26',
@@ -158,7 +174,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#2a3242',
     },
     'crawler-dusk': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 100%, rgba(245, 158, 11, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 0%, rgba(99, 102, 241, 0.16) 0%, transparent 65%), linear-gradient(155deg, #111424 0%, #0c0e18 55%, #0f1220 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 100%, rgba(245, 158, 11, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 0%, rgba(99, 102, 241, 0.16) 0%, transparent 65%), linear-gradient(155deg, #111424 0%, #0c0e18 55%, #0f1220 100%)',
         '--body-accent-color': '#f59e0b',
         '--body-color-muted': '#6068a0',
         '--card-background-color': '#171a28',
@@ -166,7 +183,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#1a1e30',
     },
     'crimson-dusk': {
-        '--body-background': 'radial-gradient(58% 48% at 100% 0%, rgba(220, 53, 69, 0.16) 0%, transparent 65%), radial-gradient(52% 45% at 0% 100%, rgba(232, 160, 176, 0.1) 0%, transparent 65%), linear-gradient(155deg, #1b121b 0%, #110d14 55%, #171018 100%)',
+        '--body-background':
+            'radial-gradient(58% 48% at 100% 0%, rgba(220, 53, 69, 0.16) 0%, transparent 65%), radial-gradient(52% 45% at 0% 100%, rgba(232, 160, 176, 0.1) 0%, transparent 65%), linear-gradient(155deg, #1b121b 0%, #110d14 55%, #171018 100%)',
         '--body-accent-color': '#dc3545',
         '--body-color-muted': '#e8a0b0',
         '--card-background-color': '#1c1620',
@@ -174,15 +192,17 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#2e2434',
     },
     'cyber-forest': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(16, 185, 129, 0.14) 0%, transparent 65%), radial-gradient(48% 42% at 0% 100%, rgba(134, 239, 172, 0.08) 0%, transparent 65%), linear-gradient(155deg, #0f1a10 0%, #070d07 55%, #0b140b 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(16, 185, 129, 0.14) 0%, transparent 65%), radial-gradient(48% 42% at 0% 100%, rgba(134, 239, 172, 0.08) 0%, transparent 65%), linear-gradient(155deg, #0f1a10 0%, #070d07 55%, #0b140b 100%)',
         '--body-accent-color': '#10b981',
         '--body-color-muted': '#86efac',
         '--card-background-color': '#14211d',
         '--header-background-color': '#14211d',
         '--header-border-bottom-color': '#1e3a2e',
     },
-    'dashdarkx': {
-        '--body-background': 'radial-gradient(60% 48% at 100% 0%, rgba(124, 137, 255, 0.14) 0%, transparent 65%), radial-gradient(52% 45% at 0% 100%, rgba(72, 96, 180, 0.12) 0%, transparent 65%), linear-gradient(155deg, #0e1734 0%, #050b1c 55%, #091229 100%)',
+    dashdarkx: {
+        '--body-background':
+            'radial-gradient(60% 48% at 100% 0%, rgba(124, 137, 255, 0.14) 0%, transparent 65%), radial-gradient(52% 45% at 0% 100%, rgba(72, 96, 180, 0.12) 0%, transparent 65%), linear-gradient(155deg, #0e1734 0%, #050b1c 55%, #091229 100%)',
         '--body-accent-color': '#ffffff',
         '--body-color-muted': '#aeb9e1',
         '--card-background-color': '#101935',
@@ -190,7 +210,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'tranparent',
     },
     'ember-night': {
-        '--body-background': 'radial-gradient(58% 48% at 100% 0%, rgba(245, 158, 11, 0.16) 0%, transparent 65%), radial-gradient(52% 45% at 0% 100%, rgba(252, 211, 77, 0.08) 0%, transparent 65%), linear-gradient(155deg, #22140c 0%, #140b07 55%, #1c1008 100%)',
+        '--body-background':
+            'radial-gradient(58% 48% at 100% 0%, rgba(245, 158, 11, 0.16) 0%, transparent 65%), radial-gradient(52% 45% at 0% 100%, rgba(252, 211, 77, 0.08) 0%, transparent 65%), linear-gradient(155deg, #22140c 0%, #140b07 55%, #1c1008 100%)',
         '--body-accent-color': '#f59e0b',
         '--body-color-muted': '#fcd34d',
         '--card-background-color': '#291a10',
@@ -198,7 +219,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#3d2817',
     },
     'emerald-ledger': {
-        '--body-background': 'radial-gradient(55% 50% at 0% 0%, rgba(16, 185, 129, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 100% 100%, rgba(217, 119, 6, 0.1) 0%, transparent 65%), radial-gradient(130% 110% at 0% 0%, #0e1814 0%, #091210 55%, #0c1612 100%)',
+        '--body-background':
+            'radial-gradient(55% 50% at 0% 0%, rgba(16, 185, 129, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 100% 100%, rgba(217, 119, 6, 0.1) 0%, transparent 65%), radial-gradient(130% 110% at 0% 0%, #0e1814 0%, #091210 55%, #0c1612 100%)',
         '--body-accent-color': '#10b981',
         '--body-color-muted': '#5a8870',
         '--card-background-color': '#131e18',
@@ -206,7 +228,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#162218',
     },
     'frost-petal': {
-        '--body-background': 'radial-gradient(60% 48% at 100% 0%, rgba(108, 92, 231, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(154, 146, 184, 0.12) 0%, transparent 65%), linear-gradient(155deg, #fbfaff 0%, #f1eef8 55%, #f7f9ff 100%)',
+        '--body-background':
+            'radial-gradient(60% 48% at 100% 0%, rgba(108, 92, 231, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(154, 146, 184, 0.12) 0%, transparent 65%), linear-gradient(155deg, #fbfaff 0%, #f1eef8 55%, #f7f9ff 100%)',
         '--body-accent-color': '#6c5ce7',
         '--body-color-muted': '#9a92b8',
         '--card-background-color': '#ffffff',
@@ -214,7 +237,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#ddd8ee',
     },
     'garden-harvest': {
-        '--body-background': 'radial-gradient(50% 45% at 100% 0%, rgba(245, 158, 11, 0.1) 0%, transparent 65%), radial-gradient(55% 50% at 0% 100%, rgba(61, 122, 58, 0.12) 0%, transparent 65%), radial-gradient(120% 100% at 0% 0%, #faf8f0 0%, #f0eddf 50%, #e8e4d0 100%)',
+        '--body-background':
+            'radial-gradient(50% 45% at 100% 0%, rgba(245, 158, 11, 0.1) 0%, transparent 65%), radial-gradient(55% 50% at 0% 100%, rgba(61, 122, 58, 0.12) 0%, transparent 65%), radial-gradient(120% 100% at 0% 0%, #faf8f0 0%, #f0eddf 50%, #e8e4d0 100%)',
         '--body-accent-color': '#3d7a3a',
         '--body-color-muted': '#5a7055',
         '--card-background-color': 'rgba(255, 255, 255, 0.94)',
@@ -222,7 +246,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'rgba(61, 122, 58, 0.14)',
     },
     'gilded-bear': {
-        '--body-background': 'radial-gradient(55% 50% at 100% 0%, rgba(201, 144, 58, 0.16) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(99, 102, 241, 0.14) 0%, transparent 65%), radial-gradient(130% 110% at 10% 0%, #0c0e28 0%, #060818 55%, #0a0c22 100%)',
+        '--body-background':
+            'radial-gradient(55% 50% at 100% 0%, rgba(201, 144, 58, 0.16) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(99, 102, 241, 0.14) 0%, transparent 65%), radial-gradient(130% 110% at 10% 0%, #0c0e28 0%, #060818 55%, #0a0c22 100%)',
         '--body-accent-color': '#c9903a',
         '--body-color-muted': '#7068a0',
         '--card-background-color': '#101230',
@@ -230,7 +255,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'rgba(201, 144, 58, 0.16)',
     },
     'graphite-shell': {
-        '--body-background': 'radial-gradient(55% 50% at 100% 0%, rgba(132, 204, 22, 0.1) 0%, transparent 65%), radial-gradient(45% 40% at 0% 100%, rgba(132, 204, 22, 0.08) 0%, transparent 65%), linear-gradient(155deg, #0c0e0c 0%, #070908 55%, #0a0c0a 100%)',
+        '--body-background':
+            'radial-gradient(55% 50% at 100% 0%, rgba(132, 204, 22, 0.1) 0%, transparent 65%), radial-gradient(45% 40% at 0% 100%, rgba(132, 204, 22, 0.08) 0%, transparent 65%), linear-gradient(155deg, #0c0e0c 0%, #070908 55%, #0a0c0a 100%)',
         '--body-accent-color': '#84cc16',
         '--body-color-muted': '#507050',
         '--card-background-color': '#101410',
@@ -238,7 +264,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#141814',
     },
     'horizon-amber': {
-        '--body-background': 'radial-gradient(70% 55% at 100% 100%, rgba(245, 158, 11, 0.16) 0%, transparent 60%), radial-gradient(50% 45% at 0% 0%, rgba(120, 60, 20, 0.12) 0%, transparent 65%), linear-gradient(150deg, #161820 0%, #0f1016 55%, #141620 100%)',
+        '--body-background':
+            'radial-gradient(70% 55% at 100% 100%, rgba(245, 158, 11, 0.16) 0%, transparent 60%), radial-gradient(50% 45% at 0% 0%, rgba(120, 60, 20, 0.12) 0%, transparent 65%), linear-gradient(150deg, #161820 0%, #0f1016 55%, #141620 100%)',
         '--body-accent-color': '#f59e0b',
         '--body-color-muted': '#7880a0',
         '--card-background-color': '#1a1c26',
@@ -246,7 +273,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#1e2030',
     },
     'horizon-drift': {
-        '--body-background': 'linear-gradient(180deg, rgba(47, 168, 204, 0.12) 0%, transparent 35%), radial-gradient(60% 50% at 100% 100%, rgba(245, 158, 11, 0.12) 0%, transparent 65%), radial-gradient(130% 110% at 0% 0%, #fef9ee 0%, #f5edd8 45%, #ece0c4 100%)',
+        '--body-background':
+            'linear-gradient(180deg, rgba(47, 168, 204, 0.12) 0%, transparent 35%), radial-gradient(60% 50% at 100% 100%, rgba(245, 158, 11, 0.12) 0%, transparent 65%), radial-gradient(130% 110% at 0% 0%, #fef9ee 0%, #f5edd8 45%, #ece0c4 100%)',
         '--body-accent-color': '#2fa8cc',
         '--body-color-muted': '#5a7888',
         '--card-background-color': 'rgba(255, 255, 255, 0.94)',
@@ -254,7 +282,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'rgba(47, 168, 204, 0.14)',
     },
     'ivory-serif': {
-        '--body-background': 'radial-gradient(50% 45% at 100% 0%, rgba(197, 160, 40, 0.1) 0%, transparent 65%), radial-gradient(45% 50% at 0% 100%, rgba(30, 58, 95, 0.08) 0%, transparent 65%), radial-gradient(110% 90% at 20% 0%, #faf8f2 0%, #f0ede2 50%, #e8e2d2 100%)',
+        '--body-background':
+            'radial-gradient(50% 45% at 100% 0%, rgba(197, 160, 40, 0.1) 0%, transparent 65%), radial-gradient(45% 50% at 0% 100%, rgba(30, 58, 95, 0.08) 0%, transparent 65%), radial-gradient(110% 90% at 20% 0%, #faf8f2 0%, #f0ede2 50%, #e8e2d2 100%)',
         '--body-accent-color': '#c5a028',
         '--body-color-muted': '#6b7280',
         '--card-background-color': 'rgba(255, 255, 255, 0.94)',
@@ -262,7 +291,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'rgba(30, 36, 51, 0.12)',
     },
     'kindred-ink': {
-        '--body-background': 'radial-gradient(55% 50% at 100% 0%, rgba(224, 137, 106, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(217, 168, 92, 0.09) 0%, transparent 65%), linear-gradient(160deg, #211a28 0%, #17131c 55%, #120f16 100%)',
+        '--body-background':
+            'radial-gradient(55% 50% at 100% 0%, rgba(224, 137, 106, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(217, 168, 92, 0.09) 0%, transparent 65%), linear-gradient(160deg, #211a28 0%, #17131c 55%, #120f16 100%)',
         '--body-accent-color': '#e0896a',
         '--body-color-muted': '#a3978f',
         '--card-background-color': '#221c29',
@@ -270,7 +300,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'rgba(224, 137, 106, 0.16)',
     },
     'lavender-mist': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(168, 85, 247, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(216, 180, 254, 0.16) 0%, transparent 65%), linear-gradient(155deg, #fffaff 0%, #f7edff 55%, #fdfbff 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(168, 85, 247, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(216, 180, 254, 0.16) 0%, transparent 65%), linear-gradient(155deg, #fffaff 0%, #f7edff 55%, #fdfbff 100%)',
         '--body-accent-color': '#a855f7',
         '--body-color-muted': '#64748b',
         '--card-background-color': '#ffffff',
@@ -278,14 +309,15 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#f3e8ff',
     },
     'light-blue': {
-        '--body-background': 'radial-gradient(farthest-side at 10% 0%, rgba(51, 56, 103, 0.95) 20%, transparent 70%), radial-gradient(55% 45% at 100% 0%, rgba(91, 143, 249, 0.16) 0%, transparent 65%), linear-gradient(155deg, #20275a 0%, #17193b 60%, #111430 100%)',
+        '--body-background':
+            'radial-gradient(farthest-side at 10% 0%, rgba(51, 56, 103, 0.95) 20%, transparent 70%), radial-gradient(55% 45% at 100% 0%, rgba(91, 143, 249, 0.16) 0%, transparent 65%), linear-gradient(155deg, #20275a 0%, #17193b 60%, #111430 100%)',
         '--body-accent-color': '#5b8ff9',
         '--body-color-muted': '#5b5f63',
         '--card-background-color': '#1b1e3c',
         '--header-background-color': 'transparent',
         '--header-border-bottom-color': '#3b3d46',
     },
-    'lumen': {
+    lumen: {
         '--body-background': '#0b0604',
         '--body-accent-color': '#e8b97a',
         '--body-color-muted': '#b3a999',
@@ -293,8 +325,9 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-background-color': '#0b0604',
         '--header-border-bottom-color': 'rgba(255, 255, 255, 0.05)',
     },
-    'luna': {
-        '--body-background': 'radial-gradient(58% 48% at 100% 0%, rgba(148, 155, 162, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(91, 95, 99, 0.12) 0%, transparent 65%), linear-gradient(155deg, #2e323d 0%, #20232b 55%, #272a33 100%)',
+    luna: {
+        '--body-background':
+            'radial-gradient(58% 48% at 100% 0%, rgba(148, 155, 162, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(91, 95, 99, 0.12) 0%, transparent 65%), linear-gradient(155deg, #2e323d 0%, #20232b 55%, #272a33 100%)',
         '--body-accent-color': '#f6a821',
         '--body-color-muted': '#5b5f63',
         '--card-background-color': '#3b3d46',
@@ -302,7 +335,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#3b3d46',
     },
     'mesh-circuit': {
-        '--body-background': 'radial-gradient(35% 30% at 20% 20%, rgba(34, 211, 238, 0.14) 0%, transparent 60%), radial-gradient(30% 28% at 80% 70%, rgba(34, 211, 238, 0.12) 0%, transparent 60%), radial-gradient(28% 25% at 60% 15%, rgba(103, 232, 249, 0.1) 0%, transparent 60%), linear-gradient(155deg, #091018 0%, #040a10 55%, #081218 100%)',
+        '--body-background':
+            'radial-gradient(35% 30% at 20% 20%, rgba(34, 211, 238, 0.14) 0%, transparent 60%), radial-gradient(30% 28% at 80% 70%, rgba(34, 211, 238, 0.12) 0%, transparent 60%), radial-gradient(28% 25% at 60% 15%, rgba(103, 232, 249, 0.1) 0%, transparent 60%), linear-gradient(155deg, #091018 0%, #040a10 55%, #081218 100%)',
         '--body-accent-color': '#22d3ee',
         '--body-color-muted': '#406880',
         '--card-background-color': '#0c1820',
@@ -310,7 +344,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#0e1c28',
     },
     'midnight-amber': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(240, 192, 64, 0.14) 0%, transparent 65%), radial-gradient(48% 42% at 0% 100%, rgba(224, 96, 128, 0.1) 0%, transparent 65%), linear-gradient(155deg, #151310 0%, #0a0a0c 55%, #101012 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(240, 192, 64, 0.14) 0%, transparent 65%), radial-gradient(48% 42% at 0% 100%, rgba(224, 96, 128, 0.1) 0%, transparent 65%), linear-gradient(155deg, #151310 0%, #0a0a0c 55%, #101012 100%)',
         '--body-accent-color': '#f0c040',
         '--body-color-muted': '#6b6b80',
         '--card-background-color': '#16161a',
@@ -318,7 +353,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#2a2a35',
     },
     'midnight-atlas': {
-        '--body-background': 'radial-gradient(62% 54% at 100% 0%, rgba(22, 199, 106, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(240, 90, 40, 0.12) 0%, transparent 68%), linear-gradient(155deg, #0f110f 0%, #090b09 52%, #1b1d19 100%)',
+        '--body-background':
+            'radial-gradient(62% 54% at 100% 0%, rgba(22, 199, 106, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(240, 90, 40, 0.12) 0%, transparent 68%), linear-gradient(155deg, #0f110f 0%, #090b09 52%, #1b1d19 100%)',
         '--body-accent-color': '#16c76a',
         '--body-color-muted': '#747061',
         '--card-background-color': '#1b1d19',
@@ -326,7 +362,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#2a2d27',
     },
     'midnight-folio': {
-        '--body-background': 'radial-gradient(62% 54% at 100% 0%, rgba(196, 181, 253, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(240, 171, 252, 0.12) 0%, transparent 68%), linear-gradient(155deg, #131528 0%, #0f1020 52%, #181a2d 100%)',
+        '--body-background':
+            'radial-gradient(62% 54% at 100% 0%, rgba(196, 181, 253, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(240, 171, 252, 0.12) 0%, transparent 68%), linear-gradient(155deg, #131528 0%, #0f1020 52%, #181a2d 100%)',
         '--body-accent-color': '#c4b5fd',
         '--body-color-muted': '#908ba8',
         '--card-background-color': '#181a2d',
@@ -334,15 +371,17 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#2d3151',
     },
     'mint-meadow': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(16, 185, 129, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(187, 247, 208, 0.18) 0%, transparent 65%), linear-gradient(155deg, #f8fffb 0%, #eafbf1 55%, #f3fff7 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(16, 185, 129, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(187, 247, 208, 0.18) 0%, transparent 65%), linear-gradient(155deg, #f8fffb 0%, #eafbf1 55%, #f3fff7 100%)',
         '--body-accent-color': '#10b981',
         '--body-color-muted': '#64748b',
         '--card-background-color': '#ffffff',
         '--header-background-color': '#ffffff',
         '--header-border-bottom-color': '#d1fae5',
     },
-    'mintone': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(52, 58, 64, 0.08) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(187, 191, 194, 0.16) 0%, transparent 65%), linear-gradient(155deg, #ffffff 0%, #f3f5fa 55%, #f8f9fc 100%)',
+    mintone: {
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(52, 58, 64, 0.08) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(187, 191, 194, 0.16) 0%, transparent 65%), linear-gradient(155deg, #ffffff 0%, #f3f5fa 55%, #f8f9fc 100%)',
         '--body-accent-color': '#343a40',
         '--body-color-muted': '#bbbfc2',
         '--card-background-color': '#fff',
@@ -350,7 +389,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#3b3d46',
     },
     'neon-tokyo': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(232, 64, 160, 0.18) 0%, transparent 65%), radial-gradient(48% 42% at 0% 100%, rgba(192, 132, 252, 0.12) 0%, transparent 65%), linear-gradient(155deg, #15101a 0%, #09090f 55%, #101018 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(232, 64, 160, 0.18) 0%, transparent 65%), radial-gradient(48% 42% at 0% 100%, rgba(192, 132, 252, 0.12) 0%, transparent 65%), linear-gradient(155deg, #15101a 0%, #09090f 55%, #101018 100%)',
         '--body-accent-color': '#e840a0',
         '--body-color-muted': '#c084fc',
         '--card-background-color': '#14141c',
@@ -358,7 +398,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#252530',
     },
     'noir-marquee': {
-        '--body-background': 'radial-gradient(62% 54% at 100% 0%, rgba(125, 211, 252, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(246, 199, 111, 0.12) 0%, transparent 68%), linear-gradient(155deg, #0c0e15 0%, #07080d 52%, #11131b 100%)',
+        '--body-background':
+            'radial-gradient(62% 54% at 100% 0%, rgba(125, 211, 252, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(246, 199, 111, 0.12) 0%, transparent 68%), linear-gradient(155deg, #0c0e15 0%, #07080d 52%, #11131b 100%)',
         '--body-accent-color': '#7dd3fc',
         '--body-color-muted': '#7f879a',
         '--card-background-color': '#11131b',
@@ -366,7 +407,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#242938',
     },
     'ocean-breeze': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(8, 145, 178, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(186, 230, 253, 0.2) 0%, transparent 65%), linear-gradient(155deg, #f8fdff 0%, #e9f7ff 55%, #f2fbff 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(8, 145, 178, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(186, 230, 253, 0.2) 0%, transparent 65%), linear-gradient(155deg, #f8fdff 0%, #e9f7ff 55%, #f2fbff 100%)',
         '--body-accent-color': '#0891b2',
         '--body-color-muted': '#64748b',
         '--card-background-color': '#ffffff',
@@ -374,7 +416,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#e0f2fe',
     },
     'ocean-depths': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(25, 205, 230, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(117, 139, 163, 0.1) 0%, transparent 65%), linear-gradient(155deg, #0d1628 0%, #070b15 55%, #0a1020 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(25, 205, 230, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(117, 139, 163, 0.1) 0%, transparent 65%), linear-gradient(155deg, #0d1628 0%, #070b15 55%, #0a1020 100%)',
         '--body-accent-color': '#19cde6',
         '--body-color-muted': '#758ba3',
         '--card-background-color': '#151b28',
@@ -382,15 +425,17 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#29283c',
     },
     'orbital-night': {
-        '--body-background': 'repeating-linear-gradient(0deg, transparent 0 39px, rgba(95, 176, 255, 0.035) 39px 40px), repeating-linear-gradient(90deg, transparent 0 39px, rgba(95, 176, 255, 0.035) 39px 40px), radial-gradient(60% 50% at 100% 0%, rgba(95, 176, 255, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(56, 189, 248, 0.10) 0%, transparent 65%), linear-gradient(160deg, #14202e 0%, #0b1424 55%, #0e1828 100%)',
+        '--body-background':
+            'repeating-linear-gradient(0deg, transparent 0 39px, rgba(95, 176, 255, 0.035) 39px 40px), repeating-linear-gradient(90deg, transparent 0 39px, rgba(95, 176, 255, 0.035) 39px 40px), radial-gradient(60% 50% at 100% 0%, rgba(95, 176, 255, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(56, 189, 248, 0.10) 0%, transparent 65%), linear-gradient(160deg, #14202e 0%, #0b1424 55%, #0e1828 100%)',
         '--body-accent-color': '#5fb0ff',
         '--body-color-muted': '#6f7f95',
         '--card-background-color': '#14213a',
         '--header-background-color': '#14213a',
         '--header-border-bottom-color': 'rgba(95, 176, 255, 0.18)',
     },
-    'sandstone': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(194, 102, 45, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(160, 128, 96, 0.12) 0%, transparent 65%), linear-gradient(155deg, #fffaf3 0%, #f6eee4 55%, #fbf5ee 100%)',
+    sandstone: {
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(194, 102, 45, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(160, 128, 96, 0.12) 0%, transparent 65%), linear-gradient(155deg, #fffaf3 0%, #f6eee4 55%, #fbf5ee 100%)',
         '--body-accent-color': '#c2662d',
         '--body-color-muted': '#a08060',
         '--card-background-color': '#ffffff',
@@ -406,7 +451,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'rgba(84, 66, 36, 0.16)',
     },
     'screening-room': {
-        '--body-background': 'radial-gradient(62% 54% at 100% 0%, rgba(244, 195, 68, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(245, 185, 66, 0.12) 0%, transparent 68%), linear-gradient(155deg, #110d18 0%, #0d0a12 52%, #181320 100%)',
+        '--body-background':
+            'radial-gradient(62% 54% at 100% 0%, rgba(244, 195, 68, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(245, 185, 66, 0.12) 0%, transparent 68%), linear-gradient(155deg, #110d18 0%, #0d0a12 52%, #181320 100%)',
         '--body-accent-color': '#f4c344',
         '--body-color-muted': '#8b8299',
         '--card-background-color': '#181320',
@@ -414,7 +460,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#2e2740',
     },
     'signal-burst': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(249, 115, 22, 0.18) 0%, transparent 60%), radial-gradient(45% 40% at 0% 100%, rgba(99, 102, 241, 0.12) 0%, transparent 65%), linear-gradient(150deg, #131420 0%, #0c0d12 55%, #0f1018 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(249, 115, 22, 0.18) 0%, transparent 60%), radial-gradient(45% 40% at 0% 100%, rgba(99, 102, 241, 0.12) 0%, transparent 65%), linear-gradient(150deg, #131420 0%, #0c0d12 55%, #0f1018 100%)',
         '--body-accent-color': '#f97316',
         '--body-color-muted': '#7880a0',
         '--card-background-color': '#16171f',
@@ -422,7 +469,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#1e2030',
     },
     'signal-clarity': {
-        '--body-background': 'radial-gradient(62% 54% at 100% 0%, rgba(56, 189, 248, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(129, 140, 248, 0.12) 0%, transparent 68%), linear-gradient(155deg, #0b1726 0%, #08111d 52%, #101b2b 100%)',
+        '--body-background':
+            'radial-gradient(62% 54% at 100% 0%, rgba(56, 189, 248, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(129, 140, 248, 0.12) 0%, transparent 68%), linear-gradient(155deg, #0b1726 0%, #08111d 52%, #101b2b 100%)',
         '--body-accent-color': '#38bdf8',
         '--body-color-muted': '#7f92aa',
         '--card-background-color': '#101b2b',
@@ -430,7 +478,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#243650',
     },
     'slate-bazaar': {
-        '--body-background': 'radial-gradient(62% 54% at 100% 0%, rgba(96, 165, 250, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(245, 158, 11, 0.12) 0%, transparent 68%), linear-gradient(155deg, #101620 0%, #0b0f16 52%, #151b24 100%)',
+        '--body-background':
+            'radial-gradient(62% 54% at 100% 0%, rgba(96, 165, 250, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(245, 158, 11, 0.12) 0%, transparent 68%), linear-gradient(155deg, #101620 0%, #0b0f16 52%, #151b24 100%)',
         '--body-accent-color': '#60a5fa',
         '--body-color-muted': '#7d8a9b',
         '--card-background-color': '#151b24',
@@ -438,7 +487,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#273142',
     },
     'slate-focus': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(59, 130, 246, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(107, 114, 128, 0.08) 0%, transparent 65%), linear-gradient(155deg, #171a20 0%, #0f1114 55%, #13161a 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(59, 130, 246, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(107, 114, 128, 0.08) 0%, transparent 65%), linear-gradient(155deg, #171a20 0%, #0f1114 55%, #13161a 100%)',
         '--body-accent-color': '#3b82f6',
         '--body-color-muted': '#6b7280',
         '--card-background-color': '#1a1d26',
@@ -446,7 +496,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#1e2230',
     },
     'spectrum-vault': {
-        '--body-background': 'radial-gradient(55% 50% at 100% 0%, rgba(139, 92, 246, 0.18) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(236, 72, 153, 0.12) 0%, transparent 65%), radial-gradient(130% 110% at 20% 0%, #130e1e 0%, #0a0810 55%, #100c18 100%)',
+        '--body-background':
+            'radial-gradient(55% 50% at 100% 0%, rgba(139, 92, 246, 0.18) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(236, 72, 153, 0.12) 0%, transparent 65%), radial-gradient(130% 110% at 20% 0%, #130e1e 0%, #0a0810 55%, #100c18 100%)',
         '--body-accent-color': '#8b5cf6',
         '--body-color-muted': '#7060a8',
         '--card-background-color': '#181428',
@@ -454,7 +505,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#1a1630',
     },
     'tailwind-vue-dark': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(96, 165, 250, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(144, 161, 185, 0.1) 0%, transparent 65%), linear-gradient(155deg, #263852 0%, #182235 55%, #1f2d43 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(96, 165, 250, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(144, 161, 185, 0.1) 0%, transparent 65%), linear-gradient(155deg, #263852 0%, #182235 55%, #1f2d43 100%)',
         '--body-accent-color': '#f0b100',
         '--body-color-muted': '#90a1b9',
         '--card-background-color': '#0f172bb3',
@@ -462,7 +514,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'transparent',
     },
     'terminal-phosphor': {
-        '--body-background': 'radial-gradient(70% 55% at 100% 0%, rgba(34, 197, 94, 0.05) 0%, transparent 58%), linear-gradient(155deg, #020402 0%, #010301 58%, #030703 100%)',
+        '--body-background':
+            'radial-gradient(70% 55% at 100% 0%, rgba(34, 197, 94, 0.05) 0%, transparent 58%), linear-gradient(155deg, #020402 0%, #010301 58%, #030703 100%)',
         '--body-accent-color': '#22c55e',
         '--body-color-muted': '#4a7040',
         '--card-background-color': '#0b140b',
@@ -470,7 +523,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#112411',
     },
     'terracotta-kitchen': {
-        '--body-background': 'radial-gradient(55% 50% at 0% 100%, rgba(194, 82, 47, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 100% 0%, rgba(194, 82, 47, 0.1) 0%, transparent 65%), radial-gradient(110% 90% at 80% 0%, #fef8f0 0%, #f8eddf 50%, #f0e4d0 100%)',
+        '--body-background':
+            'radial-gradient(55% 50% at 0% 100%, rgba(194, 82, 47, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 100% 0%, rgba(194, 82, 47, 0.1) 0%, transparent 65%), radial-gradient(110% 90% at 80% 0%, #fef8f0 0%, #f8eddf 50%, #f0e4d0 100%)',
         '--body-accent-color': '#c2522f',
         '--body-color-muted': '#7a5a48',
         '--card-background-color': 'rgba(255, 255, 255, 0.95)',
@@ -478,7 +532,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'rgba(194, 82, 47, 0.14)',
     },
     'twilight-pulse': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(217, 70, 239, 0.18) 0%, transparent 65%), radial-gradient(48% 42% at 0% 100%, rgba(167, 139, 250, 0.12) 0%, transparent 65%), linear-gradient(155deg, #171024 0%, #0b0714 55%, #120a1f 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(217, 70, 239, 0.18) 0%, transparent 65%), radial-gradient(48% 42% at 0% 100%, rgba(167, 139, 250, 0.12) 0%, transparent 65%), linear-gradient(155deg, #171024 0%, #0b0714 55%, #120a1f 100%)',
         '--body-accent-color': '#d946ef',
         '--body-color-muted': '#a78bfa',
         '--card-background-color': '#1a1028',
@@ -486,7 +541,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#2d1b4e',
     },
     'vault-guard': {
-        '--body-background': 'radial-gradient(55% 50% at 100% 0%, rgba(34, 197, 94, 0.1) 0%, transparent 65%), radial-gradient(45% 40% at 0% 100%, rgba(34, 197, 94, 0.08) 0%, transparent 65%), linear-gradient(160deg, #101418 0%, #0a0e12 55%, #0e1216 100%)',
+        '--body-background':
+            'radial-gradient(55% 50% at 100% 0%, rgba(34, 197, 94, 0.1) 0%, transparent 65%), radial-gradient(45% 40% at 0% 100%, rgba(34, 197, 94, 0.08) 0%, transparent 65%), linear-gradient(160deg, #101418 0%, #0a0e12 55%, #0e1216 100%)',
         '--body-accent-color': '#22c55e',
         '--body-color-muted': '#5a7888',
         '--card-background-color': '#161c22',
@@ -494,7 +550,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#1a2228',
     },
     'velvet-reel': {
-        '--body-background': 'radial-gradient(70% 60% at 50% 0%, rgba(232, 184, 75, 0.12) 0%, transparent 60%), radial-gradient(50% 45% at 0% 100%, rgba(120, 20, 30, 0.2) 0%, transparent 65%), radial-gradient(50% 45% at 100% 100%, rgba(120, 20, 30, 0.18) 0%, transparent 65%), radial-gradient(130% 110% at 50% 0%, #160a0e 0%, #0a0508 50%, #0e0709 100%)',
+        '--body-background':
+            'radial-gradient(70% 60% at 50% 0%, rgba(232, 184, 75, 0.12) 0%, transparent 60%), radial-gradient(50% 45% at 0% 100%, rgba(120, 20, 30, 0.2) 0%, transparent 65%), radial-gradient(50% 45% at 100% 100%, rgba(120, 20, 30, 0.18) 0%, transparent 65%), radial-gradient(130% 110% at 50% 0%, #160a0e 0%, #0a0508 50%, #0e0709 100%)',
         '--body-accent-color': '#e8b84b',
         '--body-color-muted': '#907878',
         '--card-background-color': '#1a1012',
@@ -502,7 +559,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'rgba(232, 184, 75, 0.14)',
     },
     'velvet-tome': {
-        '--body-background': 'radial-gradient(55% 50% at 80% 10%, rgba(201, 144, 58, 0.16) 0%, transparent 65%), radial-gradient(50% 45% at 10% 100%, rgba(120, 60, 20, 0.18) 0%, transparent 65%), radial-gradient(120% 100% at 10% 0%, #221808 0%, #160e04 50%, #1e1408 100%)',
+        '--body-background':
+            'radial-gradient(55% 50% at 80% 10%, rgba(201, 144, 58, 0.16) 0%, transparent 65%), radial-gradient(50% 45% at 10% 100%, rgba(120, 60, 20, 0.18) 0%, transparent 65%), radial-gradient(120% 100% at 10% 0%, #221808 0%, #160e04 50%, #1e1408 100%)',
         '--body-accent-color': '#c9903a',
         '--body-color-muted': '#8a7a68',
         '--card-background-color': '#261c0e',
@@ -510,7 +568,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': 'rgba(201, 144, 58, 0.18)',
     },
     'verdant-pulse': {
-        '--body-background': 'radial-gradient(62% 54% at 100% 0%, rgba(95, 217, 138, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(251, 179, 64, 0.12) 0%, transparent 68%), linear-gradient(155deg, #0f1a14 0%, #0b1310 52%, #131f19 100%)',
+        '--body-background':
+            'radial-gradient(62% 54% at 100% 0%, rgba(95, 217, 138, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(251, 179, 64, 0.12) 0%, transparent 68%), linear-gradient(155deg, #0f1a14 0%, #0b1310 52%, #131f19 100%)',
         '--body-accent-color': '#5fd98a',
         '--body-color-muted': '#809a8c',
         '--card-background-color': '#131f19',
@@ -518,7 +577,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#283a30',
     },
     'vital-aurora': {
-        '--body-background': 'radial-gradient(62% 54% at 100% 0%, rgba(229, 72, 42, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(200, 224, 33, 0.12) 0%, transparent 68%), linear-gradient(155deg, #dcd3c0 0%, #f2ede4 52%, #fbf8f1 100%)',
+        '--body-background':
+            'radial-gradient(62% 54% at 100% 0%, rgba(229, 72, 42, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(200, 224, 33, 0.12) 0%, transparent 68%), linear-gradient(155deg, #dcd3c0 0%, #f2ede4 52%, #fbf8f1 100%)',
         '--body-accent-color': '#e5482a',
         '--body-color-muted': '#8a8579',
         '--card-background-color': '#fbf8f1',
@@ -526,7 +586,8 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-border-bottom-color': '#dcd3c0',
     },
     'vital-signal': {
-        '--body-background': 'radial-gradient(60% 50% at 100% 0%, rgba(34, 211, 238, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(34, 211, 238, 0.1) 0%, transparent 65%), linear-gradient(155deg, #081418 0%, #040c0e 55%, #061012 100%)',
+        '--body-background':
+            'radial-gradient(60% 50% at 100% 0%, rgba(34, 211, 238, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(34, 211, 238, 0.1) 0%, transparent 65%), linear-gradient(155deg, #081418 0%, #040c0e 55%, #061012 100%)',
         '--body-accent-color': '#22d3ee',
         '--body-color-muted': '#4a8898',
         '--card-background-color': '#0e2028',

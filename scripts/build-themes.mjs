@@ -141,7 +141,7 @@ ${PREVIEW_TOKENS.map(token => `    | '${token}'`).join('\n')};
 export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewToken, string>>>> = {
 ${entries}
 };
-`,
+`
 );
 
 console.log(`Compiled ${themeNames.length} themes to dist/themes/`);

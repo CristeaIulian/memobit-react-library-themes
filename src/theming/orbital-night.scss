@@ -11,10 +11,8 @@
         repeating-linear-gradient(0deg, transparent 0 39px, rgba(95, 176, 255, 0.035) 39px 40px),
         repeating-linear-gradient(90deg, transparent 0 39px, rgba(95, 176, 255, 0.035) 39px 40px),
         radial-gradient(60% 50% at 100% 0%, rgba(95, 176, 255, 0.14) 0%, transparent 65%),
-        radial-gradient(50% 45% at 0% 100%, rgba(56, 189, 248, 0.10) 0%, transparent 65%),
-        linear-gradient(160deg, #14202e 0%, #0b1424 55%, #0e1828 100%);
-    --body-background-glow:
-        radial-gradient(900px 500px at 50% -10%, rgba(95, 176, 255, 0.18) 0%, transparent 60%);
+        radial-gradient(50% 45% at 0% 100%, rgba(56, 189, 248, 0.1) 0%, transparent 65%), linear-gradient(160deg, #14202e 0%, #0b1424 55%, #0e1828 100%);
+    --body-background-glow: radial-gradient(900px 500px at 50% -10%, rgba(95, 176, 255, 0.18) 0%, transparent 60%);
     --body-color: #cad6e5;
     --body-color-accent: #e8eef7;
     --body-color-muted: #6f7f95;
@@ -146,7 +144,7 @@
     --modal-box-shadow-hover: 0 32px 90px rgba(0, 0, 0, 0.6), 0 8px 24px rgba(0, 0, 0, 0.42);
 
     --list-alternate-background-color: #1b2c4a;
-    --list-hover-background-color: rgba(95, 176, 255, 0.10);
+    --list-hover-background-color: rgba(95, 176, 255, 0.1);
 
     --progress-bar-background-color: #1b2c4a;
     --progress-bar-color: #cad6e5;
@@ -174,14 +172,14 @@
     --form-control-label-letter-spacing: 0.18em;
     --form-control-label-text-transform: uppercase;
     --form-control-border-color: rgba(95, 176, 255, 0.22);
-    --form-control-error-background-color: rgba(239, 79, 79, 0.10);
+    --form-control-error-background-color: rgba(239, 79, 79, 0.1);
     --form-control-error-color: #ef4f4f;
     --form-control-error-border-color: #ef4f4f;
     --form-control-focus-background-color: #22365a;
     --form-control-focus-border-color: #5fb0ff;
     --form-control-focus-color: #ffffff;
     --form-control-placeholder-color: #6f7f95;
-    --form-control-success-background-color: rgba(34, 197, 94, 0.10);
+    --form-control-success-background-color: rgba(34, 197, 94, 0.1);
     --form-control-success-color: #22c55e;
     --form-control-success-border-color: #22c55e;
 
@@ -230,7 +228,7 @@
     --toast-danger-color: #ffffff;
     --toast-danger-border-color: #ef4f4f;
 
-    --loader-border-color: rgba(95, 176, 255, 0.20);
+    --loader-border-color: rgba(95, 176, 255, 0.2);
     --loader-border-top-color: #5fb0ff;
 
     --rating-color-success: #22c55e;
@@ -258,7 +256,7 @@
     --chip-selected-color: var(--body-accent-color);
     --chip-selected-count-color: var(--body-color-muted);
 
-    --note-container-effect-background-color: rgba(95, 176, 255, 0.10);
+    --note-container-effect-background-color: rgba(95, 176, 255, 0.1);
     --note-container-effect-color: #cad6e5;
     --note-container-effect-border-left-color: #5fb0ff;
 

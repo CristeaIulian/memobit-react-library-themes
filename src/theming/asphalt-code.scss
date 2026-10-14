@@ -8,8 +8,7 @@
     --body-background-base: #0a0c0e;
     --body-background-wash:
         radial-gradient(55% 50% at 100% 0%, rgba(6, 182, 212, 0.14) 0%, transparent 65%),
-        radial-gradient(50% 45% at 0% 100%, rgba(6, 182, 212, 0.1) 0%, transparent 65%),
-        linear-gradient(160deg, #0e1012 0%, #080a0c 55%, #0c0e10 100%);
+        radial-gradient(50% 45% at 0% 100%, rgba(6, 182, 212, 0.1) 0%, transparent 65%), linear-gradient(160deg, #0e1012 0%, #080a0c 55%, #0c0e10 100%);
     --body-color: #c8d8e4;
     --body-color-accent: #ffffff;
     --body-color-muted: #5a7888;
