@@ -1,6 +1,6 @@
 # @memobit/themes
 
-66 themes for the Memobit apps. Each is published as its own stylesheet, so an app loads
+67 themes for the Memobit apps. Each is published as its own stylesheet, so an app loads
 only the one it is showing instead of all of them.
 
 Extracted from [`@memobit/libs`](https://github.com/CristeaIulian/memobit-react-library) in
