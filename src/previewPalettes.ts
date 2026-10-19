@@ -299,6 +299,15 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-background-color': '#1d1823',
         '--header-border-bottom-color': 'rgba(224, 137, 106, 0.16)',
     },
+    lamplight: {
+        '--body-background':
+            'radial-gradient(55% 50% at 100% 0%, rgba(217, 164, 65, 0.1) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(184, 100, 60, 0.07) 0%, transparent 65%), linear-gradient(160deg, #1f1912 0%, #16120e 55%, #100d0a 100%)',
+        '--body-accent-color': '#d9a441',
+        '--body-color-muted': '#a6977d',
+        '--card-background-color': '#211b14',
+        '--header-background-color': '#1b1611',
+        '--header-border-bottom-color': 'rgba(217, 164, 65, 0.14)',
+    },
     'lavender-mist': {
         '--body-background':
             'radial-gradient(60% 50% at 100% 0%, rgba(168, 85, 247, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(216, 180, 254, 0.16) 0%, transparent 65%), linear-gradient(155deg, #fffaff 0%, #f7edff 55%, #fdfbff 100%)',
