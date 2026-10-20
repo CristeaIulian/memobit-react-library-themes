@@ -441,6 +441,13 @@ export const THEME_CONFIGS: ThemeConfig[] = [
         fontUrl: 'https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap',
     },
+    {
+        value: 'war-room',
+        label: 'War Room',
+        recommendedApps: ['Skirmish'],
+        fontUrl: 'https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap',
+        fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap',
+    },
 ];
 
 export const FAVORITE_THEMES = new Set([

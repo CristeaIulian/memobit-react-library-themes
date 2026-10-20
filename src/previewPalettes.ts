@@ -612,4 +612,13 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-background-color': '#091418',
         '--header-border-bottom-color': '#102028',
     },
+    'war-room': {
+        '--body-background':
+            'radial-gradient(55% 50% at 100% 0%, rgba(245, 158, 11, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(56, 189, 248, 0.08) 0%, transparent 65%), linear-gradient(160deg, #141c29 0%, #0d131d 55%, #090d14 100%)',
+        '--body-accent-color': '#f59e0b',
+        '--body-color-muted': '#8a97ab',
+        '--card-background-color': '#162030',
+        '--header-background-color': '#111926',
+        '--header-border-bottom-color': 'rgba(245, 158, 11, 0.16)',
+    },
 };
