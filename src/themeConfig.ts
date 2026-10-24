@@ -306,7 +306,7 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'mesh-circuit',
         label: 'Mesh Circuit',
-        recommendedApps: ['IoT', 'Resume'],
+        recommendedApps: ['Resume'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap',
     },
@@ -447,6 +447,13 @@ export const THEME_CONFIGS: ThemeConfig[] = [
         recommendedApps: ['Skirmish'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap',
+    },
+    {
+        value: 'circuit-harbor',
+        label: 'Circuit Harbor',
+        recommendedApps: ['IoT'],
+        fontUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+        fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap',
     },
 ];
 

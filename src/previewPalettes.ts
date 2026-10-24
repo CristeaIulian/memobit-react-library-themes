@@ -137,6 +137,15 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-background-color': '#f5ece0',
         '--header-border-bottom-color': '#c9b48d',
     },
+    'circuit-harbor': {
+        '--body-background':
+            'radial-gradient(62% 54% at 100% 0%, rgba(14, 116, 144, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(30, 58, 95, 0.12) 0%, transparent 68%), linear-gradient(155deg, #0d151b 0%, #070c10 52%, #1a2833 100%)',
+        '--body-accent-color': '#22d3ee',
+        '--body-color-muted': '#879cad',
+        '--card-background-color': '#1a2833',
+        '--header-background-color': '#0d151b',
+        '--header-border-bottom-color': '#33495a',
+    },
     'citrus-vital': {
         '--body-background':
             'radial-gradient(62% 54% at 100% 0%, rgba(45, 212, 191, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(250, 204, 21, 0.12) 0%, transparent 68%), linear-gradient(155deg, #0d1a17 0%, #0a1412 52%, #111f1b 100%)',
