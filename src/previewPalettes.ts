@@ -13,24 +13,6 @@ export type PreviewToken =
     | '--header-border-bottom-color';
 
 export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewToken, string>>>> = {
-    'amber-meridian': {
-        '--body-background':
-            'radial-gradient(80% 50% at 50% 100%, rgba(217, 119, 6, 0.18) 0%, transparent 65%), radial-gradient(45% 40% at 100% 0%, rgba(251, 191, 36, 0.1) 0%, transparent 65%), radial-gradient(130% 110% at 10% 0%, #1a1208 0%, #100c06 55%, #160e08 100%)',
-        '--body-accent-color': '#d97706',
-        '--body-color-muted': '#7a6848',
-        '--card-background-color': '#201808',
-        '--header-background-color': '#181008',
-        '--header-border-bottom-color': 'rgba(217, 119, 6, 0.16)',
-    },
-    'archive-indigo': {
-        '--body-background':
-            'radial-gradient(55% 50% at 100% 0%, rgba(99, 102, 241, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(99, 102, 241, 0.1) 0%, transparent 65%), linear-gradient(155deg, #0d1020 0%, #070a16 55%, #0b0e1c 100%)',
-        '--body-accent-color': '#6366f1',
-        '--body-color-muted': '#5060a0',
-        '--card-background-color': '#131828',
-        '--header-background-color': '#0d1020',
-        '--header-border-bottom-color': '#151828',
-    },
     'arctic-blue': {
         '--body-background': '#0f1419',
         '--body-accent-color': '#60a5fa',
@@ -93,24 +75,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-background-color': 'rgba(242, 237, 232, 0.88)',
         '--header-border-bottom-color': 'rgba(93, 122, 138, 0.18)',
     },
-    'blush-market': {
-        '--body-background':
-            'radial-gradient(60% 50% at 0% 100%, rgba(224, 120, 145, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 100% 0%, rgba(224, 120, 145, 0.14) 0%, transparent 65%), radial-gradient(120% 100% at 100% 0%, #fff0f3 0%, #f8eef0 45%, #f0e8eb 100%)',
-        '--body-accent-color': '#e07891',
-        '--body-color-muted': '#7a6870',
-        '--card-background-color': 'rgba(255, 255, 255, 0.96)',
-        '--header-background-color': '#faf2f4',
-        '--header-border-bottom-color': 'rgba(224, 120, 145, 0.12)',
-    },
-    'brass-chronicle': {
-        '--body-background':
-            'radial-gradient(55% 50% at 100% 0%, rgba(184, 134, 11, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(120, 60, 20, 0.16) 0%, transparent 65%), radial-gradient(130% 110% at 15% 0%, #141008 0%, #0c0a06 55%, #120e08 100%)',
-        '--body-accent-color': '#b8860b',
-        '--body-color-muted': '#7a6840',
-        '--card-background-color': '#1c1608',
-        '--header-background-color': '#120e08',
-        '--header-border-bottom-color': 'rgba(184, 134, 11, 0.18)',
-    },
     'carbon-velocity': {
         '--body-background':
             'radial-gradient(55% 45% at 100% 0%, rgba(220, 38, 38, 0.14) 0%, transparent 60%), radial-gradient(45% 55% at 0% 100%, rgba(120, 12, 12, 0.18) 0%, transparent 65%), linear-gradient(160deg, #111316 0%, #0a0b0d 60%, #0e0f12 100%)',
@@ -155,15 +119,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-background-color': '#0d1a17',
         '--header-border-bottom-color': '#254139',
     },
-    'clinical-aqua': {
-        '--body-background':
-            'radial-gradient(55% 50% at 100% 0%, rgba(8, 145, 178, 0.1) 0%, transparent 65%), radial-gradient(40% 45% at 0% 100%, rgba(8, 145, 178, 0.06) 0%, transparent 65%), linear-gradient(140deg, #f4f9fb 0%, #eaf2f5 55%, #e0ecf0 100%)',
-        '--body-accent-color': '#0891b2',
-        '--body-color-muted': '#5a7a84',
-        '--card-background-color': 'rgba(255, 255, 255, 0.96)',
-        '--header-background-color': '#e8f2f6',
-        '--header-border-bottom-color': 'rgba(8, 145, 178, 0.12)',
-    },
     'cobalt-pulse': {
         '--body-background':
             'radial-gradient(60% 50% at 100% 0%, rgba(79, 142, 247, 0.16) 0%, transparent 65%), radial-gradient(48% 42% at 0% 100%, rgba(150, 80, 255, 0.12) 0%, transparent 65%), linear-gradient(155deg, #11131d 0%, #08090c 55%, #0d0e14 100%)',
@@ -172,15 +127,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--card-background-color': '#191c28',
         '--header-background-color': '#0f1114',
         '--header-border-bottom-color': '#1e2236',
-    },
-    'command-slate': {
-        '--body-background':
-            'radial-gradient(62% 54% at 100% 0%, rgba(139, 92, 246, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(56, 189, 248, 0.12) 0%, transparent 68%), linear-gradient(155deg, #111620 0%, #0d1018 52%, #171b26 100%)',
-        '--body-accent-color': '#8b5cf6',
-        '--body-color-muted': '#838d9f',
-        '--card-background-color': '#171b26',
-        '--header-background-color': '#111620',
-        '--header-border-bottom-color': '#2a3242',
     },
     'crawler-dusk': {
         '--body-background':
@@ -218,15 +164,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-background-color': 'tranparent',
         '--header-border-bottom-color': 'tranparent',
     },
-    'ember-night': {
-        '--body-background':
-            'radial-gradient(58% 48% at 100% 0%, rgba(245, 158, 11, 0.16) 0%, transparent 65%), radial-gradient(52% 45% at 0% 100%, rgba(252, 211, 77, 0.08) 0%, transparent 65%), linear-gradient(155deg, #22140c 0%, #140b07 55%, #1c1008 100%)',
-        '--body-accent-color': '#f59e0b',
-        '--body-color-muted': '#fcd34d',
-        '--card-background-color': '#291a10',
-        '--header-background-color': '#291a10',
-        '--header-border-bottom-color': '#3d2817',
-    },
     'emerald-ledger': {
         '--body-background':
             'radial-gradient(55% 50% at 0% 0%, rgba(16, 185, 129, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 100% 100%, rgba(217, 119, 6, 0.1) 0%, transparent 65%), radial-gradient(130% 110% at 0% 0%, #0e1814 0%, #091210 55%, #0c1612 100%)',
@@ -236,15 +173,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-background-color': '#0e1814',
         '--header-border-bottom-color': '#162218',
     },
-    'frost-petal': {
-        '--body-background':
-            'radial-gradient(60% 48% at 100% 0%, rgba(108, 92, 231, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(154, 146, 184, 0.12) 0%, transparent 65%), linear-gradient(155deg, #fbfaff 0%, #f1eef8 55%, #f7f9ff 100%)',
-        '--body-accent-color': '#6c5ce7',
-        '--body-color-muted': '#9a92b8',
-        '--card-background-color': '#ffffff',
-        '--header-background-color': 'transparent',
-        '--header-border-bottom-color': '#ddd8ee',
-    },
     'garden-harvest': {
         '--body-background':
             'radial-gradient(50% 45% at 100% 0%, rgba(245, 158, 11, 0.1) 0%, transparent 65%), radial-gradient(55% 50% at 0% 100%, rgba(61, 122, 58, 0.12) 0%, transparent 65%), radial-gradient(120% 100% at 0% 0%, #faf8f0 0%, #f0eddf 50%, #e8e4d0 100%)',
@@ -253,15 +181,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--card-background-color': 'rgba(255, 255, 255, 0.94)',
         '--header-background-color': '#f0ede0',
         '--header-border-bottom-color': 'rgba(61, 122, 58, 0.14)',
-    },
-    'gilded-bear': {
-        '--body-background':
-            'radial-gradient(55% 50% at 100% 0%, rgba(201, 144, 58, 0.16) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(99, 102, 241, 0.14) 0%, transparent 65%), radial-gradient(130% 110% at 10% 0%, #0c0e28 0%, #060818 55%, #0a0c22 100%)',
-        '--body-accent-color': '#c9903a',
-        '--body-color-muted': '#7068a0',
-        '--card-background-color': '#101230',
-        '--header-background-color': '#0b0d22',
-        '--header-border-bottom-color': 'rgba(201, 144, 58, 0.16)',
     },
     'graphite-shell': {
         '--body-background':
@@ -280,15 +199,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--card-background-color': '#1a1c26',
         '--header-background-color': '#14161e',
         '--header-border-bottom-color': '#1e2030',
-    },
-    'horizon-drift': {
-        '--body-background':
-            'linear-gradient(180deg, rgba(47, 168, 204, 0.12) 0%, transparent 35%), radial-gradient(60% 50% at 100% 100%, rgba(245, 158, 11, 0.12) 0%, transparent 65%), radial-gradient(130% 110% at 0% 0%, #fef9ee 0%, #f5edd8 45%, #ece0c4 100%)',
-        '--body-accent-color': '#2fa8cc',
-        '--body-color-muted': '#5a7888',
-        '--card-background-color': 'rgba(255, 255, 255, 0.94)',
-        '--header-background-color': '#f4ece0',
-        '--header-border-bottom-color': 'rgba(47, 168, 204, 0.14)',
     },
     'indigo-stitch': {
         '--body-background':
@@ -325,24 +235,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--card-background-color': '#211b14',
         '--header-background-color': '#1b1611',
         '--header-border-bottom-color': 'rgba(217, 164, 65, 0.14)',
-    },
-    'lavender-mist': {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(168, 85, 247, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(216, 180, 254, 0.16) 0%, transparent 65%), linear-gradient(155deg, #fffaff 0%, #f7edff 55%, #fdfbff 100%)',
-        '--body-accent-color': '#a855f7',
-        '--body-color-muted': '#64748b',
-        '--card-background-color': '#ffffff',
-        '--header-background-color': '#ffffff',
-        '--header-border-bottom-color': '#f3e8ff',
-    },
-    'light-blue': {
-        '--body-background':
-            'radial-gradient(farthest-side at 10% 0%, rgba(51, 56, 103, 0.95) 20%, transparent 70%), radial-gradient(55% 45% at 100% 0%, rgba(91, 143, 249, 0.16) 0%, transparent 65%), linear-gradient(155deg, #20275a 0%, #17193b 60%, #111430 100%)',
-        '--body-accent-color': '#5b8ff9',
-        '--body-color-muted': '#5b5f63',
-        '--card-background-color': '#1b1e3c',
-        '--header-background-color': 'transparent',
-        '--header-border-bottom-color': '#3b3d46',
     },
     lumen: {
         '--body-background': '#0b0604',
@@ -387,42 +279,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--card-background-color': '#1b1d19',
         '--header-background-color': '#0f110f',
         '--header-border-bottom-color': '#2a2d27',
-    },
-    'midnight-folio': {
-        '--body-background':
-            'radial-gradient(62% 54% at 100% 0%, rgba(196, 181, 253, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(240, 171, 252, 0.12) 0%, transparent 68%), linear-gradient(155deg, #131528 0%, #0f1020 52%, #181a2d 100%)',
-        '--body-accent-color': '#c4b5fd',
-        '--body-color-muted': '#908ba8',
-        '--card-background-color': '#181a2d',
-        '--header-background-color': '#131528',
-        '--header-border-bottom-color': '#2d3151',
-    },
-    'mint-meadow': {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(16, 185, 129, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(187, 247, 208, 0.18) 0%, transparent 65%), linear-gradient(155deg, #f8fffb 0%, #eafbf1 55%, #f3fff7 100%)',
-        '--body-accent-color': '#10b981',
-        '--body-color-muted': '#64748b',
-        '--card-background-color': '#ffffff',
-        '--header-background-color': '#ffffff',
-        '--header-border-bottom-color': '#d1fae5',
-    },
-    mintone: {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(52, 58, 64, 0.08) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(187, 191, 194, 0.16) 0%, transparent 65%), linear-gradient(155deg, #ffffff 0%, #f3f5fa 55%, #f8f9fc 100%)',
-        '--body-accent-color': '#343a40',
-        '--body-color-muted': '#bbbfc2',
-        '--card-background-color': '#fff',
-        '--header-background-color': 'transparent',
-        '--header-border-bottom-color': '#3b3d46',
-    },
-    'neon-tokyo': {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(232, 64, 160, 0.18) 0%, transparent 65%), radial-gradient(48% 42% at 0% 100%, rgba(192, 132, 252, 0.12) 0%, transparent 65%), linear-gradient(155deg, #15101a 0%, #09090f 55%, #101018 100%)',
-        '--body-accent-color': '#e840a0',
-        '--body-color-muted': '#c084fc',
-        '--card-background-color': '#14141c',
-        '--header-background-color': '#14141c',
-        '--header-border-bottom-color': '#252530',
     },
     'noir-marquee': {
         '--body-background':
@@ -522,15 +378,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-background-color': '#161920',
         '--header-border-bottom-color': '#1e2230',
     },
-    'spectrum-vault': {
-        '--body-background':
-            'radial-gradient(55% 50% at 100% 0%, rgba(139, 92, 246, 0.18) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(236, 72, 153, 0.12) 0%, transparent 65%), radial-gradient(130% 110% at 20% 0%, #130e1e 0%, #0a0810 55%, #100c18 100%)',
-        '--body-accent-color': '#8b5cf6',
-        '--body-color-muted': '#7060a8',
-        '--card-background-color': '#181428',
-        '--header-background-color': '#110e1e',
-        '--header-border-bottom-color': '#1a1630',
-    },
     'tailwind-vue-dark': {
         '--body-background':
             'radial-gradient(60% 50% at 100% 0%, rgba(96, 165, 250, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(144, 161, 185, 0.1) 0%, transparent 65%), linear-gradient(155deg, #263852 0%, #182235 55%, #1f2d43 100%)',
@@ -558,15 +405,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-background-color': '#f8eedf',
         '--header-border-bottom-color': 'rgba(194, 82, 47, 0.14)',
     },
-    'twilight-pulse': {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(217, 70, 239, 0.18) 0%, transparent 65%), radial-gradient(48% 42% at 0% 100%, rgba(167, 139, 250, 0.12) 0%, transparent 65%), linear-gradient(155deg, #171024 0%, #0b0714 55%, #120a1f 100%)',
-        '--body-accent-color': '#d946ef',
-        '--body-color-muted': '#a78bfa',
-        '--card-background-color': '#1a1028',
-        '--header-background-color': '#1a1028',
-        '--header-border-bottom-color': '#2d1b4e',
-    },
     'vault-guard': {
         '--body-background':
             'radial-gradient(55% 50% at 100% 0%, rgba(34, 197, 94, 0.1) 0%, transparent 65%), radial-gradient(45% 40% at 0% 100%, rgba(34, 197, 94, 0.08) 0%, transparent 65%), linear-gradient(160deg, #101418 0%, #0a0e12 55%, #0e1216 100%)',
@@ -575,24 +413,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--card-background-color': '#161c22',
         '--header-background-color': '#111518',
         '--header-border-bottom-color': '#1a2228',
-    },
-    'velvet-reel': {
-        '--body-background':
-            'radial-gradient(70% 60% at 50% 0%, rgba(232, 184, 75, 0.12) 0%, transparent 60%), radial-gradient(50% 45% at 0% 100%, rgba(120, 20, 30, 0.2) 0%, transparent 65%), radial-gradient(50% 45% at 100% 100%, rgba(120, 20, 30, 0.18) 0%, transparent 65%), radial-gradient(130% 110% at 50% 0%, #160a0e 0%, #0a0508 50%, #0e0709 100%)',
-        '--body-accent-color': '#e8b84b',
-        '--body-color-muted': '#907878',
-        '--card-background-color': '#1a1012',
-        '--header-background-color': '#120a0c',
-        '--header-border-bottom-color': 'rgba(232, 184, 75, 0.14)',
-    },
-    'velvet-tome': {
-        '--body-background':
-            'radial-gradient(55% 50% at 80% 10%, rgba(201, 144, 58, 0.16) 0%, transparent 65%), radial-gradient(50% 45% at 10% 100%, rgba(120, 60, 20, 0.18) 0%, transparent 65%), radial-gradient(120% 100% at 10% 0%, #221808 0%, #160e04 50%, #1e1408 100%)',
-        '--body-accent-color': '#c9903a',
-        '--body-color-muted': '#8a7a68',
-        '--card-background-color': '#261c0e',
-        '--header-background-color': '#1e1608',
-        '--header-border-bottom-color': 'rgba(201, 144, 58, 0.18)',
     },
     'verdant-pulse': {
         '--body-background':

@@ -7,7 +7,7 @@
 // — six colours per theme is enough to draw a swatch, and costs ~6 KB for the whole set
 // rather than the stylesheets themselves.
 
-import { mkdirSync, readdirSync, writeFileSync } from 'fs';
+import { mkdirSync, readdirSync, rmSync, writeFileSync } from 'fs';
 import { dirname, join, resolve } from 'path';
 import { format, resolveConfig } from 'prettier';
 import * as sass from 'sass';
@@ -72,6 +72,8 @@ const themeNames = readdirSync(themingDir)
     .map(file => file.slice(0, -5))
     .sort();
 
+// Cleared first so a removed theme does not linger in dist and keep being served by the Vite plugin.
+rmSync(themesOutDir, { recursive: true, force: true });
 mkdirSync(themesOutDir, { recursive: true });
 
 const palettes = {};
