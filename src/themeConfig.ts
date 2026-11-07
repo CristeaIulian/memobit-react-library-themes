@@ -80,7 +80,7 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'sandy-parchment',
         label: 'Sandy Parchment',
-        recommendedApps: ['Shelf', 'Ascend', 'Basket', 'CookBook', 'HUB', 'Impulse', 'Seeds'],
+        recommendedApps: ['Shelf', 'Basket', 'CookBook', 'HUB', 'Impulse', 'Seeds'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&display=swap',
     },
@@ -108,7 +108,7 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'signal-burst',
         label: 'Signal Burst',
-        recommendedApps: ['Impulse', 'Garage', 'Ascend', 'Basket', 'CookBook', 'Resume', 'NutriTrack', 'Seeds'],
+        recommendedApps: ['Impulse', 'Garage', 'Basket', 'CookBook', 'Resume', 'NutriTrack', 'Seeds'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap',
     },
@@ -136,14 +136,13 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'citrus-vital',
         label: 'Citrus Vital',
-        recommendedApps: [],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700&display=swap',
     },
     {
         value: 'horizon-amber',
         label: 'Horizon Amber',
-        recommendedApps: ['Ascend', 'Garage', 'Basket', 'HUB', 'Impulse', 'NutriTrack'],
+        recommendedApps: ['Garage', 'Basket', 'HUB', 'Impulse', 'NutriTrack'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap',
     },
@@ -171,7 +170,6 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'slate-focus',
         label: 'Slate Focus',
-        recommendedApps: ['Tasks'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
     },
     {
@@ -191,7 +189,7 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'crawler-dusk',
         label: 'Crawler Dusk',
-        recommendedApps: ['Ascend', 'NutriTrack'],
+        recommendedApps: ['NutriTrack'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap',
     },
@@ -288,7 +286,7 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'chrono-atlas',
         label: 'Chrono Atlas',
-        recommendedApps: ['Atlas of Time', 'Garage', 'Ascend', 'Basket', 'CookBook', 'Resume', 'Pulse', 'Seeds'],
+        recommendedApps: ['Atlas of Time', 'Garage', 'Basket', 'CookBook', 'Resume', 'Pulse', 'Seeds'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap',
     },
@@ -302,21 +300,18 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'kindred-ink',
         label: 'Kindred Ink',
-        recommendedApps: ['Recall'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap',
     },
     {
         value: 'lamplight',
         label: 'Lamplight',
-        recommendedApps: ['Readout'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap',
     },
     {
         value: 'indigo-stitch',
         label: 'Indigo Stitch',
-        recommendedApps: ['Pocket'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap',
     },

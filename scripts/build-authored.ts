@@ -1,21 +1,21 @@
 // Generates the hand-made (authored) themes: each theme's choices become the shared roles,
 // the bridge turns those into every component value, and the badge/chip recipes apply on
-// top. Every `src/authored/*.ts` file except the contract is a theme. Output:
-// dist/authored/<id>.css per theme, dist/authored.css with all of them, and
-// src/authoredThemes.ts listing them for the runtime.
+// top. Every `src/authored/*.ts` file except the contract is a theme. There are two kinds:
 //
-// An authored theme applies under its classic theme's `data-theme` while the root carries
-// data-theme-engine="authored", so an app can flip between the two. Its stylesheet slot and
-// its web fonts still come from that classic theme's THEME_CONFIGS entry.
+//   - An authored version of a classic theme (same id as a THEME_CONFIGS entry). It applies
+//     under that classic theme's `data-theme` while the root carries
+//     data-theme-engine="authored", so an app can flip between the two. Its fonts come from
+//     the classic entry unless it names its own. Output: dist/authored/<id>.css and
+//     dist/authored.css.
+//   - A new theme (no classic entry). It gets everything a classic theme has: its own
+//     stylesheet at dist/themes/<id>.css (served and loaded on demand like the others), a
+//     registry entry and a picker swatch in src/authoredThemes.ts. It must pass every
+//     contrast check and name its fonts' URL.
 //
-// The build fails when
-//   - a token some classic theme sets is not produced by the bridge, since it would leak
-//     through from the classic theme still loaded underneath,
-//   - a role the bridge or recipes read is not produced by a theme, or
-//   - a theme names a font its THEME_CONFIGS entry does not load.
-// Contrast is reported, not enforced, while authored themes reproduce classic ones as they were.
+// The build also fails when a token some classic theme sets is not produced by the bridge,
+// or a role the bridge or recipes read is not produced by a theme.
 
-import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { appendFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve as resolvePath } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { format, resolveConfig } from 'prettier';
@@ -24,23 +24,18 @@ import type { AuthoredTheme } from '../src/authored/contract.ts';
 import { THEME_CONFIGS } from '../src/themeConfig.ts';
 
 import { BRIDGE } from './authored/bridge.ts';
-import { contrast, type Oklch, over, parseColor } from './authored/color.ts';
-import { deriveOverrides, deriveRoles } from './authored/derive.ts';
+import { contrastWarnings, themeSheet, unloadedFonts } from './authored/checks.ts';
 
 const root = resolvePath(dirname(fileURLToPath(import.meta.url)), '..');
 const authoredDir = join(root, 'src/authored');
 const outDir = join(root, 'dist/authored');
+const classicDir = join(root, 'dist/themes');
 const recipes = readFileSync(join(authoredDir, 'recipes.css'), 'utf8');
-
-// Scales the lib defines itself, and variables the recipes set on the element.
-const LIB_SCALES = /^--(font-size|font-weight|spacing|radius|recipe)-?/;
-// Font names that need no web font.
-const GENERIC_FONTS = /^(system-ui|-apple-system|sans-serif|serif|monospace|ui-[a-z-]+)$/;
-const WHITE: Oklch = { l: 1, c: 0, h: 0 };
 
 const failures: string[] = [];
 const warnings: string[] = [];
-const sheets: string[] = [];
+const overrideSheets: string[] = [];
+const newSheets: string[] = [];
 
 const isAuthoredTheme = (value: unknown): value is AuthoredTheme =>
     typeof value === 'object' && value !== null && 'id' in value && 'canvas' in value && 'accent' in value && 'selection' in value;
@@ -61,8 +56,6 @@ if (duplicates.length > 0) {
 }
 
 // Coverage against the classic themes.
-const classicDir = join(root, 'dist/themes');
-
 if (!existsSync(classicDir)) {
     throw new Error('dist/themes is missing: run build:themes before build:authored.');
 }
@@ -81,127 +74,100 @@ if (uncovered.length > 0) {
     failures.push(`Tokens set by classic themes but not by the bridge: ${uncovered.join(', ')}`);
 }
 
-const firstFamily = (stack: string): string =>
-    stack
-        .split(',')[0]
-        .trim()
-        .replace(/^['"]|['"]$/g, '');
-
-const loadedFamilies = (urls: (string | undefined)[]): Set<string> =>
-    new Set(
-        urls.flatMap(url => (url === undefined ? [] : [...url.matchAll(/family=([^:&]+)/g)].map(match => decodeURIComponent(match[1].replace(/\+/g, ' ')))))
-    );
-
 // Cleared first so a removed theme does not linger in dist and get published.
 rmSync(outDir, { recursive: true, force: true });
 mkdirSync(outDir, { recursive: true });
 
+const newThemes: AuthoredTheme[] = [];
+
 for (const theme of themes) {
-    const scope = `:root[data-theme-engine='authored'][data-theme='${theme.id}']`;
-    const roles = deriveRoles(theme);
-    const overrides = deriveOverrides(theme);
-    const tokens = { ...roles, ...BRIDGE, ...overrides };
-    const themeRecipes = recipes.replaceAll(":root[data-theme-engine='authored']", scope);
+    const config = THEME_CONFIGS.find(candidate => candidate.value === theme.id);
+    const isNew = config === undefined;
+    const scope = isNew ? `[data-theme='${theme.id}']` : `:root[data-theme-engine='authored'][data-theme='${theme.id}']`;
+    const { css, missing } = themeSheet(theme, scope, recipes);
 
     // Every role read must be produced, or a component would fall back to the classic value.
-    const read = [...`${Object.values(tokens).join(';')}${themeRecipes}`.matchAll(/var\((--[a-z0-9-]+)\)/g)].map(match => match[1]);
-    const missing = [...new Set(read)].filter(name => !(name in tokens) && !LIB_SCALES.test(name));
-
     if (missing.length > 0) {
         failures.push(`${theme.id}: roles read but not produced: ${missing.join(', ')}`);
     }
 
-    // The ThemeProvider loads fonts from the classic entry, so every family the theme names must be in it.
-    const config = THEME_CONFIGS.find(candidate => candidate.value === theme.id);
+    const fontUrls = theme.fonts.url !== undefined ? [theme.fonts.url] : isNew ? [] : [config.fontUrl, config.fontUrlDisplay, config.fontUrlMono];
+    const unloaded = unloadedFonts(theme, fontUrls);
 
-    if (config === undefined) {
-        failures.push(`${theme.id}: no classic theme with this id, which an authored theme needs for its stylesheet slot and fonts`);
+    if (unloaded.length > 0) {
+        failures.push(`${theme.id}: ${unloaded.join(', ')} not loaded by fonts.url${isNew ? '' : ' or its THEME_CONFIGS entry'}`);
+    }
+
+    // A new theme is held to the contrast targets; a classic one ported as it was is only reported.
+    const contrast = contrastWarnings(theme).map(warning => `${theme.id}: ${warning}`);
+    (isNew ? failures : warnings).push(...contrast);
+
+    if (isNew) {
+        newThemes.push(theme);
+        newSheets.push(css);
+        writeFileSync(join(classicDir, `${theme.id}.css`), css);
     } else {
-        const loaded = loadedFamilies([config.fontUrl, config.fontUrlDisplay, config.fontUrlMono]);
-        const unloaded = [theme.fonts.body, theme.fonts.display]
-            .flatMap(stack => (stack === undefined ? [] : [firstFamily(stack)]))
-            .filter(family => !GENERIC_FONTS.test(family) && !loaded.has(family));
-
-        if (unloaded.length > 0) {
-            failures.push(`${theme.id}: ${unloaded.join(', ')} not loaded by its THEME_CONFIGS entry; add them to fontUrl or fontUrlDisplay`);
-        }
+        overrideSheets.push(css);
+        writeFileSync(join(outDir, `${theme.id}.css`), css);
     }
-
-    // Contrast on the pairs a theme writes directly. Translucent surfaces are painted over what
-    // sits beneath them (cards over the canvas base, headers and controls over cards).
-    const paint = (value: string, base: Oklch): Oklch | null => {
-        const parsed = parseColor(value);
-
-        return parsed === null ? null : over(parsed, base);
-    };
-
-    const canvas = paint(theme.canvas.color, WHITE);
-    const card = canvas === null ? null : paint(theme.surface, canvas);
-    const surfaces = {
-        canvas,
-        card,
-        'card header': card === null ? null : paint(theme.surfaceAlt, card),
-        control: card === null ? null : paint(theme.control, card),
-    };
-
-    const check = (label: string, foreground: string, background: Oklch | null, minimum: number): void => {
-        const fg = background === null ? null : paint(foreground, background);
-
-        if (fg === null || background === null) {
-            return;
-        }
-
-        const ratio = contrast(fg, background);
-
-        if (ratio < minimum) {
-            warnings.push(`${theme.id}: ${label} is ${ratio.toFixed(2)}:1, target ${minimum}`);
-        }
-    };
-
-    for (const [name, surface] of Object.entries(surfaces)) {
-        check(`text on ${name}`, theme.text, surface, 4.5);
-        check(`muted text on ${name}`, theme.textMuted, surface, 4.5);
-        check(`accent text on ${name}`, theme.accent.text ?? theme.accent.solid, surface, 4.5);
-    }
-
-    check('link on card', theme.accent.link ?? theme.accent.solid, surfaces.card, 4.5);
-    check('placeholder on control', theme.placeholder ?? theme.textMuted, surfaces.control, 3);
-
-    for (const [name, colour] of Object.entries({ accent: theme.accent, success: theme.success, warning: theme.warning, danger: theme.danger })) {
-        check(`text on ${name} solid`, theme.onSolid, paint(colour.solid, WHITE), 4.5);
-
-        if (colour !== theme.accent) {
-            check(`${name} text on card`, colour.text ?? colour.solid, surfaces.card, 4.5);
-        }
-    }
-
-    const declarations = Object.entries(tokens)
-        .map(([name, value]) => `${name}:${value}`)
-        .join(';');
-    const sheet = `${scope}{${declarations}}\n${themeRecipes.trim()}\n`;
-
-    writeFileSync(join(outDir, `${theme.id}.css`), sheet);
-    sheets.push(sheet);
 }
 
 if (failures.length > 0) {
     throw new Error(`Authored theme build failed:\n  ${failures.join('\n  ')}`);
 }
 
-writeFileSync(join(root, 'dist/authored.css'), sheets.join('\n'));
+writeFileSync(join(root, 'dist/authored.css'), overrideSheets.join('\n'));
+
+// The legacy aggregate carries every theme, new ones included.
+if (newSheets.length > 0 && existsSync(join(root, 'dist/themes.css'))) {
+    appendFileSync(join(root, 'dist/themes.css'), newSheets.join('\n'));
+}
+
+// The registry entries and picker swatches of the new themes, light first within each app.
+const ordered = [...newThemes].sort(
+    (a, b) => (a.apps?.[0] ?? '').localeCompare(b.apps?.[0] ?? '') || (a.scheme === b.scheme ? 0 : a.scheme === 'light' ? -1 : 1)
+);
+const configs = ordered.map(theme => ({
+    value: theme.id,
+    label: theme.label,
+    fontUrl: theme.fonts.url ?? '',
+    ...(theme.apps === undefined ? {} : { recommendedApps: theme.apps }),
+}));
+const palettes = Object.fromEntries(
+    ordered.map(theme => [
+        theme.id,
+        {
+            '--body-background': theme.canvas.color,
+            '--body-accent-color': theme.accent.text ?? theme.accent.solid,
+            '--body-color-muted': theme.textMuted,
+            '--card-background-color': theme.surface,
+            '--header-background-color': theme.control,
+            '--header-border-bottom-color': theme.divider,
+        },
+    ])
+);
 
 const listPath = join(root, 'src/authoredThemes.ts');
 const listSource = `// AUTO-GENERATED by scripts/build-authored.ts — do not edit by hand.
 //
-// The hand-made themes. Each applies under the classic theme of the same id while the root
-// carries data-theme-engine="authored".
+// The hand-made themes. AUTHORED_THEMES lists all of them; the rest describe the new ones
+// (those without a classic counterpart) the way the classic registry describes its own.
+
+import type { PreviewToken } from './previewPalettes';
+import type { ThemeConfig } from './themeConfig';
 
 export const AUTHORED_THEMES = ${JSON.stringify(themes.map(theme => ({ id: theme.id, label: theme.label })))} as const;
+
+export const AUTHORED_THEME_CONFIGS: ThemeConfig[] = ${JSON.stringify(configs)};
+
+export const AUTHORED_LIGHT_THEMES: readonly string[] = ${JSON.stringify(ordered.filter(theme => theme.scheme === 'light').map(theme => theme.id))};
+
+export const AUTHORED_PREVIEW_PALETTES: Readonly<Record<string, Readonly<Record<PreviewToken, string>>>> = ${JSON.stringify(palettes)};
 `;
 const prettierConfig = await resolveConfig(listPath);
 writeFileSync(listPath, await format(listSource, { ...prettierConfig, filepath: listPath }));
 
-console.log(`authored.css: ${themes.length} theme(s), ${(sheets.join('').length / 1024).toFixed(1)} KB`);
+console.log(`authored: ${themes.length} theme(s), ${newThemes.length} new (${newThemes.map(theme => theme.id).join(', ') || 'none'})`);
 
 if (warnings.length > 0) {
     console.log(`Contrast below target (kept as the classic theme had them):\n  ${warnings.join('\n  ')}`);

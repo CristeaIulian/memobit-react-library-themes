@@ -52,20 +52,37 @@ selected chips, tabs and ticked checkboxes look.
 `npm run build:authored` fails when
 
 - a token some classic theme sets is not produced by the bridge, since it would leak
-  through from the classic theme still loaded underneath, or
-- a role the bridge or recipes read is not produced by a theme.
+  through from the classic theme still loaded underneath,
+- a role the bridge or recipes read is not produced by a theme,
+- a theme names a font that neither its `fonts.url` nor its classic entry loads, or
+- a new theme has a text/background pair below its contrast target (4.5:1, 3:1 for
+  placeholders).
 
-It also reports text/background pairs below their contrast target (4.5:1, 3:1 for
-placeholders) without failing, while authored themes reproduce classic ones as they were.
+An authored version of a classic theme only reports contrast below target, since it
+reproduces the classic theme as it was.
+
+### Two kinds of authored theme
+
+- **A new theme** (an id with no classic entry) is a theme in its own right: the build gives
+  it a stylesheet at `dist/themes/<id>.css`, served and loaded on demand like the classic
+  ones, a registry entry (with `apps` as its recommended apps) and a picker swatch, all in
+  the generated `src/authoredThemes.ts`. New themes come first in `THEME_CONFIGS`, so an app
+  listed in a theme's `apps` starts on it, light before dark. Apps pick them up by bumping
+  this package; nothing changes in the app.
+- **An authored version of a classic theme** (same id, e.g. `sandy-parchment`) applies under
+  that classic theme while `data-theme-engine="authored"` is set, for side-by-side
+  comparison in the theme lab (`@memobit/libs/theme-lab`).
 
 ### Adding a theme
 
-1. Add `src/authored/<id>.ts` exporting an `AuthoredTheme`, with the classic theme's id.
-2. Add it to `AUTHORED_THEMES` in `scripts/build-authored.ts`.
-3. Run `npm run build`. Its stylesheet lands in `dist/authored/<id>.css` and in
-   `dist/authored.css`.
+1. Draft it in `src/authored/concepts/<id>.ts` (an `AuthoredTheme` with `apps` and a
+   `description`) and run `npm run preview:concepts`. It writes `dist/concepts.html`: every
+   app theme and draft drawn as a small screen of its app, with its contrast report. Sample
+   content per app lives in `scripts/authored/samples.ts`.
+2. Once chosen, move it to `src/authored/<id>.ts` and run `npm run build`.
 
-The theme's fonts are still loaded through the classic theme's `THEME_CONFIGS` entry.
+To start from a classic theme instead, `npm run port:classic -- <id>` drafts
+`src/authored/<id>.ts` from its stylesheet.
 
 ## Classic themes
 

@@ -9,14 +9,22 @@
 export type SelectionStyle = 'ink' | 'soft' | 'solid';
 
 export interface StatusColour {
-    /** The solid: buttons, toasts, filled progress. */
+    /** The fill behind text: buttons and solid toasts, paired with `onSolid`. */
     solid: string;
     hover?: string;
+    /**
+     * The colour drawn on a surface: progress fills, focus rings, slider thumbs, selected
+     * days, accent borders, tints. Dark themes often make it brighter than the solid, which
+     * has to stay dark enough for light text. Defaults to the solid.
+     */
+    mark?: string;
     /** Text in this tone on a surface. Defaults to the solid when it reads well enough. */
     text?: string;
 }
 
 export interface TitleVoice {
+    /** Which of the theme's two fonts the title uses. Card titles always use the display font. */
+    family?: 'body' | 'display';
     style?: 'normal' | 'italic';
     weight?: number;
     size?: string;
@@ -28,12 +36,18 @@ export interface AuthoredTheme {
     /** The classic theme this replaces; the authored version applies under the same `data-theme`. */
     id: string;
     label: string;
+    /** One or two sentences on the idea behind the theme, shown in previews. */
+    description?: string;
+    /** The apps this theme is made for. They list it first in the picker and start on it. */
+    apps?: string[];
     scheme: 'light' | 'dark';
 
     fonts: {
         body: string;
         /** Titles. One font is a valid theme. */
         display?: string;
+        /** Google Fonts URL loading both. Without it, fonts load from the classic theme's THEME_CONFIGS entry. */
+        url?: string;
     };
 
     canvas: {
@@ -66,6 +80,10 @@ export interface AuthoredTheme {
     stripe?: string;
     /** Modals and drawers. Defaults to the surface. */
     overlay?: string;
+    /** Menus, popovers and calendars that float above the page. Defaults to the control colour. */
+    menu?: string;
+    /** Untoned (default) buttons. Defaults to the control colour. */
+    button?: string;
 
     // Lines.
     divider: string;
@@ -77,6 +95,8 @@ export interface AuthoredTheme {
     controlBorderHover?: string;
     /** The card's own edge, e.g. a light rim on glass. Defaults to the border. */
     edge?: string;
+    /** The card's edge on hover. Defaults to the edge. */
+    edgeHover?: string;
 
     // Colour.
     accent: StatusColour & { glow?: string; link?: string; linkHover?: string };
@@ -96,6 +116,8 @@ export interface AuthoredTheme {
     headerWeight?: number;
 
     // Depth.
+    /** Base colour of shadows. Defaults to the ink in a light theme and black in a dark one. */
+    shadowColor?: string;
     shadows?: { card?: string; surface?: string; modal?: string };
     /** Backdrop filter for glass surfaces, e.g. `blur(22px) saturate(1.4)`. */
     blur?: string;

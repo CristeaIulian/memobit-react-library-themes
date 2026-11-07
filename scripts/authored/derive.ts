@@ -35,18 +35,23 @@ const SELECTION_STYLES: Record<SelectionStyle, Record<string, string>> = {
     },
 };
 
-const tone = (name: string, colour: StatusColour, theme: AuthoredTheme): Record<string, string> => ({
-    [`--tone-${name}-solid`]: colour.solid,
-    [`--tone-${name}-solid-hover`]: colour.hover ?? mix(colour.solid, theme.ink, 82),
-    [`--tone-${name}-on-solid`]: theme.onSolid,
-    [`--tone-${name}-soft`]: mix(colour.solid, 'transparent', 16),
-    [`--tone-${name}-soft-hover`]: mix(colour.solid, 'transparent', 24),
-    [`--tone-${name}-on-soft`]: colour.text ?? mix(colour.solid, theme.ink, 80),
-    [`--tone-${name}-border`]: mix(colour.solid, 'transparent', 40),
-    [`--tone-${name}-text`]: colour.text ?? colour.solid,
-});
+const tone = (name: string, colour: StatusColour, theme: AuthoredTheme): Record<string, string> => {
+    const mark = colour.mark ?? colour.solid;
 
-const voice = (prefix: string, title: TitleVoice | undefined, fallback: Required<TitleVoice>): Record<string, string> => ({
+    return {
+        [`--tone-${name}-solid`]: colour.solid,
+        [`--tone-${name}-mark`]: mark,
+        [`--tone-${name}-solid-hover`]: colour.hover ?? mix(colour.solid, theme.ink, 82),
+        [`--tone-${name}-on-solid`]: theme.onSolid,
+        [`--tone-${name}-soft`]: mix(mark, 'transparent', 16),
+        [`--tone-${name}-soft-hover`]: mix(mark, 'transparent', 24),
+        [`--tone-${name}-on-soft`]: colour.text ?? mix(mark, theme.ink, 80),
+        [`--tone-${name}-border`]: mix(mark, 'transparent', 40),
+        [`--tone-${name}-text`]: colour.text ?? colour.solid,
+    };
+};
+
+const voice = (prefix: string, title: TitleVoice | undefined, fallback: Required<Omit<TitleVoice, 'family'>>): Record<string, string> => ({
     [`${prefix}-style`]: title?.style ?? fallback.style,
     [`${prefix}-weight`]: String(title?.weight ?? fallback.weight),
     [`${prefix}-size`]: title?.size ?? fallback.size,
@@ -56,6 +61,9 @@ const voice = (prefix: string, title: TitleVoice | undefined, fallback: Required
 
 export const deriveRoles = (theme: AuthoredTheme): Record<string, string> => {
     const { accent } = theme;
+    const accentMark = accent.mark ?? accent.solid;
+    // Shadows darken whatever they fall on: tinted ink on paper, plain black on a dark canvas.
+    const shadow = theme.shadowColor ?? (theme.scheme === 'dark' ? '#000' : mix(theme.ink, 'transparent', 40));
     const card = voice('--display', theme.cardTitle, { style: 'normal', weight: 600, size: 'var(--font-size-lg)', transform: 'none', tracking: 'normal' });
     const border = theme.border;
 
@@ -76,14 +84,15 @@ export const deriveRoles = (theme: AuthoredTheme): Record<string, string> => {
         '--surface-card': theme.surface,
         '--surface-raised': theme.control,
         '--surface-raised-alt': theme.surfaceAlt,
-        '--surface-overlay': theme.control,
+        '--surface-overlay': theme.menu ?? theme.control,
+        '--button-fill': theme.button ?? theme.control,
         '--surface-overlay-card': theme.overlay ?? theme.surface,
         '--surface-sunken': theme.track ?? mix(theme.hover, theme.ink, 92),
         '--control-hover': theme.hover,
-        '--surface-hover': mix(accent.solid, 'transparent', 8),
+        '--surface-hover': mix(accentMark, 'transparent', 8),
         '--surface-stripe': theme.stripe ?? theme.surfaceAlt,
         '--rating-empty': mix(theme.track ?? theme.hover, theme.ink, 85),
-        '--surface-selected': mix(accent.solid, 'transparent', 18),
+        '--surface-selected': mix(accentMark, 'transparent', 18),
         '--surface-blur': theme.blur ?? 'none',
 
         '--text-strong': theme.ink,
@@ -98,7 +107,7 @@ export const deriveRoles = (theme: AuthoredTheme): Record<string, string> => {
         '--border-default': border,
         '--border-strong': theme.borderStrong ?? border,
         '--border-card': theme.edge ?? border,
-        '--border-card-hover': theme.edge ?? theme.borderStrong ?? border,
+        '--border-card-hover': theme.edgeHover ?? theme.edge ?? theme.borderStrong ?? border,
 
         '--field-bg': theme.control,
         '--field-bg-focus': theme.controlFocus ?? theme.control,
@@ -106,10 +115,10 @@ export const deriveRoles = (theme: AuthoredTheme): Record<string, string> => {
         '--field-fg': theme.text,
         '--field-border': theme.controlBorder ?? border,
         '--field-border-hover': theme.controlBorderHover ?? theme.borderStrong ?? theme.controlBorder ?? border,
-        '--field-border-focus': accent.solid,
+        '--field-border-focus': accentMark,
         '--field-placeholder': theme.placeholder ?? theme.textMuted,
         '--field-label': theme.textMuted,
-        '--field-ring': mix(accent.solid, 'transparent', 24),
+        '--field-ring': mix(accentMark, 'transparent', 24),
 
         '--tone-neutral-solid': theme.ink,
         '--tone-neutral-solid-hover': mix(theme.ink, theme.text, 70),
@@ -123,11 +132,11 @@ export const deriveRoles = (theme: AuthoredTheme): Record<string, string> => {
         ...tone('success', theme.success, theme),
         ...tone('warning', theme.warning, theme),
         ...tone('danger', theme.danger, theme),
-        '--accent-glow': accent.glow ?? mix(accent.solid, theme.onSolid, 70),
+        '--accent-glow': accent.glow ?? mix(accentMark, theme.onSolid, 70),
         ...SELECTION_STYLES[theme.selection],
 
-        '--shadow-color': mix(theme.ink, 'transparent', 18),
-        '--shadow-color-strong': mix(theme.ink, 'transparent', 28),
+        '--shadow-color': mix(shadow, 'transparent', 45),
+        '--shadow-color-strong': mix(shadow, 'transparent', 62),
         '--shadow-sm': theme.shadows?.surface ?? theme.shadows?.card ?? `0 1px 2px ${mix(theme.ink, 'transparent', 12)}`,
         '--shadow-md': theme.shadows?.card ?? `0 8px 24px ${mix(theme.ink, 'transparent', 14)}`,
         '--shadow-lg': theme.shadows?.modal ?? `0 24px 64px ${mix(theme.ink, 'transparent', 26)}`,
@@ -152,7 +161,7 @@ export const deriveOverrides = (theme: AuthoredTheme): Record<string, string> =>
         });
 
         Object.assign(overrides, {
-            '--modal-title-font-family': 'var(--font-body)',
+            '--modal-title-font-family': theme.modalTitle.family === 'display' ? 'var(--font-display)' : 'var(--font-body)',
             '--modal-title-font-style': modal['--modal-title-font-style'],
             '--modal-title-font-weight': modal['--modal-title-font-weight'],
             '--modal-title-font-size': modal['--modal-title-font-size'],
