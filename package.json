@@ -1,7 +1,7 @@
 {
   "name": "@memobit/themes",
   "version": "1.4.0",
-  "description": "69 themes for the Memobit apps — each published as its own stylesheet so an app loads only the one it is showing, with preview palettes for the theme picker.",
+  "description": "Themes for the Memobit apps: hand-made themes written as design choices, with every component value derived from them, plus the 49 classic themes, each published as its own stylesheet.",
   "keywords": [
     "css",
     "themes",
@@ -41,6 +41,8 @@
       "types": "./dist/vite.d.ts",
       "import": "./dist/vite.js"
     },
+    "./authored.css": "./dist/authored.css",
+    "./authored/*.css": "./dist/authored/*.css",
     "./themes.css": "./dist/themes.css",
     "./themes/*.css": "./dist/themes/*.css",
     "./src/theming/*.scss": "./src/theming/*.scss",
@@ -51,10 +53,13 @@
     "src/theming"
   ],
   "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\"",
     "build:themes": "node scripts/build-themes.mjs",
-    "build": "npm run build:themes && vite build && npm pack",
+    "build:authored": "node scripts/build-authored.ts",
+    "build": "npm run clean && npm run build:themes && npm run build:authored && vite build && npm pack",
     "release": "npm run build && npm publish",
-    "prepublishOnly": "npm run build:themes && vite build",
+    "prepublishOnly": "npm run clean && npm run build:themes && npm run build:authored && vite build",
+    "typecheck": "tsc && tsc -p tsconfig.scripts.json",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,mjs,cjs,css,scss}\"",

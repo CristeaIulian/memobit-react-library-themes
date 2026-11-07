@@ -1,3 +1,5 @@
+export { applyAuthoredEngine, AUTHORED_ENGINE_VALUE, clearAuthoredEngine, THEME_ENGINE_ATTRIBUTE } from './authoredEngine';
+export { AUTHORED_THEMES } from './authoredThemes';
 export { previewPalettes, type PreviewToken } from './previewPalettes';
 export { FAVORITE_THEMES, getThemeAppearance, getThemeConfig, LIGHT_THEMES, THEME_CONFIGS, type ThemeAppearance, type ThemeConfig } from './themeConfig';
 

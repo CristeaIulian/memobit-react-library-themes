@@ -1,0 +1,248 @@
+// Maps the semantic roles onto the component tokens @memobit/libs reads today. A classic
+// theme sets each of these by hand; here every one is derived, so two components that mean
+// the same thing get the same value in every theme.
+//
+// The lib's "info" variant is its primary action (the profile mixin already treated it as
+// the accent), so it maps to the accent tone everywhere: buttons, badges, toasts, progress.
+//
+// The build fails if a token a classic theme sets is missing here, because a missing one
+// would leak through from the classic theme still loaded underneath.
+//
+// The roles themselves come from an authored theme's choices (scripts/authored/derive.ts).
+
+const toneTokens = (prefix: string, tone: string): Record<string, string> => ({
+    [`--button-${prefix}-background-color`]: `var(--tone-${tone}-solid)`,
+    [`--button-${prefix}-border-color`]: `var(--tone-${tone}-solid)`,
+    [`--button-${prefix}-color`]: `var(--tone-${tone}-on-solid)`,
+    [`--button-${prefix}-hover-background-color`]: `var(--tone-${tone}-solid-hover)`,
+    [`--button-${prefix}-hover-border-color`]: `var(--tone-${tone}-solid-hover)`,
+    [`--button-${prefix}-hover-color`]: `var(--tone-${tone}-on-solid)`,
+    [`--toast-${prefix}-background-color`]: `var(--tone-${tone}-soft)`,
+    [`--toast-${prefix}-border-color`]: `var(--tone-${tone}-border)`,
+    [`--toast-${prefix}-color`]: `var(--tone-${tone}-on-soft)`,
+    [`--progress-${prefix}-bar-border-color`]: `var(--tone-${tone}-solid)`,
+    [`--progress-${prefix}-bar-fill-color`]: `var(--tone-${tone}-solid)`,
+    [`--rating-color-${prefix}`]: `var(--tone-${tone}-solid)`,
+    [`--card-tint-${prefix}-background`]: `var(--tone-${tone}-soft)`,
+});
+
+const STATUS_VARIANTS = { info: 'accent', success: 'success', warning: 'warning', danger: 'danger' } as const;
+
+export const BRIDGE: Record<string, string> = {
+    // Page
+    // The background recipe's image layers over the canvas colour, as the classic themes' washes were.
+    '--body-background': 'var(--canvas-layers), var(--surface-canvas)',
+    '--body-background-base': 'var(--surface-canvas)',
+    '--body-background-wash': 'var(--canvas-layers), var(--surface-canvas)',
+    // The body paints the canvas itself, so the lib's fixed glow overlay stays off.
+    '--body-background-glow': 'none',
+    '--body-color': 'var(--text-default)',
+    '--body-color-accent': 'var(--text-strong)',
+    '--body-color-muted': 'var(--text-muted)',
+    '--body-title-color': 'var(--text-strong)',
+    '--body-sub-title-color': 'var(--text-soft)',
+    '--body-accent-color': 'var(--tone-accent-text)',
+    '--body-danger-color': 'var(--tone-danger-text)',
+    '--backdrop-color': 'var(--scrim)',
+    '--box-shadow': 'var(--shadow-color)',
+    '--text-shadow': 'var(--shadow-color)',
+    '--border-color': 'var(--border-strong)',
+    '--delimiter-color': 'var(--border-subtle)',
+    '--links-color': 'var(--text-link)',
+    '--links-hover-color': 'var(--text-link-hover)',
+
+    // Type
+    '--font-family': 'var(--font-body)',
+    '--font-family-sans': 'var(--font-body)',
+    '--font-family-display': 'var(--font-display)',
+    '--font-family-mono': 'var(--font-mono)',
+
+    // Header
+    '--header-background-color': 'var(--surface-raised)',
+    '--header-border-bottom-color': 'var(--border-subtle)',
+    '--header-color': 'var(--text-strong)',
+    '--header-font-weight': 'var(--header-weight)',
+
+    // Buttons without a tone
+    '--button-default-background-color': 'var(--surface-raised)',
+    '--button-default-border-color': 'var(--border-default)',
+    '--button-default-color': 'var(--text-default)',
+    '--button-default-hover-background-color': 'var(--control-hover)',
+    '--button-default-hover-border-color': 'var(--field-border-hover)',
+    '--button-default-hover-color': 'var(--text-strong)',
+    '--button-ghost-background-color': 'transparent',
+    '--button-ghost-border-color': 'transparent',
+    '--button-ghost-color': 'var(--text-soft)',
+    '--button-ghost-hover-background-color': 'var(--control-hover)',
+    '--button-ghost-hover-border-color': 'transparent',
+    '--button-ghost-hover-color': 'var(--text-strong)',
+    '--button-plain-color': 'var(--text-soft)',
+    '--button-plain-hover-color': 'var(--text-strong)',
+
+    // Buttons, toasts, progress bars, ratings and card tints with a tone
+    ...Object.entries(STATUS_VARIANTS).reduce<Record<string, string>>((tokens, [prefix, tone]) => ({ ...tokens, ...toneTokens(prefix, tone) }), {}),
+    '--progress-bar-background-color': 'var(--surface-sunken)',
+    '--progress-bar-color': 'var(--text-default)',
+    '--progress-default-bar-border-color': 'var(--border-strong)',
+    '--progress-default-bar-fill-color': 'var(--tone-neutral-solid)',
+    '--rating-empty-color': 'var(--rating-empty)',
+    '--rating-empty-label-color': 'var(--text-muted)',
+    '--rating-half-rate-empty-color': 'var(--rating-empty)',
+    '--card-tint-default-background': 'var(--surface-raised-alt)',
+
+    // Cards
+    '--card-accent-color': 'var(--tone-accent-text)',
+    '--card-backdrop-filter': 'var(--surface-blur)',
+    '--card-background-accent-color': 'var(--surface-raised-alt)',
+    '--card-background-color': 'var(--surface-card)',
+    '--card-border-accent-color': 'var(--tone-accent-solid)',
+    '--card-border-color': 'var(--border-card)',
+    '--card-box-shadow': 'var(--shadow-md)',
+    '--card-color': 'var(--text-default)',
+    '--card-footer-background-color': 'var(--surface-raised-alt)',
+    '--card-footer-color': 'var(--text-soft)',
+    '--card-hover-border-color': 'var(--border-card-hover)',
+    '--card-surface-box-shadow': 'var(--shadow-sm)',
+    '--card-title-color': 'var(--text-strong)',
+    '--card-title-font-family': 'var(--font-display)',
+    '--card-title-font-size': 'var(--display-size)',
+    '--card-title-font-style': 'var(--display-style)',
+    '--card-title-font-weight': 'var(--display-weight)',
+    '--card-title-letter-spacing': 'var(--display-tracking)',
+    '--card-title-text-transform': 'var(--display-transform)',
+
+    // Modals share the card's surfaces and the display type
+    '--modal-backdrop-filter': 'var(--surface-blur)',
+    '--modal-background-color': 'var(--surface-overlay-card)',
+    '--modal-body-color': 'var(--text-default)',
+    '--modal-border-color': 'var(--border-card)',
+    '--modal-box-shadow': 'var(--shadow-lg)',
+    '--modal-box-shadow-hover': 'var(--shadow-lg)',
+    '--modal-color': 'var(--text-default)',
+    '--modal-footer-background-color': 'var(--surface-raised-alt)',
+    '--modal-header-background-color': 'var(--surface-raised-alt)',
+    '--modal-header-color': 'var(--text-strong)',
+    '--modal-surface-box-shadow': 'var(--shadow-lg)',
+    '--modal-title-color': 'var(--text-strong)',
+    '--modal-title-font-family': 'var(--font-display)',
+    '--modal-title-font-size': 'var(--font-size-xl)',
+    '--modal-title-font-style': 'normal',
+    '--modal-title-font-weight': 'var(--display-weight)',
+    '--modal-title-letter-spacing': 'var(--display-tracking)',
+    '--modal-title-text-transform': 'var(--display-transform)',
+    '--drawer-background-color': 'var(--surface-overlay-card)',
+    '--drawer-header-background-color': 'var(--surface-raised-alt)',
+    '--drawer-border-color': 'var(--border-card)',
+    '--drawer-shadow': 'var(--shadow-lg)',
+
+    // Every field reads the same --field-* roles, so text inputs, dropdowns and date pickers match
+    '--form-control-background-color': 'var(--field-bg)',
+    '--form-control-border-color': 'var(--field-border)',
+    '--form-control-color': 'var(--field-fg)',
+    '--form-control-focus-background-color': 'var(--field-bg-focus)',
+    '--form-control-focus-border-color': 'var(--field-border-focus)',
+    '--form-control-focus-color': 'var(--field-fg)',
+    '--form-control-focus-ring': 'var(--field-ring)',
+    '--form-control-error-background-color': 'color-mix(in oklab, var(--tone-danger-solid) 6%, var(--field-bg))',
+    '--form-control-error-border-color': 'var(--tone-danger-solid)',
+    '--form-control-error-color': 'var(--tone-danger-text)',
+    '--form-control-success-background-color': 'color-mix(in oklab, var(--tone-success-solid) 7%, var(--field-bg))',
+    '--form-control-success-border-color': 'var(--tone-success-solid)',
+    '--form-control-success-color': 'var(--tone-success-text)',
+    '--form-control-font-family': 'var(--font-body)',
+    '--form-control-label-color': 'var(--field-label)',
+    '--form-control-label-font-size': 'var(--font-size-xs)',
+    '--form-control-label-font-weight': 'var(--label-weight)',
+    '--form-control-label-letter-spacing': 'var(--label-tracking)',
+    '--form-control-label-text-transform': 'var(--label-transform)',
+    '--form-control-placeholder-color': 'var(--field-placeholder)',
+    // A ticked checkbox or radio is a selection, drawn solid in the selection style's colour
+    '--form-control-selection-background-color': 'var(--selected-solid)',
+    '--form-control-selection-border-color': 'var(--selected-solid)',
+    '--form-control-selection-color': 'var(--selected-solid-fg)',
+    '--form-control-selection-label-color': 'var(--text-default)',
+    '--datepicker-input-background-color': 'var(--field-bg)',
+    '--dropdown-border-color': 'var(--field-border)',
+    '--dropdown-header-background-color': 'var(--field-bg)',
+    '--dropdown-header-border-focus-color': 'var(--field-border-focus)',
+    '--dropdown-header-color': 'var(--field-fg)',
+    '--dropdown-options-background-color': 'var(--surface-overlay)',
+    '--dropdown-options-color': 'var(--text-default)',
+    '--dropdown-options-hover-background-color': 'var(--surface-hover)',
+    '--dropdown-options-hover-color': 'var(--text-strong)',
+    // A selected row in a list is marked, not inverted: chips and tabs carry the selection style.
+    '--dropdown-options-selected-background-color': 'var(--surface-selected)',
+    '--dropdown-options-selected-color': 'var(--text-strong)',
+    '--dropdown-action-background-color': 'var(--surface-raised-alt)',
+    '--dropdown-action-color': 'var(--text-link)',
+    '--dropdown-action-hover-background-color': 'var(--surface-hover)',
+    '--dropdown-action-hover-color': 'var(--text-link-hover)',
+    // Selected values in a dropdown are chips, so they take the selection style too
+    '--dropdown-chips-background-color': 'var(--selected-bg)',
+    '--dropdown-chips-border-color': 'var(--selected-border)',
+    '--dropdown-chips-color': 'var(--selected-fg)',
+    '--dropdown-chips-hover-background-color': 'var(--selected-bg-hover)',
+    '--slider-track-background-color': 'var(--surface-sunken)',
+    '--slider-track-border-color': 'var(--field-border)',
+    '--slider-track-hover-background-color': 'var(--control-hover)',
+    '--slider-track-hover-border-color': 'var(--field-border-hover)',
+    '--slider-thumb-background-color': 'var(--tone-accent-solid)',
+    '--slider-thumb-border-color': 'var(--tone-accent-solid)',
+    '--slider-thumb-hover-background-color': 'var(--tone-accent-solid-hover)',
+    '--slider-thumb-hover-border-color': 'var(--tone-accent-solid-hover)',
+
+    // Calendar
+    '--calendar-background-color': 'var(--surface-overlay)',
+    '--calendar-border-color': 'var(--border-default)',
+    '--calendar-day-color': 'var(--text-soft)',
+    '--calendar-day-disabled-color': 'var(--text-subtle)',
+    '--calendar-day-hover-background-color': 'var(--control-hover)',
+    '--calendar-day-selected-background-color': 'var(--tone-accent-solid)',
+    '--calendar-day-selected-color': 'var(--tone-accent-on-solid)',
+    '--calendar-day-today-border-color': 'var(--tone-accent-solid)',
+    '--calendar-day-weekend-color': 'var(--text-muted)',
+    '--calendar-header-background-color': 'var(--surface-raised-alt)',
+    '--calendar-header-color': 'var(--text-strong)',
+
+    // Chips. The selected state follows the selection style axis.
+    '--chip-hover-background-color': 'var(--surface-hover)',
+    '--chip-hover-border-color': 'var(--border-strong)',
+    '--chip-hover-color': 'var(--text-strong)',
+    '--chip-selected-background-color': 'var(--selected-bg)',
+    '--chip-selected-border-color': 'var(--selected-border)',
+    '--chip-selected-color': 'var(--selected-fg)',
+    // The count is secondary to the label, so it sits a step back from it
+    '--chip-selected-count-color': 'color-mix(in oklab, var(--selected-fg) 72%, transparent)',
+
+    // Lists, tabs, overlays
+    '--list-alternate-background-color': 'var(--surface-stripe)',
+    '--list-hover-background-color': 'var(--surface-hover)',
+    '--tabs-active-background-color': 'var(--selected-bg)',
+    '--tabs-active-color': 'var(--selected-fg)',
+    '--tabs-inactive-background-color': 'transparent',
+    '--tabs-inactive-color': 'var(--text-muted)',
+    '--tooltip-background-color': 'var(--tone-neutral-solid)',
+    '--tooltip-border-color': 'var(--tone-neutral-solid)',
+    '--tooltip-color': 'var(--tone-neutral-on-solid)',
+    '--popover-background-color': 'var(--surface-overlay)',
+    '--popover-border-color': 'var(--border-default)',
+    '--popover-color': 'var(--text-default)',
+    '--popover-arrow-color': 'var(--border-default)',
+    '--loader-border-color': 'var(--tone-accent-soft)',
+    '--loader-border-top-color': 'var(--tone-accent-solid)',
+    '--tour-hud-accent-color': 'var(--tone-accent-solid)',
+
+    // Effects
+    '--note-container-effect-background-color': 'var(--tone-accent-soft)',
+    '--note-container-effect-color': 'var(--tone-accent-on-soft)',
+    '--note-container-effect-border-left-color': 'var(--tone-accent-solid)',
+    '--glow-box-shadow-color': '0 0 16px color-mix(in oklab, var(--tone-accent-solid) 45%, transparent)',
+    '--glow-hover-border-color': 'var(--tone-accent-border)',
+    '--infuse-effect-before-background': 'linear-gradient(90deg, var(--tone-accent-solid), var(--accent-glow))',
+    '--infuse-effect-hover-border-color': 'var(--tone-accent-solid)',
+    '--infuse-effect-hover-box-shadow-color': 'color-mix(in oklab, var(--tone-accent-solid) 35%, transparent)',
+    '--up-lift-effect-before-background': 'linear-gradient(135deg, var(--tone-accent-solid), var(--accent-glow))',
+    '--up-lift-effect-box-shadow-color': 'var(--shadow-color-strong)',
+    '--up-lift-effect-hover-border-color': 'var(--tone-accent-solid)',
+    '--up-lift-effect-hover-box-shadow-color': 'color-mix(in oklab, var(--tone-accent-solid) 35%, transparent)',
+};

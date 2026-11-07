@@ -1,24 +1,87 @@
 # @memobit/themes
 
-69 themes for the Memobit apps. Each is published as its own stylesheet, so an app loads
-only the one it is showing instead of all of them.
+Themes for the Memobit apps, in two forms:
+
+- **Authored** (new in 2.0): a hand-made theme written as its design choices — ink and text
+  tiers, paper surfaces, lines, the accent and status colours, how a selection looks, the
+  voice of titles and labels, shadows and glass. The build derives every component value
+  from those choices through one shared bridge, so badges, chips, inputs and toasts behave
+  the same way in every theme while each keeps its own look.
+- **Classic**: the 49 hand-written themes, each setting ~230 component values directly and
+  published as its own stylesheet. They keep working unchanged while apps move over.
 
 Extracted from [`@memobit/libs`](https://github.com/CristeaIulian/memobit-react-library) in
 v3.0.0 of that library.
 
-## Why
+## Authored themes
+
+```ts
+import '@memobit/themes/authored.css';
+import { applyAuthoredEngine, clearAuthoredEngine } from '@memobit/themes';
+
+applyAuthoredEngine(); // the authored version of whatever data-theme names, where one exists
+clearAuthoredEngine(); // back to the classic theme
+```
+
+An authored theme applies under its classic theme's `data-theme` while the root carries
+`data-theme-engine="authored"`, so an app can flip between the two. Where no authored
+version exists, the classic theme shows through.
+
+### Layers
+
+1. **The theme** (`src/authored/<id>.ts`): about 20 required choices and some optional
+   ones, typed by `src/authored/contract.ts`. Written by hand or with Claude Design.
+2. **Roles** (`scripts/authored/derive.ts`): turns the choices into semantic roles
+   (`--surface-*`, `--text-*`, `--border-*`, `--field-*`, `--tone-*`, `--selected-*`). An
+   optional choice left out gets the obvious derivation, e.g. a hover is the solid pushed
+   towards the ink.
+3. **Bridge** (`scripts/authored/bridge.ts`): maps the roles onto every component token
+   `@memobit/libs` reads (`--button-info-background-color`, `--dropdown-header-color`…).
+4. **Recipes** (`src/authored/recipes.css`): Badge and Chip share one tone recipe.
+
+Every tone (neutral, accent, success, warning, danger) exposes the same roles: `solid`,
+`solid-hover`, `on-solid`, `soft`, `soft-hover`, `on-soft`, `border`, `text`. Buttons,
+badges, chips, toasts, progress bars and tabs all read them, which is what keeps a
+"success" the same colour everywhere. The lib's `info` variant is its primary action and
+maps to the accent tone. Every field (text inputs, dropdowns, date pickers, sliders) reads
+the same `--field-*` roles, and the `selection` choice (`ink`, `soft`, `solid`) decides how
+selected chips, tabs and ticked checkboxes look.
+
+### Checks
+
+`npm run build:authored` fails when
+
+- a token some classic theme sets is not produced by the bridge, since it would leak
+  through from the classic theme still loaded underneath, or
+- a role the bridge or recipes read is not produced by a theme.
+
+It also reports text/background pairs below their contrast target (4.5:1, 3:1 for
+placeholders) without failing, while authored themes reproduce classic ones as they were.
+
+### Adding a theme
+
+1. Add `src/authored/<id>.ts` exporting an `AuthoredTheme`, with the classic theme's id.
+2. Add it to `AUTHORED_THEMES` in `scripts/build-authored.ts`.
+3. Run `npm run build`. Its stylesheet lands in `dist/authored/<id>.css` and in
+   `dist/authored.css`.
+
+The theme's fonts are still loaded through the classic theme's `THEME_CONFIGS` entry.
+
+## Classic themes
+
+### Why
 
 Themes used to ship as a single aggregate stylesheet that every app imported wholesale —
 ~618 KB of which exactly one theme is ever active. Splitting them took one app's CSS from
 866 KB to 295 KB.
 
-## Install
+### Install
 
 ```bash
 npm install @memobit/themes
 ```
 
-## Usage
+### Usage
 
 Add the Vite plugin. It emits each theme as a separate asset and tells `@memobit/libs`
 where to find them, so `ThemeProvider` fetches the selected theme and nothing else.
@@ -46,7 +109,7 @@ import '@memobit/libs/dist/styles/base.scss';
 import '@memobit/libs/dist/styles/scrollbars.scss';
 ```
 
-## Exports
+### Exports
 
 ```ts
 import {
@@ -63,7 +126,7 @@ import {
 whose stylesheet is not loaded. It is generated from the compiled CSS, because ten themes
 build their tokens through the `_profile-theme` mixin rather than declaring them literally.
 
-## Adding a theme
+### Adding a theme
 
 1. Add `src/theming/<name>.scss`, scoped to `[data-theme='<name>']`.
 2. Add a `@use` line in `src/themes.scss`.

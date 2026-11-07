@@ -1,0 +1,82 @@
+/*
+ * Component recipes for the authored themes. Badge and Chip take a tone and one shared set
+ * of roles (soft background, ink on soft, border), so a "success" badge, a selected
+ * "success" chip and a success toast carry the same three colours.
+ *
+ * These rules sit here rather than in @memobit/libs while the classic themes still drive
+ * the same components. Once the classic themes are retired they move into the lib.
+ */
+
+:root[data-theme-engine='authored'] .badge-variant--default {
+    --recipe-soft: var(--tone-neutral-soft);
+    --recipe-soft-hover: var(--tone-neutral-soft-hover);
+    --recipe-on-soft: var(--tone-neutral-on-soft);
+    --recipe-border: var(--tone-neutral-border);
+}
+
+:root[data-theme-engine='authored'] :is(.badge-variant--info, .chip--info) {
+    --recipe-soft: var(--tone-accent-soft);
+    --recipe-soft-hover: var(--tone-accent-soft-hover);
+    --recipe-on-soft: var(--tone-accent-on-soft);
+    --recipe-border: var(--tone-accent-border);
+}
+
+:root[data-theme-engine='authored'] :is(.badge-variant--success, .chip--success) {
+    --recipe-soft: var(--tone-success-soft);
+    --recipe-soft-hover: var(--tone-success-soft-hover);
+    --recipe-on-soft: var(--tone-success-on-soft);
+    --recipe-border: var(--tone-success-border);
+}
+
+:root[data-theme-engine='authored'] :is(.badge-variant--warning, .chip--warning) {
+    --recipe-soft: var(--tone-warning-soft);
+    --recipe-soft-hover: var(--tone-warning-soft-hover);
+    --recipe-on-soft: var(--tone-warning-on-soft);
+    --recipe-border: var(--tone-warning-border);
+}
+
+:root[data-theme-engine='authored'] :is(.badge-variant--danger, .chip--danger) {
+    --recipe-soft: var(--tone-danger-soft);
+    --recipe-soft-hover: var(--tone-danger-soft-hover);
+    --recipe-on-soft: var(--tone-danger-on-soft);
+    --recipe-border: var(--tone-danger-border);
+}
+
+:root[data-theme-engine='authored']
+    .badge:is(.badge-variant--default, .badge-variant--info, .badge-variant--success, .badge-variant--warning, .badge-variant--danger) {
+    border-color: var(--recipe-border);
+    background-color: var(--recipe-soft);
+    color: var(--recipe-on-soft);
+}
+
+:root[data-theme-engine='authored'] .chip:is(.chip--default, .chip--info, .chip--success, .chip--warning, .chip--danger) {
+    border-color: var(--border-default);
+    background: transparent;
+    color: var(--text-default);
+}
+
+:root[data-theme-engine='authored'] .chip:is(.chip--default, .chip--info, .chip--success, .chip--warning, .chip--danger):hover:not(:disabled) {
+    border-color: var(--recipe-border);
+    background: var(--surface-hover);
+    color: var(--text-strong);
+}
+
+:root[data-theme-engine='authored'] .chip:is(.chip--default, .chip--info, .chip--success, .chip--warning, .chip--danger).chip--selected {
+    border-color: var(--recipe-border);
+    background: var(--recipe-soft);
+    color: var(--recipe-on-soft);
+}
+
+:root[data-theme-engine='authored'] .chip:is(.chip--default, .chip--info, .chip--success, .chip--warning, .chip--danger).chip--selected:hover:not(:disabled) {
+    border-color: var(--recipe-border);
+    background: var(--recipe-soft-hover);
+    color: var(--recipe-on-soft);
+}
+
+/* A default chip carries no tone, so its selected state is the theme's selection style. */
+:root[data-theme-engine='authored'] .chip.chip--default {
+    --recipe-soft: var(--selected-bg);
+    --recipe-soft-hover: var(--selected-bg-hover);
+    --recipe-on-soft: var(--selected-fg);
+    --recipe-border: var(--selected-border);
+}
