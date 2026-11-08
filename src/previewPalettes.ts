@@ -13,14 +13,6 @@ export type PreviewToken =
     | '--header-border-bottom-color';
 
 export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewToken, string>>>> = {
-    'arctic-blue': {
-        '--body-background': '#0f1419',
-        '--body-accent-color': '#60a5fa',
-        '--body-color-muted': '#93c5fd',
-        '--card-background-color': '#1e293b',
-        '--header-background-color': '#1e293b',
-        '--header-border-bottom-color': '#334155',
-    },
     'asphalt-code': {
         '--body-background':
             'radial-gradient(55% 50% at 100% 0%, rgba(6, 182, 212, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(6, 182, 212, 0.1) 0%, transparent 65%), linear-gradient(160deg, #0e1012 0%, #080a0c 55%, #0c0e10 100%)',
@@ -30,69 +22,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-background-color': '#0e1014',
         '--header-border-bottom-color': '#181c20',
     },
-    'atelier-media': {
-        '--body-background':
-            'radial-gradient(50% 45% at 100% 0%, rgba(31, 92, 68, 0.08) 0%, transparent 65%), radial-gradient(55% 50% at 0% 100%, rgba(192, 116, 42, 0.07) 0%, transparent 65%), radial-gradient(120% 100% at 0% 0%, #f8f5ec 0%, #f1ede1 50%, #e8e3d2 100%)',
-        '--body-accent-color': '#1f5c44',
-        '--body-color-muted': '#8b8377',
-        '--card-background-color': 'rgba(255, 254, 250, 0.96)',
-        '--header-background-color': '#efe9dc',
-        '--header-border-bottom-color': 'rgba(31, 92, 68, 0.14)',
-    },
-    'audit-ember': {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(251, 146, 60, 0.1) 0%, transparent 65%), radial-gradient(45% 40% at 0% 100%, rgba(249, 115, 22, 0.06) 0%, transparent 70%), linear-gradient(155deg, #0c0c10 0%, #09090b 55%, #08080a 100%)',
-        '--body-accent-color': '#fb923c',
-        '--body-color-muted': '#71717a',
-        '--card-background-color': '#131318',
-        '--header-background-color': '#0c0c10',
-        '--header-border-bottom-color': '#1f1f27',
-    },
-    'azure-night': {
-        '--body-background':
-            'radial-gradient(55% 45% at 100% 0%, rgba(74, 158, 255, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(33, 150, 243, 0.08) 0%, transparent 65%), linear-gradient(155deg, #202020 0%, #151515 55%, #1c1c1c 100%)',
-        '--body-accent-color': '#4a9eff',
-        '--body-color-muted': '#888888',
-        '--card-background-color': '#2d2d2d',
-        '--header-background-color': '#2d2d2d',
-        '--header-border-bottom-color': '#3a3a3a',
-    },
-    'blossom-meadow': {
-        '--body-background':
-            'radial-gradient(55% 50% at 100% 0%, rgba(232, 130, 107, 0.16) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(123, 168, 136, 0.13) 0%, transparent 65%), radial-gradient(40% 40% at 100% 100%, rgba(243, 191, 153, 0.12) 0%, transparent 60%), linear-gradient(155deg, #fef6ec 0%, #fbeadb 55%, #f5d8c2 100%)',
-        '--body-accent-color': '#e8826b',
-        '--body-color-muted': '#8b7268',
-        '--card-background-color': 'rgba(255, 250, 244, 0.92)',
-        '--header-background-color': '#fbeadb',
-        '--header-border-bottom-color': 'rgba(120, 70, 55, 0.16)',
-    },
-    'blueprint-clay': {
-        '--body-background':
-            'radial-gradient(55% 50% at 100% 0%, rgba(93, 122, 138, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(184, 134, 11, 0.06) 0%, transparent 65%), radial-gradient(130% 110% at 15% 0%, #eee8e0 0%, #f4efe9 55%, #f0ebe4 100%)',
-        '--body-accent-color': '#5d7a8a',
-        '--body-color-muted': '#8a9aa6',
-        '--card-background-color': 'rgba(255, 252, 248, 0.7)',
-        '--header-background-color': 'rgba(242, 237, 232, 0.88)',
-        '--header-border-bottom-color': 'rgba(93, 122, 138, 0.18)',
-    },
-    'carbon-velocity': {
-        '--body-background':
-            'radial-gradient(55% 45% at 100% 0%, rgba(220, 38, 38, 0.14) 0%, transparent 60%), radial-gradient(45% 55% at 0% 100%, rgba(120, 12, 12, 0.18) 0%, transparent 65%), linear-gradient(160deg, #111316 0%, #0a0b0d 60%, #0e0f12 100%)',
-        '--body-accent-color': '#dc2626',
-        '--body-color-muted': '#6e7480',
-        '--card-background-color': '#141618',
-        '--header-background-color': '#0e1014',
-        '--header-border-bottom-color': '#1c1e24',
-    },
-    'chalk-circuit': {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(132, 204, 22, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(132, 204, 22, 0.08) 0%, transparent 65%), linear-gradient(155deg, #1a2028 0%, #141820 55%, #182028 100%)',
-        '--body-accent-color': '#84cc16',
-        '--body-color-muted': '#6a8868',
-        '--card-background-color': '#1e2830',
-        '--header-background-color': '#1a2028',
-        '--header-border-bottom-color': '#222e24',
-    },
     'chrono-atlas': {
         '--body-background': '#ede0c8',
         '--body-accent-color': '#a8472a',
@@ -100,176 +29,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--card-background-color': '#f5ece0',
         '--header-background-color': '#f5ece0',
         '--header-border-bottom-color': '#c9b48d',
-    },
-    'circuit-harbor': {
-        '--body-background':
-            'radial-gradient(62% 54% at 100% 0%, rgba(14, 116, 144, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(30, 58, 95, 0.12) 0%, transparent 68%), linear-gradient(155deg, #0d151b 0%, #070c10 52%, #1a2833 100%)',
-        '--body-accent-color': '#22d3ee',
-        '--body-color-muted': '#879cad',
-        '--card-background-color': '#1a2833',
-        '--header-background-color': '#0d151b',
-        '--header-border-bottom-color': '#33495a',
-    },
-    'citrus-vital': {
-        '--body-background':
-            'radial-gradient(62% 54% at 100% 0%, rgba(45, 212, 191, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(250, 204, 21, 0.12) 0%, transparent 68%), linear-gradient(155deg, #0d1a17 0%, #0a1412 52%, #111f1b 100%)',
-        '--body-accent-color': '#2dd4bf',
-        '--body-color-muted': '#7f9a91',
-        '--card-background-color': '#111f1b',
-        '--header-background-color': '#0d1a17',
-        '--header-border-bottom-color': '#254139',
-    },
-    'cobalt-pulse': {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(79, 142, 247, 0.16) 0%, transparent 65%), radial-gradient(48% 42% at 0% 100%, rgba(150, 80, 255, 0.12) 0%, transparent 65%), linear-gradient(155deg, #11131d 0%, #08090c 55%, #0d0e14 100%)',
-        '--body-accent-color': '#4f8ef7',
-        '--body-color-muted': '#6b7394',
-        '--card-background-color': '#191c28',
-        '--header-background-color': '#0f1114',
-        '--header-border-bottom-color': '#1e2236',
-    },
-    'crawler-dusk': {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 100%, rgba(245, 158, 11, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 0%, rgba(99, 102, 241, 0.16) 0%, transparent 65%), linear-gradient(155deg, #111424 0%, #0c0e18 55%, #0f1220 100%)',
-        '--body-accent-color': '#f59e0b',
-        '--body-color-muted': '#6068a0',
-        '--card-background-color': '#171a28',
-        '--header-background-color': '#11141e',
-        '--header-border-bottom-color': '#1a1e30',
-    },
-    'crimson-dusk': {
-        '--body-background':
-            'radial-gradient(58% 48% at 100% 0%, rgba(220, 53, 69, 0.16) 0%, transparent 65%), radial-gradient(52% 45% at 0% 100%, rgba(232, 160, 176, 0.1) 0%, transparent 65%), linear-gradient(155deg, #1b121b 0%, #110d14 55%, #171018 100%)',
-        '--body-accent-color': '#dc3545',
-        '--body-color-muted': '#e8a0b0',
-        '--card-background-color': '#1c1620',
-        '--header-background-color': '#1c1620',
-        '--header-border-bottom-color': '#2e2434',
-    },
-    'cyber-forest': {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(16, 185, 129, 0.14) 0%, transparent 65%), radial-gradient(48% 42% at 0% 100%, rgba(134, 239, 172, 0.08) 0%, transparent 65%), linear-gradient(155deg, #0f1a10 0%, #070d07 55%, #0b140b 100%)',
-        '--body-accent-color': '#10b981',
-        '--body-color-muted': '#86efac',
-        '--card-background-color': '#14211d',
-        '--header-background-color': '#14211d',
-        '--header-border-bottom-color': '#1e3a2e',
-    },
-    dashdarkx: {
-        '--body-background':
-            'radial-gradient(60% 48% at 100% 0%, rgba(124, 137, 255, 0.14) 0%, transparent 65%), radial-gradient(52% 45% at 0% 100%, rgba(72, 96, 180, 0.12) 0%, transparent 65%), linear-gradient(155deg, #0e1734 0%, #050b1c 55%, #091229 100%)',
-        '--body-accent-color': '#ffffff',
-        '--body-color-muted': '#aeb9e1',
-        '--card-background-color': '#101935',
-        '--header-background-color': 'tranparent',
-        '--header-border-bottom-color': 'tranparent',
-    },
-    'emerald-ledger': {
-        '--body-background':
-            'radial-gradient(55% 50% at 0% 0%, rgba(16, 185, 129, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 100% 100%, rgba(217, 119, 6, 0.1) 0%, transparent 65%), radial-gradient(130% 110% at 0% 0%, #0e1814 0%, #091210 55%, #0c1612 100%)',
-        '--body-accent-color': '#10b981',
-        '--body-color-muted': '#5a8870',
-        '--card-background-color': '#131e18',
-        '--header-background-color': '#0e1814',
-        '--header-border-bottom-color': '#162218',
-    },
-    'garden-harvest': {
-        '--body-background':
-            'radial-gradient(50% 45% at 100% 0%, rgba(245, 158, 11, 0.1) 0%, transparent 65%), radial-gradient(55% 50% at 0% 100%, rgba(61, 122, 58, 0.12) 0%, transparent 65%), radial-gradient(120% 100% at 0% 0%, #faf8f0 0%, #f0eddf 50%, #e8e4d0 100%)',
-        '--body-accent-color': '#3d7a3a',
-        '--body-color-muted': '#5a7055',
-        '--card-background-color': 'rgba(255, 255, 255, 0.94)',
-        '--header-background-color': '#f0ede0',
-        '--header-border-bottom-color': 'rgba(61, 122, 58, 0.14)',
-    },
-    'graphite-shell': {
-        '--body-background':
-            'radial-gradient(55% 50% at 100% 0%, rgba(132, 204, 22, 0.1) 0%, transparent 65%), radial-gradient(45% 40% at 0% 100%, rgba(132, 204, 22, 0.08) 0%, transparent 65%), linear-gradient(155deg, #0c0e0c 0%, #070908 55%, #0a0c0a 100%)',
-        '--body-accent-color': '#84cc16',
-        '--body-color-muted': '#507050',
-        '--card-background-color': '#101410',
-        '--header-background-color': '#0c0e0c',
-        '--header-border-bottom-color': '#141814',
-    },
-    'horizon-amber': {
-        '--body-background':
-            'radial-gradient(70% 55% at 100% 100%, rgba(245, 158, 11, 0.16) 0%, transparent 60%), radial-gradient(50% 45% at 0% 0%, rgba(120, 60, 20, 0.12) 0%, transparent 65%), linear-gradient(150deg, #161820 0%, #0f1016 55%, #141620 100%)',
-        '--body-accent-color': '#f59e0b',
-        '--body-color-muted': '#7880a0',
-        '--card-background-color': '#1a1c26',
-        '--header-background-color': '#14161e',
-        '--header-border-bottom-color': '#1e2030',
-    },
-    'indigo-stitch': {
-        '--body-background':
-            'radial-gradient(55% 50% at 100% 0%, rgba(143, 180, 255, 0.13) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(212, 169, 92, 0.07) 0%, transparent 65%), linear-gradient(160deg, #1a1f38 0%, #0f1220 55%, #0b0e19 100%)',
-        '--body-accent-color': '#8fb4ff',
-        '--body-color-muted': '#8a93b5',
-        '--card-background-color': '#181d33',
-        '--header-background-color': '#141830',
-        '--header-border-bottom-color': 'rgba(143, 180, 255, 0.16)',
-    },
-    'ivory-serif': {
-        '--body-background':
-            'radial-gradient(50% 45% at 100% 0%, rgba(197, 160, 40, 0.1) 0%, transparent 65%), radial-gradient(45% 50% at 0% 100%, rgba(30, 58, 95, 0.08) 0%, transparent 65%), radial-gradient(110% 90% at 20% 0%, #faf8f2 0%, #f0ede2 50%, #e8e2d2 100%)',
-        '--body-accent-color': '#c5a028',
-        '--body-color-muted': '#6b7280',
-        '--card-background-color': 'rgba(255, 255, 255, 0.94)',
-        '--header-background-color': '#f4f1e8',
-        '--header-border-bottom-color': 'rgba(30, 36, 51, 0.12)',
-    },
-    'kindred-ink': {
-        '--body-background':
-            'radial-gradient(55% 50% at 100% 0%, rgba(224, 137, 106, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(217, 168, 92, 0.09) 0%, transparent 65%), linear-gradient(160deg, #211a28 0%, #17131c 55%, #120f16 100%)',
-        '--body-accent-color': '#e0896a',
-        '--body-color-muted': '#a3978f',
-        '--card-background-color': '#221c29',
-        '--header-background-color': '#1d1823',
-        '--header-border-bottom-color': 'rgba(224, 137, 106, 0.16)',
-    },
-    lamplight: {
-        '--body-background':
-            'radial-gradient(55% 50% at 100% 0%, rgba(217, 164, 65, 0.1) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(184, 100, 60, 0.07) 0%, transparent 65%), linear-gradient(160deg, #1f1912 0%, #16120e 55%, #100d0a 100%)',
-        '--body-accent-color': '#d9a441',
-        '--body-color-muted': '#a6977d',
-        '--card-background-color': '#211b14',
-        '--header-background-color': '#1b1611',
-        '--header-border-bottom-color': 'rgba(217, 164, 65, 0.14)',
-    },
-    lumen: {
-        '--body-background': '#0b0604',
-        '--body-accent-color': '#e8b97a',
-        '--body-color-muted': '#b3a999',
-        '--card-background-color': '#0b0604',
-        '--header-background-color': '#0b0604',
-        '--header-border-bottom-color': 'rgba(255, 255, 255, 0.05)',
-    },
-    luna: {
-        '--body-background':
-            'radial-gradient(58% 48% at 100% 0%, rgba(148, 155, 162, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(91, 95, 99, 0.12) 0%, transparent 65%), linear-gradient(155deg, #2e323d 0%, #20232b 55%, #272a33 100%)',
-        '--body-accent-color': '#f6a821',
-        '--body-color-muted': '#5b5f63',
-        '--card-background-color': '#3b3d46',
-        '--header-background-color': '#3b3d46',
-        '--header-border-bottom-color': '#3b3d46',
-    },
-    'mesh-circuit': {
-        '--body-background':
-            'radial-gradient(35% 30% at 20% 20%, rgba(34, 211, 238, 0.14) 0%, transparent 60%), radial-gradient(30% 28% at 80% 70%, rgba(34, 211, 238, 0.12) 0%, transparent 60%), radial-gradient(28% 25% at 60% 15%, rgba(103, 232, 249, 0.1) 0%, transparent 60%), linear-gradient(155deg, #091018 0%, #040a10 55%, #081218 100%)',
-        '--body-accent-color': '#22d3ee',
-        '--body-color-muted': '#406880',
-        '--card-background-color': '#0c1820',
-        '--header-background-color': '#081016',
-        '--header-border-bottom-color': '#0e1c28',
-    },
-    'midnight-amber': {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(240, 192, 64, 0.14) 0%, transparent 65%), radial-gradient(48% 42% at 0% 100%, rgba(224, 96, 128, 0.1) 0%, transparent 65%), linear-gradient(155deg, #151310 0%, #0a0a0c 55%, #101012 100%)',
-        '--body-accent-color': '#f0c040',
-        '--body-color-muted': '#6b6b80',
-        '--card-background-color': '#16161a',
-        '--header-background-color': 'transparent',
-        '--header-border-bottom-color': '#2a2a35',
     },
     'midnight-atlas': {
         '--body-background':
@@ -280,51 +39,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-background-color': '#0f110f',
         '--header-border-bottom-color': '#2a2d27',
     },
-    'noir-marquee': {
-        '--body-background':
-            'radial-gradient(62% 54% at 100% 0%, rgba(125, 211, 252, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(246, 199, 111, 0.12) 0%, transparent 68%), linear-gradient(155deg, #0c0e15 0%, #07080d 52%, #11131b 100%)',
-        '--body-accent-color': '#7dd3fc',
-        '--body-color-muted': '#7f879a',
-        '--card-background-color': '#11131b',
-        '--header-background-color': '#0c0e15',
-        '--header-border-bottom-color': '#242938',
-    },
-    'ocean-breeze': {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(8, 145, 178, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(186, 230, 253, 0.2) 0%, transparent 65%), linear-gradient(155deg, #f8fdff 0%, #e9f7ff 55%, #f2fbff 100%)',
-        '--body-accent-color': '#0891b2',
-        '--body-color-muted': '#64748b',
-        '--card-background-color': '#ffffff',
-        '--header-background-color': '#ffffff',
-        '--header-border-bottom-color': '#e0f2fe',
-    },
-    'ocean-depths': {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(25, 205, 230, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(117, 139, 163, 0.1) 0%, transparent 65%), linear-gradient(155deg, #0d1628 0%, #070b15 55%, #0a1020 100%)',
-        '--body-accent-color': '#19cde6',
-        '--body-color-muted': '#758ba3',
-        '--card-background-color': '#151b28',
-        '--header-background-color': '#151b28',
-        '--header-border-bottom-color': '#29283c',
-    },
-    'orbital-night': {
-        '--body-background':
-            'repeating-linear-gradient(0deg, transparent 0 39px, rgba(95, 176, 255, 0.035) 39px 40px), repeating-linear-gradient(90deg, transparent 0 39px, rgba(95, 176, 255, 0.035) 39px 40px), radial-gradient(60% 50% at 100% 0%, rgba(95, 176, 255, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(56, 189, 248, 0.1) 0%, transparent 65%), linear-gradient(160deg, #14202e 0%, #0b1424 55%, #0e1828 100%)',
-        '--body-accent-color': '#5fb0ff',
-        '--body-color-muted': '#6f7f95',
-        '--card-background-color': '#14213a',
-        '--header-background-color': '#14213a',
-        '--header-border-bottom-color': 'rgba(95, 176, 255, 0.18)',
-    },
-    sandstone: {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(194, 102, 45, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(160, 128, 96, 0.12) 0%, transparent 65%), linear-gradient(155deg, #fffaf3 0%, #f6eee4 55%, #fbf5ee 100%)',
-        '--body-accent-color': '#c2662d',
-        '--body-color-muted': '#a08060',
-        '--card-background-color': '#ffffff',
-        '--header-background-color': 'transparent',
-        '--header-border-bottom-color': '#e0d4c4',
-    },
     'sandy-parchment': {
         '--body-background': 'radial-gradient(120% 100% at 0% 0%, #f8ecd0 0%, #e8d7af 45%, #cbb383 100%)',
         '--body-accent-color': '#c66f22',
@@ -332,24 +46,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--card-background-color': 'rgba(255, 248, 230, 0.95)',
         '--header-background-color': '#f4ead2',
         '--header-border-bottom-color': 'rgba(84, 66, 36, 0.16)',
-    },
-    'screening-room': {
-        '--body-background':
-            'radial-gradient(62% 54% at 100% 0%, rgba(244, 195, 68, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(245, 185, 66, 0.12) 0%, transparent 68%), linear-gradient(155deg, #110d18 0%, #0d0a12 52%, #181320 100%)',
-        '--body-accent-color': '#f4c344',
-        '--body-color-muted': '#8b8299',
-        '--card-background-color': '#181320',
-        '--header-background-color': '#110d18',
-        '--header-border-bottom-color': '#2e2740',
-    },
-    'signal-burst': {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(249, 115, 22, 0.18) 0%, transparent 60%), radial-gradient(45% 40% at 0% 100%, rgba(99, 102, 241, 0.12) 0%, transparent 65%), linear-gradient(150deg, #131420 0%, #0c0d12 55%, #0f1018 100%)',
-        '--body-accent-color': '#f97316',
-        '--body-color-muted': '#7880a0',
-        '--card-background-color': '#16171f',
-        '--header-background-color': '#12131a',
-        '--header-border-bottom-color': '#1e2030',
     },
     'signal-clarity': {
         '--body-background':
@@ -360,33 +56,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-background-color': '#0b1726',
         '--header-border-bottom-color': '#243650',
     },
-    'slate-bazaar': {
-        '--body-background':
-            'radial-gradient(62% 54% at 100% 0%, rgba(96, 165, 250, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(245, 158, 11, 0.12) 0%, transparent 68%), linear-gradient(155deg, #101620 0%, #0b0f16 52%, #151b24 100%)',
-        '--body-accent-color': '#60a5fa',
-        '--body-color-muted': '#7d8a9b',
-        '--card-background-color': '#151b24',
-        '--header-background-color': '#101620',
-        '--header-border-bottom-color': '#273142',
-    },
-    'slate-focus': {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(59, 130, 246, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(107, 114, 128, 0.08) 0%, transparent 65%), linear-gradient(155deg, #171a20 0%, #0f1114 55%, #13161a 100%)',
-        '--body-accent-color': '#3b82f6',
-        '--body-color-muted': '#6b7280',
-        '--card-background-color': '#1a1d26',
-        '--header-background-color': '#161920',
-        '--header-border-bottom-color': '#1e2230',
-    },
-    'tailwind-vue-dark': {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(96, 165, 250, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(144, 161, 185, 0.1) 0%, transparent 65%), linear-gradient(155deg, #263852 0%, #182235 55%, #1f2d43 100%)',
-        '--body-accent-color': '#f0b100',
-        '--body-color-muted': '#90a1b9',
-        '--card-background-color': '#0f172bb3',
-        '--header-background-color': 'transparent',
-        '--header-border-bottom-color': 'transparent',
-    },
     'terminal-phosphor': {
         '--body-background':
             'radial-gradient(70% 55% at 100% 0%, rgba(34, 197, 94, 0.05) 0%, transparent 58%), linear-gradient(155deg, #020402 0%, #010301 58%, #030703 100%)',
@@ -396,15 +65,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--header-background-color': '#040804',
         '--header-border-bottom-color': '#112411',
     },
-    'terracotta-kitchen': {
-        '--body-background':
-            'radial-gradient(55% 50% at 0% 100%, rgba(194, 82, 47, 0.12) 0%, transparent 65%), radial-gradient(50% 45% at 100% 0%, rgba(194, 82, 47, 0.1) 0%, transparent 65%), radial-gradient(110% 90% at 80% 0%, #fef8f0 0%, #f8eddf 50%, #f0e4d0 100%)',
-        '--body-accent-color': '#c2522f',
-        '--body-color-muted': '#7a5a48',
-        '--card-background-color': 'rgba(255, 255, 255, 0.95)',
-        '--header-background-color': '#f8eedf',
-        '--header-border-bottom-color': 'rgba(194, 82, 47, 0.14)',
-    },
     'vault-guard': {
         '--body-background':
             'radial-gradient(55% 50% at 100% 0%, rgba(34, 197, 94, 0.1) 0%, transparent 65%), radial-gradient(45% 40% at 0% 100%, rgba(34, 197, 94, 0.08) 0%, transparent 65%), linear-gradient(160deg, #101418 0%, #0a0e12 55%, #0e1216 100%)',
@@ -413,33 +73,6 @@ export const previewPalettes: Readonly<Record<string, Readonly<Record<PreviewTok
         '--card-background-color': '#161c22',
         '--header-background-color': '#111518',
         '--header-border-bottom-color': '#1a2228',
-    },
-    'verdant-pulse': {
-        '--body-background':
-            'radial-gradient(62% 54% at 100% 0%, rgba(95, 217, 138, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(251, 179, 64, 0.12) 0%, transparent 68%), linear-gradient(155deg, #0f1a14 0%, #0b1310 52%, #131f19 100%)',
-        '--body-accent-color': '#5fd98a',
-        '--body-color-muted': '#809a8c',
-        '--card-background-color': '#131f19',
-        '--header-background-color': '#0f1a14',
-        '--header-border-bottom-color': '#283a30',
-    },
-    'vital-aurora': {
-        '--body-background':
-            'radial-gradient(62% 54% at 100% 0%, rgba(229, 72, 42, 0.16) 0%, transparent 65%), radial-gradient(56% 48% at 0% 100%, rgba(200, 224, 33, 0.12) 0%, transparent 68%), linear-gradient(155deg, #dcd3c0 0%, #f2ede4 52%, #fbf8f1 100%)',
-        '--body-accent-color': '#e5482a',
-        '--body-color-muted': '#8a8579',
-        '--card-background-color': '#fbf8f1',
-        '--header-background-color': '#0e0e0c',
-        '--header-border-bottom-color': '#dcd3c0',
-    },
-    'vital-signal': {
-        '--body-background':
-            'radial-gradient(60% 50% at 100% 0%, rgba(34, 211, 238, 0.14) 0%, transparent 65%), radial-gradient(50% 45% at 0% 100%, rgba(34, 211, 238, 0.1) 0%, transparent 65%), linear-gradient(155deg, #081418 0%, #040c0e 55%, #061012 100%)',
-        '--body-accent-color': '#22d3ee',
-        '--body-color-muted': '#4a8898',
-        '--card-background-color': '#0e2028',
-        '--header-background-color': '#091418',
-        '--header-border-bottom-color': '#102028',
     },
     'war-room': {
         '--body-background':

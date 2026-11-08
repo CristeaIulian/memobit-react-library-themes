@@ -83,6 +83,17 @@ Rows marked Done list the app's new themes: the light one it starts on, then its
   in 2.1.0-2.3.0).
 - Later: 10 games and simulators, plus React Showcase.
 
+## 3.0.0 cleanup (2026-11-08)
+
+Reviewed side by side on the cleanup page (`npm run preview:cleanup`): 41 classic themes no
+app recommended were removed. Details the user preferred in a few were folded into their
+replacements first (Redline's red text, Lifespan Aurora's lime success, Health-IQ Signal's
+danger badge and Mesh Circuit's fonts, Cookbook Terracotta's button, Fresh Market's Garden
+Harvest page and progress colours). Eight classic themes remain: sandy-parchment,
+midnight-atlas, vault-guard, asphalt-code, terminal-phosphor (kept, nothing replaces it),
+signal-clarity, chrono-atlas, war-room. Games and simulators stay on themes 1.x, where their
+themes still exist. Luna is gone, so an app falls back to its own theme (`fallbackTheme`).
+
 ## Things to settle along the way
 
 - **Shared defaults.** sandy-parchment (Shelf, Ascend), sandstone (Cookbook, Impulse),
