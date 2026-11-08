@@ -164,7 +164,7 @@ const ACCENTS: [number, number][] = [
 
 export type Fingerprint = (Oklch | null)[];
 
-const fingerprint = (css: string): Fingerprint => PROBES.map(colourReader(css));
+export const fingerprint = (css: string): Fingerprint => PROBES.map(colourReader(css));
 
 const oklab = ({ l, c, h }: Oklch): [number, number, number] => [l, c * Math.cos((h * Math.PI) / 180), c * Math.sin((h * Math.PI) / 180)];
 
