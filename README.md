@@ -78,7 +78,7 @@ reproduces the classic theme as it was.
 1. Draft it in `src/authored/concepts/<id>.ts` (an `AuthoredTheme` with `apps` and a
    `description`) and run `npm run preview:concepts`. It writes `dist/concepts.html`: every
    app theme and draft drawn as a small screen of its app, with its contrast report. Sample
-   content per app lives in `scripts/authored/samples.ts`.
+   content per app lives in `scripts/authored/samples/`, one file per batch.
 2. Once chosen, move it to `src/authored/<id>.ts` and run `npm run build`.
 
 To start from a classic theme instead, `npm run port:classic -- <id>` drafts

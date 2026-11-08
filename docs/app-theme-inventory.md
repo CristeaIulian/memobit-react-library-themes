@@ -24,43 +24,43 @@ Rows marked Done list the app's new themes: the light one it starts on, then its
 | readout | readout-highlighter | readout-night-reader | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (new light + dark) |
 | pocket | pocket-receipt | pocket-chip | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (new light + dark) |
 | tasks | tasks-legal-pad | tasks-deep-work | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (Slate Focus taken further, light + dark) |
-| quiz-lab | chalk-circuit | — | 3.19.1 / 1.0.3 | Attune (chalk-circuit is also offered to 6 other apps; make it Quiz Lab's) |
-| pulse | pulse-ivory | pulse-night-chart | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (Ivory Serif attuned + new dark); app bump pending |
-| reels | noir-marquee | screening-room | 3.19.1 / 1.0.3 | Attune, pick one of the two (velvet-reel was its own and is gone) |
-| voyage | midnight-atlas | — | 3.19.1 / 1.0.3 | Recreate (horizon-drift was its own and is gone; midnight-atlas is shared with 5 apps) |
-| cookbook | cookbook-terracotta | cookbook-slate | 3.29.0 / 1.0.3 | **Done** in 2.2.0 (Terracotta Kitchen attuned + new dark); app bump pending |
-| impulse | impulse-pause | impulse-still-water | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (recreated, light + dark); app bump pending |
+| quiz-lab | quiz-lab-whiteboard | quiz-lab-chalkboard | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Chalk & Circuit attuned + new light); app bump pending |
+| pulse | pulse-ivory | pulse-night-chart | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (Ivory Serif attuned + new dark); live |
+| reels | reels-matinee | reels-marquee | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (cinema look, light + dark); app bump pending |
+| voyage | voyage-field-guide | voyage-midnight-atlas | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Midnight Atlas attuned + new light); app bump pending |
+| cookbook | cookbook-terracotta | cookbook-slate | 3.29.0 / 1.0.3 | **Done** in 2.2.0 (Terracotta Kitchen attuned + new dark); live |
+| impulse | impulse-pause | impulse-still-water | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (recreated, light + dark); live |
 | ascend | ascend-contour | ascend-contour-night | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (recreated, light + dark) |
-| seeds | seeds-blossom | seeds-nightlight | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (Blossom Meadow attuned + new dark); app bump pending |
-| garage | garage-workshop | garage-night-drive, garage-redline | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (recreated light + dark, Carbon Velocity attuned as Redline); app bump pending |
-| basket | cyber-forest | 11 others | 3.30.0 / 1.0.3 | Attune cyber-forest, or recreate; 12 options today |
-| hub | hub-shallows | hub-deep-water | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (Ocean Depths attuned + new light); app bump pending |
-| nutritrack | nutritrack-fresh-market | nutritrack-verdant | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (Verdant Pulse attuned + new light); app bump pending |
-| iuliancristea | carbon-velocity | 10 others, `allowedThemes` set | 3.19.1 / 1.0.3 | Attune carbon-velocity; already uses `allowedThemes` |
+| seeds | seeds-blossom | seeds-nightlight | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (Blossom Meadow attuned + new dark); live |
+| garage | garage-workshop | garage-night-drive, garage-redline | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (recreated light + dark, Carbon Velocity attuned as Redline); live |
+| basket | basket-greenmarket | basket-emerald | 3.30.0 / 1.0.3 | **Done** in 2.3.0 (Cyber Forest attuned + new light); app bump pending |
+| hub | hub-shallows | hub-deep-water | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (Ocean Depths attuned + new light); live |
+| nutritrack | nutritrack-fresh-market | nutritrack-verdant | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (Verdant Pulse attuned + new light); live |
+| iuliancristea | resume-letterpress | resume-graphite | 3.19.1 / 1.0.3 | **Done** in 2.3.0 for the admin (new light + dark); the public CV look is still open; app bump pending |
 | react-showcase | luna | — | 3.19.1 / 1.0.3 | Keep all themes (it is the theme gallery) |
 
 ## Local Tools
 
 | App | Starts on | Also offered | libs / themes | Proposed |
 |---|---|---|---|---|
-| iot | circuit-harbor | — | 3.25.0 / 1.4.0 | Attune |
-| global-pulse | orbital-night | — | 3.19.1 / 1.0.3 | Attune |
-| lifespan | vital-aurora | — | 3.19.1 / 1.0.3 | Attune |
-| health-iq | vital-signal | — | 3.19.1 / 1.0.3 | Attune (vital-signal is also offered to 3 Online apps) |
-| network-audit | signal-clarity | audit-ember | 3.19.1 / 1.0.3 | Attune signal-clarity |
-| realestate-crawler | blueprint-clay | — | 3.19.1 / 1.0.3 | Attune |
-| atelier-media | atelier-media | — | 3.19.1 / 1.0.3 | Attune |
-| lumen | lumen | — | 3.19.1 / 1.0.3 | Attune |
-| atlas-of-time | luna (hardcoded) | chrono-atlas | 3.19.1 / 1.0.3 | Attune chrono-atlas and make it the default |
-| tessera | vault-guard (hardcoded) | — | 3.29.0 / 1.4.0 | Attune vault-guard, or recreate (a password manager may want its own) |
-| pinhole | audit-ember (hardcoded) | — | 3.28.0 / 1.4.0 | Recreate (borrows Network Audit's second theme) |
-| holdings | luna | — | 3.28.2 / 1.0.3 | Recreate (gilded-bear was its own and is gone) |
-| nexus | luna (fallback) | — | 3.19.1 / 1.0.3 | Recreate (command-slate was its own and is gone) |
-| lifeline | luna (fallback) | — | 3.19.1 / 1.0.3 | Recreate |
-| reverb | luna (fallback) | — | 3.19.1 / 1.0.3 | Recreate |
-| mirror | ocean-depths (fallback) | — | 3.19.1 / 1.0.3 | Recreate, or share Hub's |
-| llm-lab | arctic-blue (hardcoded) | — | 3.19.1 / 1.0.3 | Recreate, low priority |
-| faviconify | arctic-blue (hardcoded) | — | 3.19.1 / 1.0.3 | Recreate, low priority |
+| iot | iot-wall-panel | iot-harbor | 3.25.0 / 1.4.0 | **Done** in 2.3.0 (Circuit Harbor attuned) |
+| global-pulse | global-pulse-atlas-paper | global-pulse-orbital | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Orbital Night attuned, glow kept); theme is hardcoded |
+| lifespan | lifespan-aurora | lifespan-long-evening | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Vital Aurora attuned) |
+| health-iq | health-iq-lab-glass | health-iq-signal | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Vital Signal attuned) |
+| network-audit | network-audit-report | network-audit-clarity | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Signal Clarity attuned); needs libs >=3.31 |
+| realestate-crawler | realestate-blueprint | realestate-night-plan | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Blueprint Clay attuned) |
+| atelier-media | atelier-media-studio | atelier-media-darkroom | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Atelier Media attuned) |
+| lumen | lumen-contact-sheet | lumen-lantern | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Lumen attuned, neutral greys); theme is hardcoded |
+| atlas-of-time | atlas-of-time-chronicle | atlas-of-time-night-archive | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Chrono Atlas attuned); theme is hardcoded |
+| tessera | tessera-keycard | tessera-vault | 3.29.0 / 1.4.0 | **Done** in 2.3.0 (Vault Guard attuned); theme is hardcoded, no picker |
+| pinhole | pinhole-lightbox | pinhole-darkroom | 3.28.0 / 1.4.0 | **Done** in 2.3.0 (recreated); theme is hardcoded and the picker ignores the saved choice |
+| holdings | holdings-ledger | holdings-night-ledger | 3.28.2 / 1.0.3 | **Done** in 2.3.0 (recreated); theme is hardcoded |
+| nexus | nexus-console | nexus-switchboard | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (recreated) |
+| lifeline | lifeline-album | lifeline-starlit | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (recreated) |
+| reverb | reverb-liner-notes | reverb-after-hours | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (recreated) |
+| mirror | mirror-reflection | mirror-still-lake | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (recreated) |
+| llm-lab | llm-lab-bench | llm-lab-inference | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (recreated); theme is hardcoded |
+| faviconify | faviconify-sticker-sheet | faviconify-glow-stick | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (recreated); theme is hardcoded |
 
 ## Games and simulators (later)
 
@@ -79,9 +79,8 @@ Rows marked Done list the app's new themes: the light one it starts on, then its
 
 ## Counts
 
-- Attune: 23 (19 if Seeds, Basket, Tessera and Cookbook go to Recreate instead).
-- Recreate: 12 (16 in that case).
-- Done: Shelf.
+- Done: every Online app and every Local Tool with a theme picker (Shelf in 2.0.0, batches 1-5
+  in 2.1.0-2.3.0).
 - Later: 10 games and simulators, plus React Showcase.
 
 ## Things to settle along the way
@@ -110,8 +109,9 @@ app bump, compare in the theme lab, turn authored on, set `allowedThemes`.
 2. **Online, shared themes:** Cookbook, Seeds, Hub, NutriTrack, Pulse (attune) + Impulse,
    Garage (recreate). Done in 2.2.0.
 3. **Online, the rest:** Basket, Reels, Quiz Lab, iuliancristea (attune) + Voyage (recreate).
+   Done in 2.3.0.
 4. **Local Tools, attune:** IoT, Global Pulse, Lifespan, Health-IQ, Network Audit,
-   Real Estate Crawler, Atelier Media, Lumen, Atlas of Time, Tessera.
+   Real Estate Crawler, Atelier Media, Lumen, Atlas of Time, Tessera. Done in 2.3.0.
 5. **Local Tools, recreate:** Holdings, Nexus, Lifeline, Reverb, Mirror, Pinhole, LLM Lab,
-   Faviconify.
+   Faviconify. Done in 2.3.0.
 6. **Games and simulators**, if ever.

@@ -14,7 +14,8 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import type { AuthoredTheme } from '../src/authored/contract.ts';
 
 import { contrastWarnings, themeSheet } from './authored/checks.ts';
-import { type AppSample, appSamples } from './authored/samples.ts';
+import { appSamples } from './authored/samples/index.ts';
+import type { AppSample } from './authored/samples/types.ts';
 
 const root = resolvePath(dirname(fileURLToPath(import.meta.url)), '..');
 const authoredDir = join(root, 'src/authored');
@@ -111,6 +112,12 @@ const screen = (sample: AppSample): string => `
 // In the order the samples list them, which is the batch's order. While drafts exist, only
 // their apps are shown, so the page is about the batch waiting for a decision.
 const hasDrafts = concepts.some(concept => concept.draft);
+const unsampled = [...new Set(concepts.map(concept => concept.app))].filter(appName => !(appName in appSamples));
+
+if (unsampled.length > 0) {
+    throw new Error(`No sample content for ${unsampled.join(', ')} in scripts/authored/samples/`);
+}
+
 const apps = Object.keys(appSamples).filter(appName => concepts.some(concept => concept.app === appName && (!hasDrafts || concept.draft)));
 const sheets: string[] = [];
 const fontLinks = new Set<string>();
@@ -118,10 +125,6 @@ const sections: string[] = [];
 
 for (const appName of apps) {
     const sample = appSamples[appName];
-
-    if (sample === undefined) {
-        throw new Error(`No sample content for ${appName} in scripts/authored/samples.ts`);
-    }
 
     const panels = concepts
         .filter(concept => concept.app === appName)

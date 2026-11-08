@@ -33,7 +33,6 @@ export const THEME_CONFIGS: ThemeConfig[] = [
         value: 'cyber-forest',
         label: 'Cyber Forest',
         fontUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-        recommendedApps: ['Basket'],
     },
     {
         value: 'dashdarkx',
@@ -43,7 +42,6 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'lumen',
         label: 'Lumen',
-        recommendedApps: ['Lumen'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap',
         fontUrlMono: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap',
@@ -72,12 +70,11 @@ export const THEME_CONFIGS: ThemeConfig[] = [
         value: 'tailwind-vue-dark',
         label: 'Tailwind View Dark',
         fontUrl: 'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swa',
-        recommendedApps: ['Basket'],
     },
     {
         value: 'sandy-parchment',
         label: 'Sandy Parchment',
-        recommendedApps: ['Shelf', 'Basket'],
+        recommendedApps: ['Shelf'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&display=swap',
     },
@@ -92,19 +89,16 @@ export const THEME_CONFIGS: ThemeConfig[] = [
         label: 'Cobalt Pulse',
         fontUrl: 'https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap',
         fontUrlMono: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap',
-        recommendedApps: ['Basket'],
     },
     {
         value: 'carbon-velocity',
         label: 'Carbon Velocity',
-        recommendedApps: ['Resume'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap',
     },
     {
         value: 'signal-burst',
         label: 'Signal Burst',
-        recommendedApps: ['Basket', 'Resume'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap',
     },
@@ -117,7 +111,6 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'noir-marquee',
         label: 'Noir Marquee',
-        recommendedApps: ['Reels', 'Resume'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap',
     },
@@ -136,14 +129,12 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'horizon-amber',
         label: 'Horizon Amber',
-        recommendedApps: ['Basket'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap',
     },
     {
         value: 'chalk-circuit',
         label: 'Chalk & Circuit',
-        recommendedApps: ['Quiz Lab', 'Basket', 'Resume'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap',
     },
@@ -156,7 +147,6 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'slate-bazaar',
         label: 'Slate Bazaar',
-        recommendedApps: ['Basket'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap',
     },
@@ -168,14 +158,13 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'midnight-atlas',
         label: 'Midnight Atlas',
-        recommendedApps: ['Voyage', 'Basket', 'Resume'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&display=swap',
     },
     {
         value: 'vault-guard',
         label: 'Vault Guard',
-        recommendedApps: ['Backup', 'Basket', 'Resume'],
+        recommendedApps: ['Backup'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap',
     },
@@ -188,7 +177,7 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'asphalt-code',
         label: 'Asphalt Code',
-        recommendedApps: ['Cars Crawler', 'Resume'],
+        recommendedApps: ['Cars Crawler'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap',
     },
@@ -202,21 +191,18 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'vital-signal',
         label: 'Vital Signal',
-        recommendedApps: ['Health-IQ', 'Basket', 'Resume'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap',
     },
     {
         value: 'mesh-circuit',
         label: 'Mesh Circuit',
-        recommendedApps: ['Resume'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap',
     },
     {
         value: 'vital-aurora',
         label: 'Vital Aurora',
-        recommendedApps: ['Lifespan'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap',
     },
@@ -229,21 +215,18 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'signal-clarity',
         label: 'Signal Clarity',
-        recommendedApps: ['Network Audit'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap',
     },
     {
         value: 'audit-ember',
         label: 'Audit Ember',
-        recommendedApps: ['Network Audit', 'Resume'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap',
         fontUrlMono: 'https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&display=swap',
     },
     {
         value: 'blueprint-clay',
         label: 'Blueprint Clay',
-        recommendedApps: ['Real Estate Crawler'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap',
     },
@@ -256,7 +239,6 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'screening-room',
         label: 'Screening Room',
-        recommendedApps: ['Reels'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700;800&display=swap',
     },
@@ -269,7 +251,6 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'atelier-media',
         label: 'Atelier Media',
-        recommendedApps: ['Atelier Media'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
         fontUrlDisplay:
             'https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap',
@@ -277,14 +258,12 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'chrono-atlas',
         label: 'Chrono Atlas',
-        recommendedApps: ['Atlas of Time', 'Basket', 'Resume'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap',
     },
     {
         value: 'orbital-night',
         label: 'Orbital Night',
-        recommendedApps: ['Global Pulse'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap',
         fontUrlMono: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap',
     },
@@ -316,7 +295,6 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'circuit-harbor',
         label: 'Circuit Harbor',
-        recommendedApps: ['IoT'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap',
     },
