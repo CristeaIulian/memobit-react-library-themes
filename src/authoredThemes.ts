@@ -11,7 +11,6 @@ export const AUTHORED_THEMES = [
     { id: 'ascend-contour', label: 'Contour' },
     { id: 'atelier-media-darkroom', label: 'Darkroom' },
     { id: 'atelier-media-studio', label: 'Studio' },
-    { id: 'atlas-of-time-chronicle', label: 'Chronicle' },
     { id: 'atlas-of-time-night-archive', label: 'Night Archive' },
     { id: 'basket-emerald', label: 'Emerald' },
     { id: 'basket-greenmarket', label: 'Greenmarket' },
@@ -44,7 +43,6 @@ export const AUTHORED_THEMES = [
     { id: 'lumen-lantern', label: 'Lantern' },
     { id: 'mirror-reflection', label: 'Reflection' },
     { id: 'mirror-still-lake', label: 'Still Lake' },
-    { id: 'network-audit-clarity', label: 'Clarity' },
     { id: 'network-audit-report', label: 'Report' },
     { id: 'nexus-console', label: 'Console' },
     { id: 'nexus-switchboard', label: 'Switchboard' },
@@ -76,9 +74,7 @@ export const AUTHORED_THEMES = [
     { id: 'tasks-deep-work', label: 'Deep Work' },
     { id: 'tasks-legal-pad', label: 'Legal Pad' },
     { id: 'tessera-keycard', label: 'Keycard' },
-    { id: 'tessera-vault', label: 'Vault' },
     { id: 'voyage-field-guide', label: 'Field Guide' },
-    { id: 'voyage-midnight-atlas', label: 'Midnight Atlas' },
 ] as const;
 
 export const AUTHORED_THEME_CONFIGS: ThemeConfig[] = [
@@ -107,13 +103,6 @@ export const AUTHORED_THEME_CONFIGS: ThemeConfig[] = [
         fontUrl:
             'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&display=swap',
         recommendedApps: ['Atelier Media'],
-    },
-    {
-        value: 'atlas-of-time-chronicle',
-        label: 'Chronicle',
-        fontUrl:
-            'https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap',
-        recommendedApps: ['Atlas of Time'],
     },
     {
         value: 'atlas-of-time-night-archive',
@@ -317,12 +306,6 @@ export const AUTHORED_THEME_CONFIGS: ThemeConfig[] = [
         recommendedApps: ['Network Audit'],
     },
     {
-        value: 'network-audit-clarity',
-        label: 'Clarity',
-        fontUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap',
-        recommendedApps: ['Network Audit'],
-    },
-    {
         value: 'nexus-console',
         label: 'Console',
         fontUrl: 'https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@500;600&display=swap',
@@ -504,20 +487,8 @@ export const AUTHORED_THEME_CONFIGS: ThemeConfig[] = [
         recommendedApps: ['Tessera'],
     },
     {
-        value: 'tessera-vault',
-        label: 'Vault',
-        fontUrl: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap',
-        recommendedApps: ['Tessera'],
-    },
-    {
         value: 'voyage-field-guide',
         label: 'Field Guide',
-        fontUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:wght@400;500;600;700&display=swap',
-        recommendedApps: ['Voyage'],
-    },
-    {
-        value: 'voyage-midnight-atlas',
-        label: 'Midnight Atlas',
         fontUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:wght@400;500;600;700&display=swap',
         recommendedApps: ['Voyage'],
     },
@@ -526,7 +497,6 @@ export const AUTHORED_THEME_CONFIGS: ThemeConfig[] = [
 export const AUTHORED_LIGHT_THEMES: readonly string[] = [
     'ascend-contour',
     'atelier-media-studio',
-    'atlas-of-time-chronicle',
     'basket-greenmarket',
     'cookbook-terracotta',
     'faviconify-sticker-sheet',
@@ -593,14 +563,6 @@ export const AUTHORED_PREVIEW_PALETTES: Readonly<Record<string, Readonly<Record<
         '--card-background-color': '#141c19',
         '--header-background-color': '#101714',
         '--header-border-bottom-color': 'rgba(224, 221, 212, 0.08)',
-    },
-    'atlas-of-time-chronicle': {
-        '--body-background': '#ede0c8',
-        '--body-accent-color': '#963d22',
-        '--body-color-muted': '#6e5a3c',
-        '--card-background-color': '#f5ece0',
-        '--header-background-color': '#f8f1e6',
-        '--header-border-bottom-color': '#d6c4a2',
     },
     'atlas-of-time-night-archive': {
         '--body-background': '#0d1520',
@@ -866,14 +828,6 @@ export const AUTHORED_PREVIEW_PALETTES: Readonly<Record<string, Readonly<Record<
         '--header-background-color': '#ffffff',
         '--header-border-bottom-color': 'rgba(11, 18, 32, 0.08)',
     },
-    'network-audit-clarity': {
-        '--body-background': '#08111d',
-        '--body-accent-color': '#5ccbfa',
-        '--body-color-muted': '#8b9db4',
-        '--card-background-color': '#101b2b',
-        '--header-background-color': '#0b1726',
-        '--header-border-bottom-color': '#1c2c44',
-    },
     'nexus-console': {
         '--body-background': '#f2f3f0',
         '--body-accent-color': '#3d5c00',
@@ -1106,14 +1060,6 @@ export const AUTHORED_PREVIEW_PALETTES: Readonly<Record<string, Readonly<Record<
         '--header-background-color': '#ffffff',
         '--header-border-bottom-color': 'rgba(12, 20, 16, 0.08)',
     },
-    'tessera-vault': {
-        '--body-background': '#0d1014',
-        '--body-accent-color': '#4ade80',
-        '--body-color-muted': '#7c98a6',
-        '--card-background-color': '#161c22',
-        '--header-background-color': '#0f1318',
-        '--header-border-bottom-color': '#1e2830',
-    },
     'voyage-field-guide': {
         '--body-background': '#f4f1e8',
         '--body-accent-color': '#0d6e3c',
@@ -1121,13 +1067,5 @@ export const AUTHORED_PREVIEW_PALETTES: Readonly<Record<string, Readonly<Record<
         '--card-background-color': '#fdfcf8',
         '--header-background-color': '#ffffff',
         '--header-border-bottom-color': 'rgba(18, 21, 16, 0.08)',
-    },
-    'voyage-midnight-atlas': {
-        '--body-background': '#090b09',
-        '--body-accent-color': '#3ad67f',
-        '--body-color-muted': '#9a9483',
-        '--card-background-color': '#1b1d19',
-        '--header-background-color': '#0f110f',
-        '--header-border-bottom-color': '#2a2d27',
     },
 };

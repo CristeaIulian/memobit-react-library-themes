@@ -27,7 +27,7 @@ Rows marked Done list the app's new themes: the light one it starts on, then its
 | quiz-lab | quiz-lab-whiteboard | quiz-lab-chalkboard | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Chalk & Circuit attuned + new light); app bump pending |
 | pulse | pulse-ivory | pulse-night-chart | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (Ivory Serif attuned + new dark); live |
 | reels | reels-matinee | reels-marquee | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (cinema look, light + dark); app bump pending |
-| voyage | voyage-field-guide | voyage-midnight-atlas | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Midnight Atlas attuned + new light); app bump pending |
+| voyage | voyage-field-guide | midnight-atlas | 3.36.0 / 2.4.0 | **Done**: new light in 2.3.0; the dark is classic Midnight Atlas again since 2.4.0 (the user preferred it to the attuned copy) |
 | cookbook | cookbook-terracotta | cookbook-slate | 3.29.0 / 1.0.3 | **Done** in 2.2.0 (Terracotta Kitchen attuned + new dark); live |
 | impulse | impulse-pause | impulse-still-water | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (recreated, light + dark); live |
 | ascend | ascend-contour | ascend-contour-night | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (recreated, light + dark) |
@@ -47,12 +47,12 @@ Rows marked Done list the app's new themes: the light one it starts on, then its
 | global-pulse | global-pulse-atlas-paper | global-pulse-orbital | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Orbital Night attuned, glow kept); theme is hardcoded |
 | lifespan | lifespan-aurora | lifespan-long-evening | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Vital Aurora attuned) |
 | health-iq | health-iq-lab-glass | health-iq-signal | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Vital Signal attuned) |
-| network-audit | network-audit-report | network-audit-clarity | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Signal Clarity attuned); needs libs >=3.31 |
+| network-audit | network-audit-report | signal-clarity | 3.36.0 / 2.4.0 | **Done**: new light in 2.3.0; the dark is classic Signal Clarity again since 2.4.0 |
 | realestate-crawler | realestate-blueprint | realestate-night-plan | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Blueprint Clay attuned) |
 | atelier-media | atelier-media-studio | atelier-media-darkroom | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Atelier Media attuned) |
 | lumen | lumen-contact-sheet | lumen-lantern | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Lumen attuned, neutral greys); theme is hardcoded |
-| atlas-of-time | atlas-of-time-chronicle | atlas-of-time-night-archive | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Chrono Atlas attuned); theme is hardcoded |
-| tessera | tessera-keycard | tessera-vault | 3.29.0 / 1.4.0 | **Done** in 2.3.0 (Vault Guard attuned); theme is hardcoded, no picker |
+| atlas-of-time | chrono-atlas | atlas-of-time-night-archive | 3.36.0 / 2.4.0 | **Done**: classic Chrono Atlas (the app names it as its default) + new dark |
+| tessera | vault-guard | tessera-keycard | 3.36.0 / 2.4.0 | **Done**: stays on classic Vault Guard (no picker); Keycard waits for a picker |
 | pinhole | pinhole-lightbox | pinhole-darkroom | 3.28.0 / 1.4.0 | **Done** in 2.3.0 (recreated); theme is hardcoded and the picker ignores the saved choice |
 | holdings | holdings-ledger | holdings-night-ledger | 3.28.2 / 1.0.3 | **Done** in 2.3.0 (recreated); theme is hardcoded |
 | nexus | nexus-console | nexus-switchboard | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (recreated) |

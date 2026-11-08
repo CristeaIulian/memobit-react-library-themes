@@ -158,13 +158,14 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'midnight-atlas',
         label: 'Midnight Atlas',
+        recommendedApps: ['Voyage'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&display=swap',
     },
     {
         value: 'vault-guard',
         label: 'Vault Guard',
-        recommendedApps: ['Backup'],
+        recommendedApps: ['Tessera', 'Backup'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap',
     },
@@ -215,6 +216,7 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'signal-clarity',
         label: 'Signal Clarity',
+        recommendedApps: ['Network Audit'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap',
     },
@@ -258,6 +260,7 @@ export const THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'chrono-atlas',
         label: 'Chrono Atlas',
+        recommendedApps: ['Atlas of Time'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap',
     },
