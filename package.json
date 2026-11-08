@@ -58,6 +58,7 @@
     "build:authored": "node scripts/build-authored.ts",
     "port:classic": "node scripts/port-classic.ts",
     "preview:concepts": "node scripts/preview-concepts.ts",
+    "preview:cleanup": "node scripts/preview-cleanup.ts",
     "build": "npm run clean && npm run build:themes && npm run build:authored && vite build && npm pack",
     "release": "npm run build && npm publish",
     "prepublishOnly": "npm run clean && npm run build:themes && npm run build:authored && vite build",
