@@ -15,25 +15,27 @@ the apps. Change any of them.
 
 ## Online
 
+Rows marked Done list the app's new themes: the light one it starts on, then its dark one(s).
+
 | App | Starts on | Also offered | libs / themes | Proposed |
 |---|---|---|---|---|
 | shelf | sandy-parchment | — | 3.19.1 / 2.0.0 | **Done** (authored, matches v1); turn it on in prod |
-| recall | kindred-ink | — | 3.19.1 / 1.0.3 | Attune |
-| readout | lamplight | — | 3.19.1 / 1.1.0 | Attune |
-| pocket | indigo-stitch | — | 3.19.1 / 1.2.0 | Attune |
-| tasks | slate-focus | — | 3.26.2 / 1.0.3 | Attune |
+| recall | recall-calling-card | recall-stage-light | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (new light + dark) |
+| readout | readout-highlighter | readout-night-reader | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (new light + dark) |
+| pocket | pocket-receipt | pocket-chip | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (new light + dark) |
+| tasks | tasks-legal-pad | tasks-deep-work | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (Slate Focus taken further, light + dark) |
 | quiz-lab | chalk-circuit | — | 3.19.1 / 1.0.3 | Attune (chalk-circuit is also offered to 6 other apps; make it Quiz Lab's) |
-| pulse | ivory-serif | noir-marquee, garden-harvest, chalk-circuit, chrono-atlas | 3.19.1 / 1.0.3 | Attune ivory-serif |
+| pulse | pulse-ivory | pulse-night-chart | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (Ivory Serif attuned + new dark); app bump pending |
 | reels | noir-marquee | screening-room | 3.19.1 / 1.0.3 | Attune, pick one of the two (velvet-reel was its own and is gone) |
 | voyage | midnight-atlas | — | 3.19.1 / 1.0.3 | Recreate (horizon-drift was its own and is gone; midnight-atlas is shared with 5 apps) |
-| cookbook | sandstone | sandy-parchment, midnight-amber, signal-burst, terracotta-kitchen, midnight-atlas, chrono-atlas | 3.29.0 / 1.0.3 | Attune terracotta-kitchen (food-themed); sandstone is shared with Impulse |
-| impulse | sandstone | 12 others | 3.19.1 / 1.0.3 | Recreate (no theme of its own; shares sandstone with Cookbook) |
-| ascend | sandy-parchment | signal-burst, horizon-amber, crawler-dusk, chrono-atlas | 3.19.1 / 1.0.3 | Recreate (its default is Shelf's theme) |
-| seeds | blossom-meadow | sandstone, sandy-parchment, signal-burst, terracotta-kitchen, chrono-atlas | 3.19.1 / 1.0.3 | Attune blossom-meadow (shared with Garage; decide whose it is) |
-| garage | blossom-meadow | 8 others | 3.19.1 / 1.0.3 | Recreate (borrows Seeds' default) |
+| cookbook | cookbook-terracotta | cookbook-slate | 3.29.0 / 1.0.3 | **Done** in 2.2.0 (Terracotta Kitchen attuned + new dark); app bump pending |
+| impulse | impulse-pause | impulse-still-water | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (recreated, light + dark); app bump pending |
+| ascend | ascend-contour | ascend-contour-night | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (recreated, light + dark) |
+| seeds | seeds-blossom | seeds-nightlight | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (Blossom Meadow attuned + new dark); app bump pending |
+| garage | garage-workshop | garage-night-drive, garage-redline | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (recreated light + dark, Carbon Velocity attuned as Redline); app bump pending |
 | basket | cyber-forest | 11 others | 3.30.0 / 1.0.3 | Attune cyber-forest, or recreate; 12 options today |
-| hub | ocean-depths | sandy-parchment, carbon-velocity, horizon-amber, midnight-atlas, vital-signal | 3.19.1 / 1.0.3 | Attune ocean-depths |
-| nutritrack | signal-burst | 7 others incl. verdant-pulse | 3.19.1 / 1.0.3 | Attune verdant-pulse (made for it), drop signal-burst as default |
+| hub | hub-shallows | hub-deep-water | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (Ocean Depths attuned + new light); app bump pending |
+| nutritrack | nutritrack-fresh-market | nutritrack-verdant | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (Verdant Pulse attuned + new light); app bump pending |
 | iuliancristea | carbon-velocity | 10 others, `allowedThemes` set | 3.19.1 / 1.0.3 | Attune carbon-velocity; already uses `allowedThemes` |
 | react-showcase | luna | — | 3.19.1 / 1.0.3 | Keep all themes (it is the theme gallery) |
 
@@ -104,8 +106,9 @@ Each batch: author its themes in the themes package, one themes minor release, t
 app bump, compare in the theme lab, turn authored on, set `allowedThemes`.
 
 1. **Online, own themes:** Recall, Readout, Pocket, Tasks (attune) + Ascend (recreate).
+   Done in 2.1.0.
 2. **Online, shared themes:** Cookbook, Seeds, Hub, NutriTrack, Pulse (attune) + Impulse,
-   Garage (recreate).
+   Garage (recreate). Done in 2.2.0.
 3. **Online, the rest:** Basket, Reels, Quiz Lab, iuliancristea (attune) + Voyage (recreate).
 4. **Local Tools, attune:** IoT, Global Pulse, Lifespan, Health-IQ, Network Audit,
    Real Estate Crawler, Atelier Media, Lumen, Atlas of Time, Tessera.

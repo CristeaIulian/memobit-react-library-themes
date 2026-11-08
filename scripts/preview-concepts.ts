@@ -108,8 +108,10 @@ const screen = (sample: AppSample): string => `
   </div>
 </div>`;
 
-// In the order the samples list them, which is the batch's order.
-const apps = Object.keys(appSamples).filter(appName => concepts.some(concept => concept.app === appName));
+// In the order the samples list them, which is the batch's order. While drafts exist, only
+// their apps are shown, so the page is about the batch waiting for a decision.
+const hasDrafts = concepts.some(concept => concept.draft);
+const apps = Object.keys(appSamples).filter(appName => concepts.some(concept => concept.app === appName && (!hasDrafts || concept.draft)));
 const sheets: string[] = [];
 const fontLinks = new Set<string>();
 const sections: string[] = [];
@@ -165,7 +167,7 @@ for (const appName of apps) {
 </section>`);
 }
 
-const page = `<title>Batch 1 Theme Concepts</title>
+const page = `<title>App Theme Concepts</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 ${[...fontLinks].map(url => `<link rel="stylesheet" href="${escape(url)}">`).join('\n')}
@@ -260,7 +262,7 @@ ${sheets.join('\n')}
 </style>
 <main class="page">
   <div class="intro">
-    <h1>Batch 1 themes</h1>
+    <h1>App themes</h1>
     <p>A light and a dark theme for each app, drawn as a small screen of that app. Every colour, font and border below comes from the theme's own tokens, through the same derivation and bridge that @memobit/libs components read. Themes marked Chosen are in; one marked Concept is still waiting for your call.</p>
   </div>
   ${sections.join('\n')}
