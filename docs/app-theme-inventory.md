@@ -94,6 +94,11 @@ midnight-atlas, vault-guard, asphalt-code, terminal-phosphor (kept, nothing repl
 signal-clarity, chrono-atlas, war-room. Games and simulators stay on themes 1.x, where their
 themes still exist. Luna is gone, so an app falls back to its own theme (`fallbackTheme`).
 
+After the cleanup a near-duplicates review (`npm run preview:duplicates`, 57 look-alike themes
+in 19 groups) kept every theme: each is tuned to its app. Two stale recommendations were
+removed: "Backup" (no such app) from vault-guard and "Cars Crawler" (no themed UI) from
+asphalt-code, which now stays only for the iuliancristea public CV list.
+
 ## Things to settle along the way
 
 - **Shared defaults.** sandy-parchment (Shelf, Ascend), sandstone (Cookbook, Impulse),

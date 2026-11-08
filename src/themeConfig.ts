@@ -26,14 +26,13 @@ const CLASSIC_THEMES = [
     {
         value: 'vault-guard',
         label: 'Vault Guard',
-        recommendedApps: ['Tessera', 'Backup'],
+        recommendedApps: ['Tessera'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap',
     },
     {
         value: 'asphalt-code',
         label: 'Asphalt Code',
-        recommendedApps: ['Cars Crawler'],
         fontUrl: 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap',
         fontUrlDisplay: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap',
     },
