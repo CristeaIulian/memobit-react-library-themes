@@ -20,6 +20,8 @@ export interface StatusColour {
     mark?: string;
     /** Text in this tone on a surface. Defaults to the solid when it reads well enough. */
     text?: string;
+    /** Text on this tone's solid, when it differs from the theme's `onSolid` (a light solid wanting dark text). */
+    onSolid?: string;
 }
 
 export interface TitleVoice {
@@ -105,6 +107,8 @@ export interface AuthoredTheme {
     danger: StatusColour;
     /** Text on every solid. */
     onSolid: string;
+    /** Progress bar fills, when a bar should not take its tone's mark. */
+    progress?: { info?: string; success?: string; warning?: string; danger?: string };
 
     // Voice.
     selection: SelectionStyle;

@@ -37,7 +37,7 @@ export const garageRedline: AuthoredTheme = {
     controlBorderHover: '#dc2626',
     edge: '#1e2228',
     edgeHover: 'rgba(220, 38, 38, 0.45)',
-    accent: { solid: '#dc2626', hover: '#c81e1e', mark: '#ef4444', text: '#f87171', glow: '#f87171', link: '#f87171', linkHover: '#fca5a5' },
+    accent: { solid: '#dc2626', hover: '#c81e1e', mark: '#ef4444', text: '#ec3a35', glow: '#f87171', link: '#f87171', linkHover: '#fca5a5' },
     success: { solid: '#15803d', hover: '#17924a', mark: '#22c55e', text: '#4ade80' },
     warning: { solid: '#b45309', hover: '#c2600c', mark: '#f59e0b', text: '#fbbf24' },
     danger: { solid: '#dc2626', hover: '#c81e1e', mark: '#ef4444', text: '#f87171' },

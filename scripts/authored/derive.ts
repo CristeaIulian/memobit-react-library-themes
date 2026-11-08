@@ -42,7 +42,7 @@ const tone = (name: string, colour: StatusColour, theme: AuthoredTheme): Record<
         [`--tone-${name}-solid`]: colour.solid,
         [`--tone-${name}-mark`]: mark,
         [`--tone-${name}-solid-hover`]: colour.hover ?? mix(colour.solid, theme.ink, 82),
-        [`--tone-${name}-on-solid`]: theme.onSolid,
+        [`--tone-${name}-on-solid`]: colour.onSolid ?? theme.onSolid,
         [`--tone-${name}-soft`]: mix(mark, 'transparent', 16),
         [`--tone-${name}-soft-hover`]: mix(mark, 'transparent', 24),
         [`--tone-${name}-on-soft`]: colour.text ?? mix(mark, theme.ink, 80),
@@ -174,10 +174,17 @@ export const deriveOverrides = (theme: AuthoredTheme): Record<string, string> =>
         for (const [prefix, colour] of Object.entries({ info: theme.accent, success: theme.success, warning: theme.warning, danger: theme.danger })) {
             Object.assign(overrides, {
                 [`--toast-${prefix}-background-color`]: colour.solid,
-                [`--toast-${prefix}-color`]: theme.onSolid,
-                [`--toast-${prefix}-border-color`]: mix(colour.solid, theme.onSolid, 75),
+                [`--toast-${prefix}-color`]: colour.onSolid ?? theme.onSolid,
+                [`--toast-${prefix}-border-color`]: mix(colour.solid, colour.onSolid ?? theme.onSolid, 75),
             });
         }
+    }
+
+    for (const [prefix, fill] of Object.entries(theme.progress ?? {})) {
+        Object.assign(overrides, {
+            [`--progress-${prefix}-bar-fill-color`]: fill,
+            [`--progress-${prefix}-bar-border-color`]: fill,
+        });
     }
 
     return overrides;

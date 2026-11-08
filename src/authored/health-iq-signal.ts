@@ -8,9 +8,9 @@ export const healthIqSignal: AuthoredTheme = {
     apps: ['Health-IQ'],
     scheme: 'dark',
     fonts: {
-        body: "'IBM Plex Sans', 'Helvetica Neue', sans-serif",
-        display: "'Syne', 'IBM Plex Sans', sans-serif",
-        url: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Syne:wght@500;600;700&display=swap',
+        body: "'Space Grotesk', 'DM Sans', sans-serif",
+        display: "'Orbitron', 'Space Grotesk', sans-serif",
+        url: 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap',
     },
     canvas: {
         color: '#060e10',
@@ -40,7 +40,7 @@ export const healthIqSignal: AuthoredTheme = {
     accent: { solid: '#0e7490', hover: '#0b86a5', mark: '#22d3ee', text: '#4fdcf0', glow: '#67e8f9', link: '#67e8f9', linkHover: '#a5f3fc' },
     success: { solid: '#047857', hover: '#05906a', mark: '#34d399', text: '#5ee0b0' },
     warning: { solid: '#a16207', hover: '#b56f0a', mark: '#fbbf24', text: '#fcd05a' },
-    danger: { solid: '#c42222', hover: '#d63030', mark: '#f87171', text: '#fa9090' },
+    danger: { solid: '#c42222', hover: '#d63030', mark: '#dc2626', text: '#f3423b' },
     onSolid: '#ffffff',
     selection: 'soft',
     toasts: 'soft',

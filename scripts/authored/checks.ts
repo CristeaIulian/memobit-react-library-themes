@@ -97,7 +97,7 @@ export const contrastWarnings = (theme: AuthoredTheme): string[] => {
     check('placeholder on control', theme.placeholder ?? theme.textMuted, surfaces.control, 3);
 
     for (const [name, colour] of Object.entries({ accent: theme.accent, success: theme.success, warning: theme.warning, danger: theme.danger })) {
-        check(`text on ${name} solid`, theme.onSolid, paint(colour.solid, WHITE), 4.5);
+        check(`text on ${name} solid`, colour.onSolid ?? theme.onSolid, paint(colour.solid, WHITE), 4.5);
 
         if (colour !== theme.accent) {
             check(`${name} text on card`, colour.text ?? colour.solid, surfaces.card, 4.5);

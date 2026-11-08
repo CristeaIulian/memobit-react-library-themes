@@ -37,7 +37,7 @@ export const cookbookTerracotta: AuthoredTheme = {
     controlBorderHover: '#b0462a',
     edge: 'rgba(255, 255, 255, 0.9)',
     edgeHover: 'rgba(176, 70, 42, 0.4)',
-    accent: { solid: '#b0462a', hover: '#933a22', mark: '#c2522f', text: '#a3401f', glow: '#e07050', link: '#a3401f', linkHover: '#7d3018' },
+    accent: { solid: '#c0502d', hover: '#a44025', mark: '#c2522f', text: '#a3401f', glow: '#e07050', link: '#a3401f', linkHover: '#7d3018' },
     success: { solid: '#3f6e3d', hover: '#325a31', mark: '#4f8a4c', text: '#3a663a' },
     warning: { solid: '#9a6512', hover: '#7e520e', mark: '#c98a26', text: '#87570d' },
     danger: { solid: '#a11c1c', hover: '#841616', mark: '#c23a2e', text: '#961a1a' },

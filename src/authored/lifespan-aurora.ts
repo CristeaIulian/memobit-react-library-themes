@@ -36,7 +36,7 @@ export const lifespanAurora: AuthoredTheme = {
     edge: '#e3dccd',
     edgeHover: '#0e0e0c',
     accent: { solid: '#c13d20', hover: '#a3331a', mark: '#e5482a', text: '#b2391e', glow: '#f08a6e', link: '#b2391e', linkHover: '#8a2c17' },
-    success: { solid: '#4d6b12', hover: '#3f580e', mark: '#9ab51c', text: '#4a6610' },
+    success: { solid: '#c8e021', hover: '#b5cc1a', mark: '#c8e021', text: '#4a6610', onSolid: '#0e0e0c' },
     warning: { solid: '#8a671b', hover: '#735616', mark: '#c49a3f', text: '#7a5c18' },
     danger: { solid: '#b3261e', hover: '#961f19', mark: '#d63a2c', text: '#a3231b' },
     onSolid: '#fbf8f1',

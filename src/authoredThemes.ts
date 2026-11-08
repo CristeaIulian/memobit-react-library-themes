@@ -188,7 +188,7 @@ export const AUTHORED_THEME_CONFIGS: ThemeConfig[] = [
     {
         value: 'health-iq-signal',
         label: 'Signal',
-        fontUrl: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Syne:wght@500;600;700&display=swap',
+        fontUrl: 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap',
         recommendedApps: ['Health-IQ'],
     },
     {
@@ -638,7 +638,7 @@ export const AUTHORED_PREVIEW_PALETTES: Readonly<Record<string, Readonly<Record<
     },
     'garage-redline': {
         '--body-background': '#0c0d0f',
-        '--body-accent-color': '#f87171',
+        '--body-accent-color': '#ec3a35',
         '--body-color-muted': '#8a909b',
         '--card-background-color': '#141618',
         '--header-background-color': '#0e0f12',
@@ -845,7 +845,7 @@ export const AUTHORED_PREVIEW_PALETTES: Readonly<Record<string, Readonly<Record<
         '--header-border-bottom-color': 'rgba(221, 224, 218, 0.08)',
     },
     'nutritrack-fresh-market': {
-        '--body-background': '#f3f7f0',
+        '--body-background': '#f7f5ed',
         '--body-accent-color': '#1b6d36',
         '--body-color-muted': '#55665b',
         '--card-background-color': '#ffffff',
