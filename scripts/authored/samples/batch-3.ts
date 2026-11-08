@@ -1,8 +1,35 @@
-// Batch 3: Basket, Reels, Quiz Lab, iuliancristea, Voyage.
+// Batch 3: Basket, Reels, Quiz Lab, iuliancristea, Voyage, and Shelf, the pilot that predates the batches.
 
 import type { AppSample } from './types.ts';
 
 export const batch3Samples: Record<string, AppSample> = {
+    Shelf: {
+        app: 'Shelf',
+        about: 'A personal book library: books with covers, ISBNs, ratings and notes, the authors behind them, and what is read, being read or wished for.',
+        search: 'Search books and authors…',
+        title: 'The Remains of the Day',
+        subtitle: 'Kazuo Ishiguro · 1989 · 258 pages',
+        text: 'A butler drives to the West Country and looks back on his years of service. <mark>Rated 5 / 5, read twice.</mark> Shelved in <span class="m-accent">English fiction</span>, see <a href="#">all of Ishiguro</a>.',
+        chips: ['Reading', 'Read', 'Wishlist', 'Lent out'],
+        selectedChip: 0,
+        badges: ['Hardcover', 'Reading', 'Signed', 'Lent to Ana', 'Missing ISBN'],
+        field: { label: 'ISBN', value: '978-0-571-20008-5' },
+        empty: { label: 'Note', placeholder: 'What stayed with you?' },
+        buttons: ['Add book', 'Edit', 'Mark read', 'Remove'],
+        progress: [
+            { label: 'This book · page 164 of 258', value: 64, tone: 'info' },
+            { label: '2026 goal · 18 of 24 books', value: 75, tone: 'success' },
+        ],
+        table: {
+            columns: ['Title', 'Author', 'Status'],
+            rows: [
+                ['The Remains of the Day', 'Kazuo Ishiguro', 'Reading'],
+                ['Stoner', 'John Williams', 'Read'],
+                ['The Leopard', 'Giuseppe di Lampedusa', 'Wishlist'],
+            ],
+        },
+        toast: 'Marked read: Stoner',
+    },
     Basket: {
         app: 'Basket',
         about: 'A shopping-list manager: what to buy, who it is for, which shop or site sells it and where in the store it sits.',

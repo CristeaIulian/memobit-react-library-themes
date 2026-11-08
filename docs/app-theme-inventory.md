@@ -19,7 +19,7 @@ Rows marked Done list the app's new themes: the light one it starts on, then its
 
 | App | Starts on | Also offered | libs / themes | Proposed |
 |---|---|---|---|---|
-| shelf | sandy-parchment | — | 3.19.1 / 2.0.0 | **Done** (authored, matches v1); turn it on in prod |
+| shelf | sandy-parchment | shelf-night-library | 3.34.0 / 2.0.0 | **Done**: Sandy Parchment (authored, matches v1) + Night Library dark, added after 3.0.0; the registry puts Sandy Parchment ahead of it, so Shelf still starts light |
 | recall | recall-calling-card | recall-stage-light | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (new light + dark) |
 | readout | readout-highlighter | readout-night-reader | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (new light + dark) |
 | pocket | pocket-receipt | pocket-chip | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (new light + dark) |
@@ -51,7 +51,7 @@ Rows marked Done list the app's new themes: the light one it starts on, then its
 | realestate-crawler | realestate-blueprint | realestate-night-plan | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Blueprint Clay attuned) |
 | atelier-media | atelier-media-studio | atelier-media-darkroom | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Atelier Media attuned) |
 | lumen | lumen-contact-sheet | lumen-lantern | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Lumen attuned, neutral greys); theme is hardcoded |
-| atlas-of-time | chrono-atlas | atlas-of-time-night-archive | 3.36.0 / 2.4.0 | **Done**: classic Chrono Atlas (the app names it as its default) + new dark |
+| atlas-of-time | chrono-atlas | atlas-of-time-night-archive | 3.36.0 / 2.4.0 | **Done**: classic Chrono Atlas + new dark; the registry puts Chrono Atlas first, so the app starts on it |
 | tessera | vault-guard | tessera-keycard | 3.36.0 / 2.4.0 | **Done**: stays on classic Vault Guard (no picker); Keycard waits for a picker |
 | pinhole | pinhole-lightbox | pinhole-darkroom | 3.28.0 / 1.4.0 | **Done** in 2.3.0 (recreated); theme is hardcoded and the picker ignores the saved choice |
 | holdings | holdings-ledger | holdings-night-ledger | 3.28.2 / 1.0.3 | **Done** in 2.3.0 (recreated); theme is hardcoded |

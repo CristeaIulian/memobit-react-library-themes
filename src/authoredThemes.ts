@@ -71,6 +71,7 @@ export const AUTHORED_THEMES = [
     { id: 'sandy-parchment', label: 'Sandy Parchment' },
     { id: 'seeds-blossom', label: 'Blossom' },
     { id: 'seeds-nightlight', label: 'Night Light' },
+    { id: 'shelf-night-library', label: 'Night Library' },
     { id: 'tasks-deep-work', label: 'Deep Work' },
     { id: 'tasks-legal-pad', label: 'Legal Pad' },
     { id: 'tessera-keycard', label: 'Keycard' },
@@ -467,6 +468,12 @@ export const AUTHORED_THEME_CONFIGS: ThemeConfig[] = [
         fontUrl:
             'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Nunito:wght@400;500;600;700&display=swap',
         recommendedApps: ['Seeds'],
+    },
+    {
+        value: 'shelf-night-library',
+        label: 'Night Library',
+        fontUrl: 'https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap',
+        recommendedApps: ['Shelf'],
     },
     {
         value: 'tasks-legal-pad',
@@ -1035,6 +1042,14 @@ export const AUTHORED_PREVIEW_PALETTES: Readonly<Record<string, Readonly<Record<
         '--card-background-color': '#211c2e',
         '--header-background-color': '#1c1828',
         '--header-border-bottom-color': 'rgba(235, 223, 220, 0.09)',
+    },
+    'shelf-night-library': {
+        '--body-background': '#0f131b',
+        '--body-accent-color': '#eba765',
+        '--body-color-muted': '#9e9684',
+        '--card-background-color': '#171c27',
+        '--header-background-color': '#121722',
+        '--header-border-bottom-color': 'rgba(228, 220, 203, 0.08)',
     },
     'tasks-legal-pad': {
         '--body-background': '#f7f3dc',

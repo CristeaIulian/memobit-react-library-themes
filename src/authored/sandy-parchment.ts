@@ -6,6 +6,7 @@ import type { AuthoredTheme } from './contract.ts';
 export const sandyParchment: AuthoredTheme = {
     id: 'sandy-parchment',
     label: 'Sandy Parchment',
+    apps: ['Shelf'],
     scheme: 'light',
 
     fonts: {
