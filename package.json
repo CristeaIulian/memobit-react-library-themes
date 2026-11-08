@@ -1,6 +1,6 @@
 {
   "name": "@memobit/themes",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "description": "Themes for the Memobit apps: hand-made themes written as design choices, with every component value derived from them, plus the 49 classic themes, each published as its own stylesheet.",
   "keywords": [
     "css",
