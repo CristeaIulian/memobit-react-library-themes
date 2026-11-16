@@ -1,8 +1,35 @@
-// Batch 3: Basket, Reels, Quiz Lab, iuliancristea, Voyage, and Shelf, the pilot that predates the batches.
+// Batch 3: Basket, Reels, Quiz Lab, iuliancristea, Voyage, Shelf (the pilot that predates the batches) and Vigil.
 
 import type { AppSample } from './types.ts';
 
 export const batch3Samples: Record<string, AppSample> = {
+    Vigil: {
+        app: 'Vigil',
+        about: 'A family health overview: a body map per member coloured by status, the checks each one is due for, and what is known or suspected. Reads the family Pulse records; it never diagnoses.',
+        search: 'Search members, regions and checks…',
+        title: 'Heart & vessels',
+        subtitle: 'Cornel · 72 · last checked 14 Mar 2026',
+        text: 'Blood pressure is managed. <mark>Lipid panel overdue by 4 months</mark>, and smoking (30 pack-years) weighs on this region. Next: <span class="m-accent">ECG and lipid panel</span>, see <a href="#">all checks due</a>.',
+        chips: ['Body map', 'Checks due', 'Known state', 'Longevity'],
+        selectedChip: 0,
+        badges: ['Unknown', 'Suspected', 'Checked', 'Overdue', 'Active problem'],
+        field: { label: 'Interval', value: 'Every 12 months · men over 40' },
+        empty: { label: 'Note', placeholder: 'What to ask the doctor…' },
+        buttons: ['Add check', 'Map region', 'Mark done', 'Remove'],
+        progress: [
+            { label: 'Checks up to date · 7 of 11', value: 64, tone: 'info' },
+            { label: 'Regions checked · 12 of 14', value: 86, tone: 'success' },
+        ],
+        table: {
+            columns: ['Check', 'Last done', 'Next due'],
+            rows: [
+                ['Lipid panel', '14 Jul 2025', 'Overdue'],
+                ['HbA1c', '02 Sep 2026', 'Mar 2027'],
+                ['Chest X-ray', 'Never', 'Due now'],
+            ],
+        },
+        toast: 'Check marked done: HbA1c',
+    },
     Shelf: {
         app: 'Shelf',
         about: 'A personal book library: books with covers, ISBNs, ratings and notes, the authors behind them, and what is read, being read or wished for.',

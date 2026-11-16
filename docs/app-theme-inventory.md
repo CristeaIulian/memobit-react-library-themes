@@ -23,6 +23,7 @@ Rows marked Done list the app's new themes: the light one it starts on, then its
 | recall | recall-calling-card | recall-stage-light | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (new light + dark) |
 | readout | readout-highlighter | readout-night-reader | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (new light + dark) |
 | pocket | pocket-receipt | pocket-chip | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (new light + dark) |
+| vigil | vigil-night-watch | — | 4.2.2 / 3.2.0 | **Done** in 3.2.0: new app (2026-11-16), dark Night Watch only; the periwinkle accent stays clear of the green / amber / red / grey body-map states |
 | tasks | tasks-legal-pad | tasks-deep-work | 3.34.0 / 2.1.0 | **Done** in 2.1.0 (Slate Focus taken further, light + dark) |
 | quiz-lab | quiz-lab-whiteboard | quiz-lab-chalkboard | 3.19.1 / 1.0.3 | **Done** in 2.3.0 (Chalk & Circuit attuned + new light); app bump pending |
 | pulse | pulse-ivory | pulse-night-chart | 3.19.1 / 1.0.3 | **Done** in 2.2.0 (Ivory Serif attuned + new dark); live |

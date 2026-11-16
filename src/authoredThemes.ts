@@ -75,6 +75,7 @@ export const AUTHORED_THEMES = [
     { id: 'tasks-deep-work', label: 'Deep Work' },
     { id: 'tasks-legal-pad', label: 'Legal Pad' },
     { id: 'tessera-keycard', label: 'Keycard' },
+    { id: 'vigil-night-watch', label: 'Night Watch' },
     { id: 'voyage-field-guide', label: 'Field Guide' },
 ] as const;
 
@@ -492,6 +493,12 @@ export const AUTHORED_THEME_CONFIGS: ThemeConfig[] = [
         label: 'Keycard',
         fontUrl: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap',
         recommendedApps: ['Tessera'],
+    },
+    {
+        value: 'vigil-night-watch',
+        label: 'Night Watch',
+        fontUrl: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap',
+        recommendedApps: ['Vigil'],
     },
     {
         value: 'voyage-field-guide',
@@ -1074,6 +1081,14 @@ export const AUTHORED_PREVIEW_PALETTES: Readonly<Record<string, Readonly<Record<
         '--card-background-color': '#ffffff',
         '--header-background-color': '#ffffff',
         '--header-border-bottom-color': 'rgba(12, 20, 16, 0.08)',
+    },
+    'vigil-night-watch': {
+        '--body-background': '#0b0f17',
+        '--body-accent-color': '#a9b5f7',
+        '--body-color-muted': '#959eb0',
+        '--card-background-color': '#151b28',
+        '--header-background-color': '#10151f',
+        '--header-border-bottom-color': 'rgba(221, 225, 234, 0.08)',
     },
     'voyage-field-guide': {
         '--body-background': '#f4f1e8',
