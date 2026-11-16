@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { readdirSync, readFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
@@ -76,8 +77,14 @@ export const memobitThemes = (options: MemobitThemesOptions = {}): ThemePlugin =
         // ./public/assets/, so Vite's base is / while the real URL is /public/. Deriving the
         // prefix from the loaded bundle is correct wherever the app ends up mounted, and it
         // works in dev too, since the middleware below matches the segment anywhere.
+        //
+        // The filenames are fixed, and hosts cache static files for days, so a fixed URL kept
+        // serving a theme's old CSS after a fix shipped. The content hash in the query gives a
+        // changed theme a new URL, while an unchanged one keeps its cached copy.
         config() {
-            const urls = Object.fromEntries([...themes.keys()].map(name => [name, `../${THEME_ASSET_DIR}/${name}.css`]));
+            const urls = Object.fromEntries(
+                [...themes].map(([name, css]) => [name, `../${THEME_ASSET_DIR}/${name}.css?v=${createHash('sha256').update(css).digest('hex').slice(0, 10)}`])
+            );
 
             return { define: { __MEMOBIT_THEME_URLS__: JSON.stringify(urls) } };
         },
