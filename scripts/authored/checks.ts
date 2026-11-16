@@ -2,7 +2,7 @@ import type { AuthoredTheme } from '../../src/authored/contract.ts';
 
 import { BRIDGE } from './bridge.ts';
 import { contrast, type Oklch, over, parseColor } from './color.ts';
-import { deriveOverrides, deriveRoles } from './derive.ts';
+import { deriveOverrides, deriveRoles, neutralOnSolid } from './derive.ts';
 
 // Shared by the build and the concept preview: turning a theme into its stylesheet, and the
 // checks every theme goes through.
@@ -95,6 +95,7 @@ export const contrastWarnings = (theme: AuthoredTheme): string[] => {
 
     check('link on card', theme.accent.link ?? theme.accent.solid, surfaces.card, 4.5);
     check('placeholder on control', theme.placeholder ?? theme.textMuted, surfaces.control, 3);
+    check('text on ink (tooltips, ink selection)', neutralOnSolid(theme), paint(theme.ink, WHITE), 4.5);
 
     for (const [name, colour] of Object.entries({ accent: theme.accent, success: theme.success, warning: theme.warning, danger: theme.danger })) {
         check(`text on ${name} solid`, colour.onSolid ?? theme.onSolid, paint(colour.solid, WHITE), 4.5);

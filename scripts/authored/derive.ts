@@ -51,6 +51,10 @@ const tone = (name: string, colour: StatusColour, theme: AuthoredTheme): Record<
     };
 };
 
+// Text on an ink fill: tooltips and the `ink` selection style. In a dark theme the ink is the
+// light end, so `onSolid` (white in most of them) would vanish on it; the dark ground reads instead.
+export const neutralOnSolid = (theme: AuthoredTheme): string => (theme.scheme === 'dark' ? theme.canvas.color : theme.onSolid);
+
 const voice = (prefix: string, title: TitleVoice | undefined, fallback: Required<Omit<TitleVoice, 'family'>>): Record<string, string> => ({
     [`${prefix}-style`]: title?.style ?? fallback.style,
     [`${prefix}-weight`]: String(title?.weight ?? fallback.weight),
@@ -122,7 +126,7 @@ export const deriveRoles = (theme: AuthoredTheme): Record<string, string> => {
 
         '--tone-neutral-solid': theme.ink,
         '--tone-neutral-solid-hover': mix(theme.ink, theme.text, 70),
-        '--tone-neutral-on-solid': theme.onSolid,
+        '--tone-neutral-on-solid': neutralOnSolid(theme),
         '--tone-neutral-soft': theme.hover,
         '--tone-neutral-soft-hover': mix(theme.hover, theme.ink, 92),
         '--tone-neutral-on-soft': theme.ink,
